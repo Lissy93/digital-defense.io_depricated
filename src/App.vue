@@ -15,6 +15,8 @@
           <li><router-link to="/about">About</router-link></li>
       </ul>
 	</header> 
+
+  <router-view></router-view>
   
   </div>
 
@@ -22,6 +24,7 @@
 
 
 <style src="typeface-dosis/index.css" />
+<style src="typeface-raleway/index.css" />
 
 
 
@@ -35,6 +38,22 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
 }
+p, span {
+  font-family: 'Raleway', sans-serif;
+}
+
+h1, h2, h3{
+      font-family: 'Dosis', sans-serif;
+      font-weight: normal;
+}
+
+p, a, span { font-size: 1em; }
+h1 { font-size: 3em; }
+h2 { font-size: 3em; }
+h3 { font-size: 2em; }
+
+
+
 
 </style>
 
