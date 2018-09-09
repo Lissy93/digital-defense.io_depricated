@@ -1,8 +1,11 @@
 <template>
   <div class="hero">
     <div class="hero-child">
-      <h2>Cyber Crime is on the Up.</h2>
-      <h3>This site explains the steps that you need to take to protect yourself.</h3>
+      <h2>
+        Cyber Crime is on the Up.
+        <br>
+        <small>This site explains the steps that you need to take to protect yourself.</small>
+      </h2>
     </div>
     <div class="hero-child">
       <img src="../../public/img/hero-scaled.png" alt=""> 

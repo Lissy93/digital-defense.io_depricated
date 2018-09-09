@@ -26,11 +26,15 @@
 <style src="typeface-dosis/index.css" />
 <style src="typeface-raleway/index.css" />
 
+<style src="./assets/global-styles.scss" />
+
+<style src="./assets/navbar-styles.scss" />
 
 
 <style lang="scss">
 body {
   margin: 0;
+  background: #fafafa;
 }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -38,24 +42,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
 }
-p, span {
-  font-family: 'Raleway', sans-serif;
-}
-
-h1, h2, h3{
-      font-family: 'Dosis', sans-serif;
-      font-weight: normal;
-}
-
-p, a, span { font-size: 1em; }
-h1 { font-size: 3em; }
-h2 { font-size: 3em; }
-h3 { font-size: 2em; }
-
-
-
-
 </style>
 
-<style src="./assets/navbar-styles.scss" />
 
