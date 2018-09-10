@@ -31,15 +31,33 @@ header{
       text-decoration: none;
       font-family: 'Dosis', sans-serif;
       font-size: 1.2em;
+      display: block;
+      margin: 0;
   
       &.router-link-exact-active {
         border: 1px solid #ee6373;
       }
       
-      &.router-link-active:hover {
-        background: #ee6e73;
+      &.router-link-active:hover, &:hover {
+        background: #ee6373;
         color: #2c3e50;
       }
+    }
+  }
+
+  .sub-nav{
+    @media (min-width: 769px) {
+      position: absolute;
+    }
+    background: #2c3e50;
+    li a {
+      color: lighten(#ee6373, 10);
+      &:hover{
+        background: lighten(#ee6373, 10);
+        color: lighten(#2c3e50, 10);
+      }
+      display: block;
+      margin: 0;
     }
   }
   

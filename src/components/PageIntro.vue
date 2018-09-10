@@ -1,7 +1,7 @@
 <template>
   <div class="page-intro">
     <Card class="intro-card">
-      <h3>What's the Situation?</h3>
+      <h3>The Situation</h3>
       <p>
         In our increasingly connected world, cyber threats are on the up. 
         Fraud and computer misuse has already overtaken traditional crime, 
@@ -18,10 +18,10 @@
     </Card>
     
     <Card class="intro-card">
-      <h3>Aim of this Site</h3>
+      <h3>The Aim</h3>
       <p>
-        The aim of this website is to outline the common threats and demonstrate the 
-        simple measures you can take to protect your digital security and privacy.
+        My aim in creating this website, is to outline the common threats, and demonstrate the 
+        simple measures that <b>you</b> can take to protect your digital security and privacy.
       </p>
     </Card>
   </div>
