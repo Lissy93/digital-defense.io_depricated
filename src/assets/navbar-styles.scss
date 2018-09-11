@@ -33,6 +33,7 @@ header{
       font-size: 1.2em;
       display: block;
       margin: 0;
+      border: 1px solid #2c3e50;
   
       &.router-link-exact-active {
         border: 1px solid #ee6373;
@@ -40,6 +41,7 @@ header{
       
       &.router-link-active:hover, &:hover {
         background: #ee6373;
+        border: 1px solid #ee6373;
         color: #2c3e50;
       }
     }

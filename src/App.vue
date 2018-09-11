@@ -2,46 +2,38 @@
 
   <div id="app">
 
+    <header v-click-outside="closeAllDropdowns">
 
-	<header>
-		 <h1 class="logo">
-        <router-link to="/">
-          <img src="../public/img/main-icon.png" alt="" v-click-outside="closeAllDropdowns">
-          Cyber Defence
-        </router-link>
-      </h1>
-      <ul class="main-nav">
-          <li><router-link to="/">Home</router-link></li>
-          <li><router-link to="/beginer">Beginer</router-link></li>
-          <li><router-link to="/intermediate">Intermediate</router-link></li>
-          <li><router-link to="/advanced">Advanced</router-link></li>
-          <li>
-            <div @mouseover="closeAllDropdowns(); showingSpecifics = true">
-              <router-link to="/specifics">Specifics</router-link>
-            </div>
-            <ul class="sub-nav" v-show="showingSpecifics">
-              <li><router-link to="/advanced/passwords">Passwords</router-link></li>
-              <li><router-link to="/advanced/2fa">2-Factor Auth</router-link></li>
-              <li><router-link to="/advanced/updates">Updates</router-link></li>
-            </ul>
-          </li>
-          <li>
-            <div @mouseover="closeAllDropdowns(); showingTools = true">
-              <router-link to="/tools">More</router-link>
-            </div>
-            <ul class="sub-nav" v-show="showingTools">
-              <li><router-link to="/advanced/check">Have you been hacked?</router-link></li>
-              <li><router-link to="/advanced/hacks">Live Hack Map</router-link></li>
-              <li><router-link to="/advanced/news">Cyber Security News</router-link></li>
-              <li><router-link to="/advanced/links">Helpful Links</router-link></li>
-            </ul>
-          </li>
-          <li><router-link to="/about">About</router-link></li>
-      </ul>
-	</header> 
+      <!-- Main Logo and Title -->
+      <h1 class="logo">
+          <router-link to="/">
+            <img src="../public/img/main-icon.png" alt="" v-click-outside="closeAllDropdowns">
+            Cyber Defence
+          </router-link>
+        </h1>
 
+        <!-- Main Navigation -->
+        <nav>
+          <ul class="main-nav">
+            <li v-for="navBarItem in navBarItems" v-bind:key="navBarItem.name" @mouseover="visibleDropdown = navBarItem.name">
+              <div>
+                <router-link :to="navBarItem.path">{{navBarItem.name}}</router-link>
+              </div>
+              <ul class="sub-nav" v-if="visibleDropdown == navBarItem.name">
+                <li v-for="navBarItemChild in navBarItem.children" v-bind:key="navBarItemChild.name">
+                  <router-link :to="navBarItemChild.path">{{navBarItemChild.name}}</router-link>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
 
-  <router-view></router-view>
+    </header> 
+
+    <!-- Main Content -->
+    <main>
+      <router-view></router-view>
+    </main>
   
   </div>
 
@@ -50,28 +42,32 @@
 <script lang="ts">
 
   import { Component, Vue } from 'vue-property-decorator';
+
+  // tslint:disable-next-line:no-var-requires
   const ClickOutside = require('./directives/ClickOutside.js');
 
+  import NavBarItems from './models/NavBarItems';
+
+  // tslint:disable-next-line:no-var-requires
+  const navData = require('./data/nav-bar-content.json');
 
   @Component({
   data: () => {
-    return { 
-      showingSpecifics: false,
-      showingTools: false,
+    return {
+      navBarItems: (new NavBarItems()).makeTheFuckingNavbar(navData),
+      visibleDropdown: '',
     };
   },
   methods: {
-    closeAllDropdowns () {
-      this.$data.showingSpecifics = false
-      this.$data.showingTools = false
-    }
+    closeAllDropdowns() {
+      this.$data.visibleDropdown = '';
+    },
   },
   directives: {
-    ClickOutside
-  }
+    ClickOutside,
+  },
 })
 export default class Home extends Vue {}
-
 
 </script>
 

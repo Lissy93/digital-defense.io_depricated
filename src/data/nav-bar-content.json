@@ -1,0 +1,17 @@
+[
+    {"name": "Home", "path": "/", "children": []},
+    {"name": "Beginner", "path": "/beginner", "children": []},
+    {"name": "Intermediate", "path": "/intermediate", "children": []},
+    {"name": "Advanced", "path": "/advanced", "children": []},
+    {"name": "Specifics", "path": "/specifics", "children": [
+        {"name": "Passwords", "path": "/specifics/passwords", "children": []},
+        {"name": "Updates", "path": "/specifics/updates", "children": []},
+        {"name": "Browsing", "path": "/specifics/browsing", "children": []},
+        {"name": "2 FA", "path": "/specifics/2fa", "children": []}
+    ]},
+    {"name": "More", "path": "/tools", "children": [
+        {"name": "Hack Map", "path": "/tools/map", "children": []},
+        {"name": "Have you been Hacked?", "path": "/tools/hacked", "children": []}
+    ]},
+    {"name": "About", "path": "/about", "children": []}
+]
