@@ -6741,6 +6741,10 @@ typeface-dosis@^0.0.54:
   version "0.0.54"
   resolved "https://registry.yarnpkg.com/typeface-dosis/-/typeface-dosis-0.0.54.tgz#323a7c9e69cc8199366d33b7fc1c4b118e75e44f"
 
+typeface-raleway@0.0.54:
+  version "0.0.54"
+  resolved "https://registry.yarnpkg.com/typeface-raleway/-/typeface-raleway-0.0.54.tgz#f166c517becc81f34d14e72736d28b8923c79c65"
+
 typescript@^3.0.0:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.0.3.tgz#4853b3e275ecdaa27f78fda46dc273a7eb7fc1c8"
@@ -6959,6 +6963,10 @@ vue-class-component@^6.0.0, vue-class-component@^6.2.0:
   version "6.2.0"
   resolved "https://registry.yarnpkg.com/vue-class-component/-/vue-class-component-6.2.0.tgz#7adb1daa9a868c75f30f97f33f4f1b94aee62089"
 
+vue-click-outside@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/vue-click-outside/-/vue-click-outside-1.0.7.tgz#cdd2b1605e3c4944784e1794eae4a12a0f700bd6"
+
 vue-hot-reload-api@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.0.tgz#97976142405d13d8efae154749e88c4e358cf926"
@@ -7000,6 +7008,10 @@ vue-template-compiler@^2.5.17:
 vue-template-es2015-compiler@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.6.0.tgz#dc42697133302ce3017524356a6c61b7b69b4a18"
+
+vue2-animate@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/vue2-animate/-/vue2-animate-2.1.0.tgz#93eee5f381d8d6493bae0507bcad6b615fdacb7f"
 
 vue@^2.5.17:
   version "2.5.17"
