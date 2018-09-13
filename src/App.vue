@@ -19,16 +19,11 @@
               <div>
                 <router-link :to="navBarItem.path">{{navBarItem.name}}</router-link>
               </div>
-              <transition   
-                name="slide"
-                enter-active-class="slideInDown"
-                leave-active-class="slideOutUp">
-              <ul style="animation-duration: 0.3s" class="sub-nav" v-if="visibleDropdown == navBarItem.name">
+              <ul class="sub-nav" v-bind:class="{ open: visibleDropdown == navBarItem.name }">
                 <li v-for="navBarItemChild in navBarItem.children" v-bind:key="navBarItemChild.name">
                   <router-link :to="navBarItemChild.path">{{navBarItemChild.name}}</router-link>
                 </li>
               </ul>
-              </transition>
             </li>
           </ul>
         </nav>

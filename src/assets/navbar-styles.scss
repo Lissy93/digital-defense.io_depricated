@@ -48,6 +48,16 @@ header{
   }
 
   .sub-nav{
+
+    max-height: 0;
+    overflow: hidden;
+    transition: height, 0.5s linear;
+
+    &.open {
+      max-height: 500px;
+      transition: height, 0.5s linear;
+    }
+
     @media (min-width: 769px) {
       position: absolute;
     }
