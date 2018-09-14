@@ -3,10 +3,25 @@ header{
     padding: 0.5em 1em;
     box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0,0,0,.12), 0 2px 4px rgba(0,0,0,.24);
     text-align: center;
+    align-items: center;
+    display: flex;
+    @media (min-width: 769px) {
+      display: block;
+    }
   
-    h1 {
-      margin: 0;
+    .bigmac{
+      width: 5%;
+      @media (min-width: 769px) {
+        display: none;
+      }
+    }
 
+    h1 {
+      width: 95%;
+      @media (min-width: 769px) {
+        width: auto;
+      }
+      margin: 0;
       a{
         margin: 0;
         display: flex;
@@ -14,6 +29,9 @@ header{
         justify-content: center;
         img{
           width: 1.5em; 
+          @media screen and (max-width: 479px) {
+            display: none; // Sorry tiny phones - u don't get no pretty picture
+          }
         }
       }
     }
@@ -21,7 +39,9 @@ header{
     ul {
       list-style: none;
       padding: 0;
+      display: none; // Because the menu should only be immediately visible on desktop
     }
+
     ul li a {
       flex: 1;
       clear: right;
@@ -48,7 +68,7 @@ header{
   }
 
   .sub-nav{
-
+    background: #2c3e50;
     max-height: 0;
     overflow: hidden;
     transition: height, 0.5s linear;
@@ -58,30 +78,33 @@ header{
       transition: height, 0.5s linear;
     }
 
-    @media (min-width: 769px) {
-      position: absolute;
-    }
-    background: #2c3e50;
     li a {
       color: lighten(#ee6373, 10);
-      &:hover{
-        background: lighten(#ee6373, 10);
-        color: lighten(#2c3e50, 10);
-      }
       display: block;
       margin: 0;
+
+      &:hover{
+        background: lighten(#ee6373, 10);
+        border: 1px solid lighten(#ee6373, 10);
+        color: lighten(#2c3e50, 10);
+      }
+
+    }
+
+    @media (min-width: 769px) {
+      position: absolute;
     }
   }
   
   
   @media (min-width: 769px) {
-      .main-nav {
-          display: flex;
-      }
-      header {
+    .main-nav {
       display: flex;
-          flex-direction: column;
-          align-items: center;
+    }
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     ul li a {
       margin: 0 0.5em;
@@ -89,11 +112,10 @@ header{
   }
   
   @media (min-width: 1025px) {
-      header {
-          flex-direction: row;
-          justify-content: space-between;
-      }
-  
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
   }
   
   h1 a{

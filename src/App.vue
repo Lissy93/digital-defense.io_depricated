@@ -4,6 +4,9 @@
 
     <header v-click-outside="closeAllDropdowns">
 
+      <!-- Burger menu for mobile-->
+      <Burger class="bigmac" />
+
       <!-- Main Logo and Title -->
       <h1 class="logo">
           <router-link to="/">
@@ -19,7 +22,7 @@
               <div>
                 <router-link :to="navBarItem.path">{{navBarItem.name}}</router-link>
               </div>
-              <ul class="sub-nav" v-bind:class="{ open: visibleDropdown == navBarItem.name }">
+              <ul class="sub-nav" v-bind:class="{ open: visibleDropdown == navBarItem.name }"  @mouseleave="closeAllDropdowns">
                 <li v-for="navBarItemChild in navBarItem.children" v-bind:key="navBarItemChild.name">
                   <router-link :to="navBarItemChild.path">{{navBarItemChild.name}}</router-link>
                 </li>
@@ -43,17 +46,17 @@
 
   import { Component, Vue } from 'vue-property-decorator';
 
+  import NavBarItems from './models/NavBarItems';
+  import Burger from './components/Burger.vue';
+
   // tslint:disable-next-line:no-var-requires
   const ClickOutside = require('./directives/ClickOutside.js');
-
-  import NavBarItems from './models/NavBarItems';
 
   // tslint:disable-next-line:no-var-requires
   const navData = require('./data/nav-bar-content.json');
 
   // tslint:disable-next-line:no-var-requires
   require('vue2-animate/dist/vue2-animate.min.css');
-
 
   @Component({
   data: () => {
@@ -69,6 +72,9 @@
   },
   directives: {
     ClickOutside,
+  },
+  components: {
+    Burger,
   },
 })
 export default class Home extends Vue {}
