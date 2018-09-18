@@ -1,5 +1,5 @@
 <template>
-    <div class="bigmac" v-bind:class="{ open: menuOpen }" v-on:click="menuOpen = !menuOpen">
+    <div class="bigmac" v-bind:class="{ open: isMenuOpen }" v-on:click="onBurgerChange(!isMenuOpen)">
         <span></span>
         <span></span>
         <span></span>
@@ -11,14 +11,22 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component({
-  data: () => {
+  data: function() {
     return {
-      menuOpen: true,
+      isMenuOpen: this.$props.id, // Start closed
     };
+  },
+  methods: {
+    onBurgerChange(toWhat: boolean) {
+      this.$data.isMenuOpen = !this.$data.isMenuOpen;
+      this.$emit('onBurgerChange', toWhat);
+    },
   },
 })
 
-export default class Burger extends Vue {}
+export default class Burger extends Vue {
+      @Prop() private startIsMenuOpen!: boolean;
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -27,7 +35,7 @@ export default class Burger extends Vue {}
 $burgerSize: 1em;
 
 .bigmac{
-  width: $burgerSize * 2;
+  max-width: $burgerSize * 2;
   height: $burgerSize;
   position: relative;
   margin: 0 auto;

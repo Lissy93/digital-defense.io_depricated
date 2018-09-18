@@ -5,19 +5,20 @@ header{
     text-align: center;
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
     @media (min-width: 769px) {
       display: block;
     }
   
     .bigmac{
-      width: 5%;
+      width: 10%;
       @media (min-width: 769px) {
         display: none;
       }
     }
 
     h1 {
-      width: 95%;
+      width: 90%;
       @media (min-width: 769px) {
         width: auto;
       }
@@ -35,11 +36,33 @@ header{
         }
       }
     }
+
+    nav{
+      margin: 0 auto;
+      @media (min-width: 769px) {
+        margin: 0;
+      }
+    }
   
     ul {
       list-style: none;
       padding: 0;
-      display: none; // Because the menu should only be immediately visible on desktop
+
+      &.main-nav{
+        display: none; // Because the menu should only be immediately visible on desktop
+        flex-direction: column;
+
+        &.menuOpen{
+          display: flex;
+        }
+        
+        @media (min-width: 769px) {
+          display: flex;
+          flex-direction: row;
+        }
+      }
+
+
     }
 
     ul li a {
@@ -98,7 +121,7 @@ header{
   
   
   @media (min-width: 769px) {
-    .main-nav {
+    ul.main-nav {
       display: flex;
     }
     header {

@@ -5,7 +5,7 @@
     <header v-click-outside="closeAllDropdowns">
 
       <!-- Burger menu for mobile-->
-      <Burger class="bigmac" />
+      <Burger class="bigmac" @onBurgerChange="onBurgerChange" :startIsMenuOpen="isMenuOpen"/>
 
       <!-- Main Logo and Title -->
       <h1 class="logo">
@@ -17,7 +17,7 @@
 
         <!-- Main Navigation -->
         <nav>
-          <ul class="main-nav">
+          <ul class="main-nav" v-bind:class="{ menuOpen: isMenuOpen }">
             <li v-for="navBarItem in navBarItems" v-bind:key="navBarItem.name" @mouseover="visibleDropdown = navBarItem.name">
               <div>
                 <router-link :to="navBarItem.path">{{navBarItem.name}}</router-link>
@@ -63,11 +63,15 @@
     return {
       navBarItems: (new NavBarItems()).makeTheFuckingNavbar(navData),
       visibleDropdown: '',
+      isMenuOpen: false, // start closed
     };
   },
   methods: {
     closeAllDropdowns() {
       this.$data.visibleDropdown = '';
+    },
+    onBurgerChange(openOrClose) {
+      this.$data.isMenuOpen = openOrClose;
     },
   },
   directives: {
