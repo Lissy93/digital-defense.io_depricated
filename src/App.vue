@@ -2,6 +2,8 @@
 
   <div id="app">
 
+    <div class="wrapper">
+
     <header v-click-outside="closeAllDropdowns">
 
       <!-- Burger menu for mobile-->
@@ -35,9 +37,16 @@
 
     <!-- Main Content -->
     <main>
-      <router-view></router-view>
+      <router-view/>
     </main>
+
+    <div class="push"></div>
+
+    </div> <!--End Wrapper -->
   
+    <!-- Footer -->
+    <Footer class="footer"/>
+
   </div>
 
 </template>
@@ -48,6 +57,7 @@
 
   import NavBarItems from './models/NavBarItems';
   import Burger from './components/Burger.vue';
+  import Footer from './components/Footer.vue';
 
   // tslint:disable-next-line:no-var-requires
   const ClickOutside = require('./directives/ClickOutside.js');
@@ -79,6 +89,7 @@
   },
   components: {
     Burger,
+    Footer,
   },
 })
 export default class Home extends Vue {}
@@ -96,15 +107,22 @@ export default class Home extends Vue {}
 
 
 <style lang="scss">
-body {
+html, body, #app {
   margin: 0;
+  height: 100%;
   background: #fafafa;
-}
-#app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+}
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -3em ;
+}
+.footer, .push {
+  height: 3em;
 }
 </style>
 
