@@ -30,11 +30,17 @@ export default class Footer extends Vue {}
         margin: 0;
         background: darken(#fafafa, 10);
         display: flex;
+        flex-wrap: wrap;
         font-family: 'Raleway', sans-serif;
         padding-top: 0.15em;
         .footer-item{
+ 
             flex-grow: 1;
             padding: 1em;
+            min-width: 100%;
+            @media (min-width: 769px) {
+                min-width: 10em;
+            }
             color: #2c3e50;
             a{
                 color: #2c3e50;
