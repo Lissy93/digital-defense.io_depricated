@@ -37,14 +37,10 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 import NavBarItems from './../models/NavBarItems';
 import Burger from './Burger.vue';
 
-// tslint:disable-next-line:no-var-requires
+// tslint:disable:no-var-requires // Will I go to hell for this?
 const ClickOutside = require('./../directives/ClickOutside.js');
-
-// tslint:disable-next-line:no-var-requires
 const navData = require('./../data/nav-bar-content.json');
-
-// tslint:disable-next-line:no-var-requires
-require('vue2-animate/dist/vue2-animate.min.css');
+// tslint:enable:no-var-requires // Probably, but it was worth it.
 
 @Component({
     data: () => {

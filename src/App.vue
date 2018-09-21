@@ -31,12 +31,6 @@
   import Header from './components/Header.vue';
   import Footer from './components/Footer.vue';
 
-  // tslint:disable:no-var-requires // Will I go to hell for this?
-  const ClickOutside = require('./directives/ClickOutside.js');
-  const navData = require('./data/nav-bar-content.json');
-  require('vue2-animate/dist/vue2-animate.min.css');
-  // tslint:enable:no-var-requires // Probably, but it was worth it.
-
   @Component({
   components: {
     Header,

@@ -11,6 +11,7 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component({
+  // tslint:disable-next-line:object-literal-shorthand
   data: function() {
     return {
       isMenuOpen: this.$props.id, // Start closed
