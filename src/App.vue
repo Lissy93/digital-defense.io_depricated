@@ -4,8 +4,8 @@
 
     <div class="wrapper">
 
-      <!-- Header containing navigation bar -->
-      <Header />
+      <!-- Header containing navigation bar (don't show on home) -->
+      <Header v-if="['home'].indexOf($route.name) < 0" />
 
     <!-- Main Content -->
     <main>
@@ -23,7 +23,7 @@
   </div>
 
 </template>
-
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script lang="ts">
 
   import { Component, Vue } from 'vue-property-decorator';

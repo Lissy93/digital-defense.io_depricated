@@ -51,7 +51,8 @@ export default class PageIntro extends Vue {}
     padding: 2em;
     display: flex;
     flex-direction: row;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
+    background: #2c3e50;
 
     .intro-card {
         padding: 1em;

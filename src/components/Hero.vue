@@ -1,5 +1,5 @@
 <template>
-  <div class="hero">
+  <div class="hero" id="particles-js">
     <div class="hero-child">
       <h2>
         Cyber Crime is on the Up.
@@ -14,12 +14,24 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
 
-@Component
-export default class Hero extends Vue {
-  @Prop() private msg!: string;
-}
+import { Component, Prop, Vue } from 'vue-property-decorator';
+import 'particles.js'
+
+const particleData = require('./../data/particles-js-config.json');
+
+
+@Component({
+  methods: {
+      initParticlesJS() {
+      },
+    },
+    mounted: ()=> {
+      // Initialize the particles.js on the hero.
+      (<any>window).particlesJS('particles-js', particleData);
+    },
+})
+export default class Hero extends Vue {}
 </script>
 
 <style scoped lang="scss">
@@ -36,6 +48,9 @@ export default class Hero extends Vue {
     flex-direction: row;
     flex-wrap:wrap;
   
+    > * {
+      z-index: 3;
+    }
 
     .hero-child {
         width: 100%;
@@ -59,4 +74,16 @@ export default class Hero extends Vue {
     }
   }
 
+</style>
+
+
+<style>
+  .particles-js-canvas-el{
+    position: absolute;
+    padding: 0;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    left:0;
+  }
 </style>

@@ -9,6 +9,7 @@
     "test:e2e": "vue-cli-service test:e2e"
   },
   "dependencies": {
+    "particles.js": "^2.0.0",
     "register-service-worker": "^1.0.0",
     "typeface-dosis": "^0.0.54",
     "typeface-raleway": "0.0.54",
