@@ -13,25 +13,17 @@
 <script lang="ts">
 
 import { Component, Prop, Vue } from 'vue-property-decorator';
-
-import 'particles.js'
-
 import HomeCarousel from '@/components/Carousel.vue';
-
-const particleData = require('./../data/particles-js-config.json');
-
+import 'particles.js';
+import * as particleData from './../data/particles-js-config.json';
 
 @Component({
   components: {
     HomeCarousel,
   },
-  methods: {
-      initParticlesJS() {
-      },
-    },
-    mounted: ()=> {
+    mounted: () => {
       // Initialize the particles.js on the hero.
-      (<any>window).particlesJS('particles-js', particleData);
+      (window as any).particlesJS('particles-js', particleData.default);
     },
 })
 export default class Hero extends Vue {}
