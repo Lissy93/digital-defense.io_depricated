@@ -45,6 +45,8 @@ export default class PageIntro extends Vue {}
 <style scoped lang="scss">
 
   .page-intro{
+    position: relative;
+    z-index: 5;
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
@@ -52,7 +54,6 @@ export default class PageIntro extends Vue {}
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background: #2c3e50;
 
     .intro-card {
         padding: 1em;

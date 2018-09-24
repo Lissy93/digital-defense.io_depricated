@@ -1,11 +1,8 @@
 <template>
   <div class="hero" id="particles-js">
     <div class="hero-child">
-      <h2>
-        Cyber Crime is on the Up.
-        <br>
-        <small>This site explains the steps that you need to take to protect yourself.</small>
-      </h2>
+      <HomeCarousel />
+
     </div>
     <div class="hero-child">
       <img src="../../public/img/hero-scaled.png" alt=""> 
@@ -16,12 +13,18 @@
 <script lang="ts">
 
 import { Component, Prop, Vue } from 'vue-property-decorator';
+
 import 'particles.js'
+
+import HomeCarousel from '@/components/Carousel.vue';
 
 const particleData = require('./../data/particles-js-config.json');
 
 
 @Component({
+  components: {
+    HomeCarousel,
+  },
   methods: {
       initParticlesJS() {
       },
@@ -85,5 +88,6 @@ export default class Hero extends Vue {}
     z-index: 1;
     top: 0;
     left:0;
+    opacity: 0.5;
   }
 </style>

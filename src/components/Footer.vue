@@ -28,7 +28,7 @@ export default class Footer extends Vue {}
     footer {
         width: 100%;
         margin: 0;
-        background: darken(#fafafa, 10);
+        background: #d0d0d0;
         display: flex;
         flex-wrap: wrap;
         font-family: 'Raleway', sans-serif;
