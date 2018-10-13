@@ -1,0 +1,32 @@
+{
+    "sections": [
+        {
+            "sectionTitle": "Title",
+            "sectionSubTitle": "SubTitle",
+            "tiles": [
+                {
+                    "id": "0",
+                    "name": "Beginer",
+                    "color": "#E8117F",
+                    "description": "Get started with understanding the basics of staying safe online",
+                    "url": "https://google.com",
+                    "icon": "https://via.placeholder.com/100/E8117F"
+                },
+                {
+                    "id": "1",
+                    "name": "Intermediate",
+                    "description": "Personal cyber security principles we all should follow",
+                    "url": "https://google.com",
+                    "icon": "https://via.placeholder.com/100/3cbd14"
+                },
+                {
+                    "id": "2",
+                    "name": "Advanced",
+                    "description": "Complete personal cyber security checklist",
+                    "url": "https://google.com",
+                    "icon": "https://via.placeholder.com/100/00bcd4"
+                }
+            ]
+        }
+    ]
+}

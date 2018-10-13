@@ -1,13 +1,39 @@
 <template>
   <div class="main-page-links">
     <p>hello</p>
+
+    <TileSection 
+      v-for="(section, sectionIndex) in this.sections"
+      :key="sectionIndex" 
+      :tileSectionTitle="section.sectionTitle" 
+      :tileSectionSubTitle="section.sectionSubTitle"
+      :styles="myStyle"
+      :tiles = "section.tiles"
+      theme="soft"
+    />
+
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
-@Component
+import { TileSection } from 'vue-link-grid';
+
+import * as exampleData1 from './../data/main-page-links-content.json';
+
+
+@Component({
+  data: () => {
+      return  {
+        myStyle: {},
+        sections: exampleData1.default.sections,
+      };
+    },
+  components: {
+    TileSection,
+  },
+})
 export default class MainPageLinks extends Vue {}
 </script>
 
@@ -17,7 +43,5 @@ export default class MainPageLinks extends Vue {}
         z-index: 5;
         background: #2c3e50;
         border: 1em solid transparent;
-    
-        
     }
 </style>
