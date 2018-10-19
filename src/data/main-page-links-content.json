@@ -6,25 +6,27 @@
             "tiles": [
                 {
                     "id": "0",
-                    "name": "Beginer",
-                    "color": "#E8117F",
+                    "name": "Beginner",
+                    "color": "#00c4d4",
                     "description": "Get started with understanding the basics of staying safe online",
                     "url": "https://google.com",
-                    "icon": "https://via.placeholder.com/100/E8117F"
+                    "icon": "/img/ico_beginer.png"
                 },
                 {
                     "id": "1",
                     "name": "Intermediate",
+                    "color": "#ffbd00",
                     "description": "Personal cyber security principles we all should follow",
                     "url": "https://google.com",
-                    "icon": "https://via.placeholder.com/100/3cbd14"
+                    "icon": "/img/ico_intermediate.png"
                 },
                 {
                     "id": "2",
                     "name": "Advanced",
+                    "color": "#ff636f",
                     "description": "Complete personal cyber security checklist",
                     "url": "https://google.com",
-                    "icon": "https://via.placeholder.com/100/00bcd4"
+                    "icon": "/img/ico_advanced.png"
                 }
             ]
         }
