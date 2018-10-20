@@ -1,7 +1,5 @@
 <template>
   <div class="main-page-links">
-    <p>hello</p>
-
     <TileSection 
       v-for="(section, sectionIndex) in this.sections"
       :key="sectionIndex" 
