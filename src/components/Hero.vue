@@ -2,10 +2,18 @@
   <div class="hero" id="particles-js">
     <div class="hero-child">
       <HomeCarousel />
-
     </div>
-    <div class="hero-child">
+    <div class="hero-child main-logo-in-hero">
       <img src="../../public/img/hero-scaled.png" alt=""> 
+    </div>
+    <div class="hero-child what-is-this-site">
+      <h3>
+        This site outlines common security risks, and 
+        explains the steps you can take to stay protected.
+        </h3>
+      <h4 class="get-started-button" v-on:click="scrollTo('.main-page-links')">
+        ▼ Get Started Now ▼
+      </h4>
     </div>
   </div>
 </template>
@@ -21,10 +29,17 @@ import * as particleData from './../data/particles-js-config.json';
   components: {
     HomeCarousel,
   },
-    mounted: () => {
-      // Initialize the particles.js on the hero.
-      (window as any).particlesJS('particles-js', particleData.default);
+  methods: {
+    scrollTo(elem) {
+      document.querySelector(elem).scrollIntoView({
+        behavior: 'smooth',
+      });
     },
+  },
+  mounted: () => {
+    // Initialize the particles.js on the hero.
+    (window as any).particlesJS('particles-js', particleData.default);
+  },
 })
 export default class Hero extends Vue {}
 </script>
@@ -50,9 +65,37 @@ export default class Hero extends Vue {}
     .hero-child {
         width: 100%;
         @media (min-width: 769px) {
-          &:nth-child(1) { width: 65% }
-          &:nth-child(2) { width: 35% }
+          &:nth-child(1) { width: 70% }
+          &:nth-child(2) { width: 30% }
         }
+
+      &.main-logo-in-hero{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+
+      &.what-is-this-site{
+          color: white;
+          opacity: 0.9;
+          h3, .get-started-button {
+            text-align: center;
+            background: #2c3e50;
+            padding: 0.5em;
+            box-shadow: 1px 1px 1px rgba(255,255,255, 0.4);
+            border-radius: 5px;
+        }
+      }
+    }
+
+    .get-started-button {
+      cursor: pointer;
+      max-width: 704px;
+      display: block;
+      @media (min-width: 769px) {
+        display: none;
+      }
+      margin: 0 auto;
     }
 
     img{

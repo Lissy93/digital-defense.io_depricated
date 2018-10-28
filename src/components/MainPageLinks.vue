@@ -18,14 +18,14 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 
 import { TileSection } from 'vue-link-grid';
 
-import * as exampleData1 from './../data/main-page-links-content.json';
+import * as mainPageLinks from './../data/main-page-links-content.json';
 
 
 @Component({
   data: () => {
       return  {
         myStyle: {},
-        sections: exampleData1.default.sections,
+        sections: mainPageLinks.default.sections,
       };
     },
   components: {

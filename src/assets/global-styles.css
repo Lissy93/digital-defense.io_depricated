@@ -9,7 +9,7 @@ p, span {
     text-align: left;
   }
   
-h1, h2, h3{
+h1, h2, h3, h4{
 font-family: 'Dosis', sans-serif;
 font-weight: normal;
 margin: 0.5em 0;
@@ -25,6 +25,10 @@ h2 {
 }
 h3 {
     font-size: 2em;
+    text-align: left;
+}
+h4 {
+    font-size: 1.8em;
     text-align: left;
 }
 

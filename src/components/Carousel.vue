@@ -5,22 +5,19 @@
       :autoplay="true"
       :autoplayHoverPause="true"
       paginationActiveColor="#2c3e50"
+      autoplayTimeout="8000"
+      loop="true"
     >
-        <slide>
-          <h2>
-            Cyber Crime is on the Up.
-            <br>
-            <small>This site explains the steps that you need to take to protect yourself.</small>
-          </h2>
-        </slide>
-        <slide>
-          <h2>
-            Hello World
-            <br>
-            <small>
-              Lorem Ipsum 
-            </small>
-          </h2>
+        <slide v-for="carouselItem in carouselContent" v-bind:key="carouselItem.heading">
+          <h2>{{ carouselItem.heading }}</h2>
+          <span>{{ carouselItem.subtitle }}</span>
+          <br>
+          <small>
+            Reference:
+            <a :href="carouselItem.reference.url" target="_blank">
+              {{ carouselItem.reference.title}}
+            </a>
+          </small>
         </slide>
     </carousel>
   </div>
@@ -31,7 +28,14 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 
 import { Carousel, Slide } from 'vue-carousel';
 
+import * as carouselContent from './../data/carousel-content.json';
+
 @Component({
+    data: () => {
+      return  {
+        carouselContent: carouselContent.default,
+      };
+    },
   components: {
     Carousel,
     Slide,
@@ -43,5 +47,16 @@ export default class HomeCarousel extends Vue {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+
+  span{
+    font-size: 1.2rem;
+  }
+  small {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    a{
+      color: inherit;
+    }
+  }
 
 </style>

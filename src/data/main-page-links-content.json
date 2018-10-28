@@ -7,15 +7,15 @@
                 {
                     "id": "0",
                     "name": "Beginner",
-                    "color": "#00c4d4",
+                    "color": "#ffbd00",
                     "description": "Get started with understanding the basics of staying safe online",
                     "url": "https://google.com",
-                    "icon": "/img/ico_beginer.png"
+                    "icon": "/img/ico_beginner.png"
                 },
                 {
                     "id": "1",
                     "name": "Intermediate",
-                    "color": "#ffbd00",
+                    "color": "#00c4d4",
                     "description": "Personal cyber security principles we all should follow",
                     "url": "https://google.com",
                     "icon": "/img/ico_intermediate.png"
