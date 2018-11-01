@@ -40,7 +40,7 @@ import * as articleListings from './../data/article-listings.json';
     articleFound() {
       let found = false;
       articleListings.default.forEach((article: any ) => {
-        if (article.file === this.requestedFile) {
+        if (article.file === (this as any).requestedFile) {
           found = true;
         }
       });
@@ -48,9 +48,9 @@ import * as articleListings from './../data/article-listings.json';
     },
 
     articleContent() {
-      if (this.articleFound) {
+      if ((this as any).articleFound) {
         try {
-          return require(`./../docs/${this.requestedFile}.md`);
+          return require(`./../docs/${(this as any).requestedFile}.md`);
         }
         catch (e) {
           return '';
@@ -60,7 +60,7 @@ import * as articleListings from './../data/article-listings.json';
 
   },
    watch: {
-    '$route.params.file': function(urlFile) {
+    '$route.params.file': (urlFile) => {
       // todo
     },
   },
