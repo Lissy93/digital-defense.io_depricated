@@ -5,8 +5,8 @@
       :autoplay="true"
       :autoplayHoverPause="true"
       paginationActiveColor="#2c3e50"
-      autoplayTimeout="8000"
-      loop="true"
+      :autoplayTimeout="8000"
+      :loop="true"
     >
         <slide v-for="carouselItem in carouselContent" v-bind:key="carouselItem.heading">
           <h2>{{ carouselItem.heading }}</h2>

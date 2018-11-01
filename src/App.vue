@@ -42,7 +42,7 @@ export default class Home extends Vue {}
 </script>
 
 <style src="typeface-dosis/index.css" />
-<style src="typeface-raleway/index.css" />
+<style src="typeface-raleway/index.css" />>
 
 <style src="./assets/global-styles.css" />
 
