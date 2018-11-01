@@ -51,8 +51,7 @@ import * as articleListings from './../data/article-listings.json';
       if ((this as any).articleFound) {
         try {
           return require(`./../docs/${(this as any).requestedFile}.md`);
-        }
-        catch (e) {
+        } catch (e) {
           return '';
         }
       }
