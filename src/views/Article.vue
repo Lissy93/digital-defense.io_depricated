@@ -1,14 +1,17 @@
 <template>
-  <div class="hello">
+  <div class="article">
 
     <div v-if="!articleFound || articleContent===''">
       ARTICLE NOT FOUND
     </div>
-    
-    <h1>Articles Page is Coming Soon...</h1>
+
+    <Card class="article-card">
+      <vue-markdown>{{ articleContent }}</vue-markdown>
+    </Card>
+
     <h2>{{ $route.params.file }}</h2>
 
-    <vue-markdown :source="articleContent" />
+    
 
   </div>
 </template>
@@ -23,6 +26,8 @@ import VueMarkdown from 'vue-markdown';
 
 import * as articleListings from './../data/article-listings.json';
 
+import Card from '@/components/Card.vue';
+
 
 @Component({
   data: () => {
@@ -30,7 +35,17 @@ import * as articleListings from './../data/article-listings.json';
     },
   components: {
     VueMarkdown,
+    Card,
   },
+  filters: {
+    capitalize: (value: string) => {
+      if (!value) {
+        return '';
+      }
+      value = value.toString();
+      return '<Card>This is a card</Card>' + value.charAt(0).toUpperCase() + value.slice(1);
+    },
+  },  
   computed: {
 
     requestedFile() {
@@ -54,6 +69,8 @@ import * as articleListings from './../data/article-listings.json';
         } catch (e) {
           return '';
         }
+      } else {
+        return '';
       }
     },
 
@@ -67,3 +84,43 @@ import * as articleListings from './../data/article-listings.json';
 export default class Home extends Vue {}
 
 </script>
+
+
+<style lang="scss" >
+
+  .article{
+    margin: 2em auto;
+    max-width: 800px;
+  }
+  .article-card{
+    margin: 2em;
+    padding: 2em;
+
+    .check-item{
+      background: red;
+    }
+
+    h2{
+      text-align: left;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    
+    ul {
+      margin: 0;
+      list-style: none;
+      float: left;
+      text-align: left;
+    }
+
+    strong{
+      display: inline;
+      &::after {
+        content: "";
+        display: block;
+      }
+    }
+  }
+
+</style>

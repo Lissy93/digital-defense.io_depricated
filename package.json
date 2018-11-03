@@ -24,7 +24,6 @@
     "vue-click-outside": "^1.0.7",
     "vue-link-grid": "^0.1.5",
     "vue-markdown": "^2.2.4",
-    "vue-markdown-loader": "^2.4.1",
     "vue-property-decorator": "^7.0.0",
     "vue-router": "^3.0.1",
     "vue2-animate": "^2.1.0",
