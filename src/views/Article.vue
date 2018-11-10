@@ -37,15 +37,6 @@ import Card from '@/components/Card.vue';
     VueMarkdown,
     Card,
   },
-  filters: {
-    capitalize: (value: string) => {
-      if (!value) {
-        return '';
-      }
-      value = value.toString();
-      return '<Card>This is a card</Card>' + value.charAt(0).toUpperCase() + value.slice(1);
-    },
-  },  
   computed: {
 
     requestedFile() {

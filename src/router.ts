@@ -17,6 +17,11 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
     },
     {
+      path: '/getting-started/intermediate',
+      name: 'intermediate',
+      component: () => import(/* webpackChunkName: "intermediate" */ './views/Intermediate.vue'),
+    },
+    {
       path: '/article/:file',
       name: 'article',
       component: () => import(/* webpackChunkName: "article" */ './views/Article.vue'),
