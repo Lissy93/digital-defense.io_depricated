@@ -65,10 +65,7 @@ const navData = require('./../data/nav-bar-content.json');
         Burger,
     },
 })
-export default class Header extends Vue {}
+export default class NavBar extends Vue {}
 </script>
 
-<style lang="sass">
-  @import './../styles/navbar-styles.scss'
-</style>
-
+<style src="./../styles/navbar-styles.scss" />
