@@ -2,10 +2,8 @@
   <div class="page-intermediate">
     <h1>Intermediate</h1>
     
-      <Card>
-        <vue-markdown class="markdown-container">
-          {{ require('./../docs/intermediate-intro.md') }}
-        </vue-markdown>
+      <Card class="view-card">
+        <MdViewer>{{ require('./../docs/intermediate-intro.md') }}</MdViewer>
       </Card>
 
     <Checklist class="checklist" :theList="theList" title="Strong Password Checklist"/>
@@ -18,14 +16,14 @@ import Vue from 'vue';
 import Component from 'vue-class-component';
 import { Checklist } from 'vue-checklist';
 import Card from '@/components/Card.vue';
-import VueMarkdown from 'vue-markdown';
+import MdViewer from '@/components/MdViewer.vue';
 import * as listPasswords from './../data/intermediate-password-list.json';
 
 @Component({
     components: {
         Checklist,
         Card,
-        VueMarkdown,
+        MdViewer,
     },
     data: () => {
       return  {
@@ -41,8 +39,9 @@ export default class Intermediate extends Vue {}
 
 <style lang="scss">
 
-  @import './../styles/markdown-overrides.scss';
-
+  .view-card{
+    margin: 2em;
+  }
 
   .checklist{
     .checkbox_label, .header-item{
