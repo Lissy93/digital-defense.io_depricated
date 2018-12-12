@@ -1,0 +1,1 @@
+*Authy, Google Authenticator, Microsoft Authenticator and LastPass Authenticator are all good choices. They’re easy to set up, hassle-free to use and significantly increase the security of your accounts.*

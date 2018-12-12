@@ -1,0 +1,1 @@
+*It is important to understand password best practices, since most of your online logins such as email, social media, finance and work accounts can be easily compromised by a hacker if these steps aren’t followed. Consider using passphrases, which are made up of several words, or seemingly random characters.*

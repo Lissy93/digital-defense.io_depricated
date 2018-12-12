@@ -1,12 +1,11 @@
-# Personal Cyber Security | TL;DR
 
-# Aim of this Guide
+## Aim of this Guide
 
 The objectives of this guide are to give you a quick overview of what cyber security is, why it’s important, and the basic steps you can take to keep yourself, your connections and the organisations you work for, safe from common threats.
 
 
 ----------
-# Intro
+## Intro
 
 ### What is Cyber Security?
 In layman's terms, cyber security is simply the measures put in place to protect your digital life. There are two key aspects of a good cyber security approach:
@@ -22,7 +21,7 @@ It’s true that individuals are targets, but more often than not, criminals hav
 
 ----------
 
-# Bottom Line Up Front
+## Bottom Line Up Front
 - A worryingly high proportion of individuals, and organisations have been, or will be hacked.
 - The weak point in any computing system, is the humans (aka, you). This often puts yourself, your contacts and the organisation you work for at risk.
 - A few very basic and simple steps, can make it significantly harder for a hacker to target you.

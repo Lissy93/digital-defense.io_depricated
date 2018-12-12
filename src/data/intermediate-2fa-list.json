@@ -1,0 +1,7 @@
+[
+    { 
+        "name": "Enable 2-Factor-Authentication", 
+        "description": "Enable 2-Factor-Authentication on any online account that allows it. Any site (such as email, social media, finance…) will almost certantly have the option of setting up 2FA.",
+        "checked": false
+    }
+]

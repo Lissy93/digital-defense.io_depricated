@@ -31,6 +31,9 @@ export default class MdViewer extends Vue {
       text-align: left;
       font-size: 1rem;
     }
+    h2 {
+      font-size: 2em;
+    }
     h3 {
       font-size: 1.2rem;
       font-weight: bold;

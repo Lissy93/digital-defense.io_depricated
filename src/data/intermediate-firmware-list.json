@@ -1,0 +1,22 @@
+[
+    { 
+        "name": "Install Updates", 
+        "description": "Always install the latest operating system (Windows, OSX, Android and iOS) updates, when prompted to. Don’t ignore or postpone  them",
+        "checked": false
+    },
+    { 
+        "name": "Apps", 
+        "description": "Keep all apps and software on both your PC and phone up to date",
+        "checked": false
+    },
+    { 
+        "name": "Anti-virus", 
+        "description": "Ensure your antivirus definitions are kept update, or turn on auto-update",
+        "checked": false
+    },
+    { 
+        "name": "Router Firmware", 
+        "description": "Update your router firmware",
+        "checked": false
+    }
+]
