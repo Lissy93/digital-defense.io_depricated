@@ -1,0 +1,32 @@
+[
+    { 
+        "name": "VPN", 
+        "description": "Find a reputable VPN provider, to use on any public, shared or potentially insecure networks",
+        "checked": false
+    },
+    { 
+        "name": "HTTPS", 
+        "description": "Avoid entering data on any site that isn't secured via HTTPS, or use a browser extension such as HTTPS Anywhere",
+        "checked": false
+    },
+    { 
+        "name": "Block trackers", 
+        "description": "Install Privacy Badger to block spying ads and invisible trackers",
+        "checked": false
+    },
+    { 
+        "name": "Extensions", 
+        "description": "Be wary when installing new browser extensions, as there are malicious ones out there, and they can access everything you do on your browser",
+        "checked": false
+    },
+    { 
+        "name": "Incognito", 
+        "description": "When using the internet on either a public device, or someone else computer, use Incognito or private browsing mode, so that cookies, browsing history and your passwords don’t get stored",
+        "checked": false
+    },
+    { 
+        "name": "Privacy Browsers", 
+        "description": "You could consider using a safer browser, such as Brave, Epic or Comodo Dragon. These browsers will disallow trackers, fingerprinting, cryptomining, ultrasound signalling and more",
+        "checked": false
+    }
+]

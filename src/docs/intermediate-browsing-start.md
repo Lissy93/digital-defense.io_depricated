@@ -1,0 +1,1 @@
+Chances are you browse the internet on a daily basis, whether that be for emails, shopping, news, social media or work. *But what you may not realise, it that without following a couple of simple guidelines you are opening yourself up to a whole host of common data exploits while your sending or receiving data from web pages.

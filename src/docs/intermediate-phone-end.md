@@ -1,0 +1,1 @@
+*The data collected by your phone, holds enormous value to advertisers, hackers, scammers and sometimes even stalkers. That’s why it is important to keep an eye on what’s being collected and which apps have permission to access it. Ensure you know how to remotely erase your phone, in case gets stolen.*

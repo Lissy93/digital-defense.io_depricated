@@ -1,0 +1,17 @@
+[
+    { 
+        "name": "Encrypt your PC", 
+        "description": "Encrypt your devices. Windows has [BitLocker](https://docs.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-overview), and OS X comes with [FileVault](https://support.apple.com/en-gb/HT204837) installed. Alternatively [VeraCrypt](https://www.veracrypt.fr/) is a free, fast and secure cross-platform encryption utility",
+        "checked": false
+    },
+    { 
+        "name": "Encrypt your Device", 
+        "description": "If you store either personal, or work related data on a USB stick, or external hard drive, set up encryption with VeraCrypt",
+        "checked": false
+    },
+    { 
+        "name": "Backup", 
+        "description": "Backup all media and data that you wouldn’t want to  loose",
+        "checked": false
+    }
+]

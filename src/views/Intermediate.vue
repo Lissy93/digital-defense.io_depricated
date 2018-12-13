@@ -36,10 +36,44 @@
       </Card>
 
       <!-- Sec 4 - Encryption and Backup -->
+      <Card class="view-card" id="encryption-and-backup">
+        <h2>Encryption and Backup</h2>
+        <MdViewer>{{ require('./../docs/intermediate-encryption-start.md') }}</MdViewer>
+        <Checklist class="checklist" :theList="encryptionList" title="Encryption and Backup Checklist"/>
+        <MdViewer>{{ require('./../docs/intermediate-encryption-end.md') }}</MdViewer>
+      </Card>
+
       <!-- Sec 5 - Safe Browsing -->
+      <Card class="view-card" id="safe-browsing">
+        <h2>Safe Browsing</h2>
+        <MdViewer>{{ require('./../docs/intermediate-browsing-start.md') }}</MdViewer>
+        <Checklist class="checklist" :theList="browsingList" title="Safe Browsing Checklist"/>
+        <MdViewer>{{ require('./../docs/intermediate-browsing-end.md') }}</MdViewer>
+      </Card>
+
       <!-- Sec 6 - Social Media -->
+      <Card class="view-card" id="social-media">
+        <h2>Social Media</h2>
+        <MdViewer>{{ require('./../docs/intermediate-social-start.md') }}</MdViewer>
+        <Checklist class="checklist" :theList="socialList" title="Social Media Checklist"/>
+        <MdViewer>{{ require('./../docs/intermediate-social-end.md') }}</MdViewer>
+      </Card>
+
       <!-- Sec 7 - Smart Phones -->
+      <Card class="view-card" id="smart-phones">
+        <h2>Smart Phones</h2>
+        <MdViewer>{{ require('./../docs/intermediate-phone-start.md') }}</MdViewer>
+        <Checklist class="checklist" :theList="phoneList" title="Smart Phone Checklist"/>
+        <MdViewer>{{ require('./../docs/intermediate-phone-end.md') }}</MdViewer>
+      </Card>
+
       <!-- Sec 8 - Be weary -->
+      <Card class="view-card" id="be-weary">
+        <h2>Social Media</h2>
+        <MdViewer>{{ require('./../docs/intermediate-weary-start.md') }}</MdViewer>
+        <Checklist class="checklist" :theList="wearyList" title="Be Weary Checklist"/>
+        <MdViewer>{{ require('./../docs/intermediate-weary-end.md') }}</MdViewer>
+      </Card>
 
   </div>
 </template>
@@ -54,6 +88,11 @@ import MdViewer from '@/components/MdViewer.vue';
 import * as listPasswords from './../data/intermediate-password-list.json';
 import * as list2Fa from './../data/intermediate-2fa-list.json';
 import * as listUpdates from './../data/intermediate-firmware-list.json';
+import * as listEncryption from './../data/intermediate-encryption-list.json';
+import * as listBrowsing from './../data/intermediate-browsing-list.json';
+import * as listSocial from './../data/intermediate-social-list.json';
+import * as listPhone from './../data/intermediate-phone-list.json';
+import * as listWeary from './../data/intermediate-weary-list.json';
 
 @Component({
     components: {
@@ -66,6 +105,11 @@ import * as listUpdates from './../data/intermediate-firmware-list.json';
         passwordList: listPasswords.default,
         twoFaList: list2Fa.default,
         updatesList: listUpdates.default,
+        encryptionList: listEncryption.default,
+        browsingList: listBrowsing.default,
+        socialList: listSocial.default,
+        phoneList: listPhone.default,
+        wearyList: listWeary.default,
       };
     },
 })
@@ -88,6 +132,10 @@ export default class Intermediate extends Vue {}
   }
 
   .checklist{
+    box-shadow: none !important;
+    border: 1px solid #CCC;
+    border-radius: 10px;
+
     .checkbox_label, .header-item{
         font-family: 'Dosis', sans-serif;
     }
