@@ -6,21 +6,72 @@
 
       <!-- Contents -->
       <Card class="view-card" id="contents">
-        <ul>
-          <li v-scroll-to="'#intro'">Introduction</li>
-          <li v-scroll-to="'#passwords'">Passwords</li>
-          <li v-scroll-to="'#2-fa'">Two-Factor Authentication</li>
-          <li v-scroll-to="'#firmware-updates'">Firmware Updates</li>
-          <li v-scroll-to="'#encryption-and-backup'">Encryption and Backup</li>
-          <li v-scroll-to="'#safe-browsing'">Safe Browsing</li>
-          <li v-scroll-to="'#social-media'">Social Media</li>
-          <li v-scroll-to="'#smart-phones'">Smart Phones</li>
-          <li v-scroll-to="'#be-weary'">Be Weary</li>
-        </ul>
-      </Card>
+        
+        <h3>Contents</h3>
 
-      <!-- Introduction -->
-      <Card class="view-card" id="intro">
+        <section class="tile-wrapper"> 
+
+          <Tile
+              class="tile"
+              name="Passwords"
+              icon="/img/icon_password.jpg"
+              v-scroll-to="'#passwords'"
+              color="#f16449"
+          />
+          <Tile
+              class="tile"
+              name="2fa"
+              icon="/img/icon_2fa.jpg"
+              v-scroll-to="'#2-fa'"
+              color="#26bdb4"
+          />
+          <Tile
+              class="tile"
+              name="Firmware Updates"
+              icon="/img/icon_antivirus.jpg"
+              v-scroll-to="'#firmware-updates'"
+              color="#feca39"
+          />
+          <Tile
+              class="tile"
+              name="Encryption and Backup"
+              icon="/img/icon_encryption.jpg"
+              v-scroll-to="'#encryption-and-backup'"
+              color="#d844a2"
+          />
+          <Tile
+              class="tile"
+              name="Safe Browsing"
+              icon="/img/icon_secure.jpg"
+              v-scroll-to="'#safe-browsing'"
+              color="#222222"
+          />
+          <Tile
+              class="tile"
+              name="Social Media"
+              icon="/img/icon_social.jpg"
+              v-scroll-to="'#social-media'"
+              color="#ff5e4c"
+          />
+          <Tile
+              class="tile"
+              name="Smart Phones"
+              icon="/img/icon_phone.jpg"
+              v-scroll-to="'#smart-phones'"
+              color="#f1634a"
+          />
+          <Tile
+              class="tile"
+              name="Think before you Click"
+              icon="/img/icon_click.jpg"
+              v-scroll-to="'#be-weary'"
+              color="#a37db8"
+          />
+
+        </section>
+
+        <hr>
+ 
         <MdViewer>{{ require('./../docs/intermediate-intro.md') }}</MdViewer>
       </Card>
   
@@ -122,6 +173,7 @@ import { Checklist } from 'vue-checklist';
 import Card from '@/components/Card.vue';
 import MdViewer from '@/components/MdViewer.vue';
 import * as  VueScrollTo from 'vue-scrollto';
+import { Tile } from 'vue-link-grid';
 
 import * as listPasswords from './../data/intermediate-password-list.json';
 import * as list2Fa from './../data/intermediate-2fa-list.json';
@@ -139,6 +191,7 @@ Vue.use(VueScrollTo);
         Checklist,
         Card,
         MdViewer,
+        Tile,
     },
     data: () => {
       return  {
@@ -178,6 +231,53 @@ export default class Intermediate extends Vue {}
     h2{
       color: (rgba(255,255,255,0.8))
     }
+  }
+
+  .tile-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    .tile {
+      flex: 1;
+      justify-content: space-between;
+      flex-flow: column;
+      padding: 6px 2px 2px 2px;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+      &:hover {
+        box-shadow: 0 7px 14px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
+      }
+      .tile-texts {
+        color: #FFF;
+      }
+    }
+  }
+
+
+  /* Icon Bounce */
+  .tile {
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+  .tile .tile-icon {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .tile:hover .tile-icon, .tile:focus .tile-icon, .tile:active .tile-icon {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    // -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
   }
 
   .page-intermediate{

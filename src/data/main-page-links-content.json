@@ -9,7 +9,7 @@
                     "name": "Beginner",
                     "color": "#ffbd00",
                     "description": "Get started with understanding the basics of staying safe online",
-                    "url": "https://google.com",
+                    "path": "/getting-started/beginner",
                     "icon": "/img/ico_beginner.png"
                 },
                 {
@@ -17,7 +17,7 @@
                     "name": "Intermediate",
                     "color": "#00c4d4",
                     "description": "Personal cyber security principles we all should follow",
-                    "url": "https://google.com",
+                    "path": "/getting-started/intermediate",
                     "icon": "/img/ico_intermediate.png"
                 },
                 {
@@ -25,7 +25,7 @@
                     "name": "Advanced",
                     "color": "#ff636f",
                     "description": "Complete personal cyber security checklist",
-                    "url": "https://google.com",
+                    "path": "/getting-started/advanced",
                     "icon": "/img/ico_advanced.png"
                 }
             ]
