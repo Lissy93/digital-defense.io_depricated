@@ -1968,7 +1968,7 @@ babel-loader@8.0.2:
     mkdirp "^0.5.1"
     util.promisify "^1.0.0"
 
-babel-loader@^8.0.0-0, babel-loader@^8.0.4:
+babel-loader@^8.0.0-0:
   version "8.0.4"
   resolved "https://registry.yarnpkg.com/babel-loader/-/babel-loader-8.0.4.tgz#7bbf20cbe4560629e2e41534147692d3fecbdce6"
   dependencies:
@@ -7961,12 +7961,11 @@ vue-hot-reload-api@^2.3.0:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.1.tgz#b2d3d95402a811602380783ea4f566eb875569a2"
 
-vue-link-grid@^0.1.5:
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/vue-link-grid/-/vue-link-grid-0.1.5.tgz#a20a995e972016dee0ff83b6b052097e4595d9b4"
+vue-link-grid@^0.1.7:
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/vue-link-grid/-/vue-link-grid-0.1.7.tgz#4bb4cd1ef48d4848e8ecb50f2e510a62b01db6cc"
   dependencies:
     "@types/node" "^10.11.2"
-    babel-loader "^8.0.4"
     register-service-worker "^1.0.0"
     vue "^2.5.17"
     vue-class-component "^6.0.0"

@@ -22,7 +22,7 @@
               class="tile"
               name="2fa"
               icon="/img/icon_2fa.jpg"
-              v-scroll-to="'#2-fa'"
+              v-scroll-to="'#two-f-a'"
               color="#26bdb4"
           />
           <Tile
@@ -87,7 +87,7 @@
       </Card>
 
       <!-- Sec 2 - Two-Factor Authentication -->
-      <Card class="view-card" id="2-fa">
+      <Card class="view-card" id="two-f-a">
         <div class="section-heading" style="background: #26bdb4;">
           <img src="/img/icon_2fa.jpg" alt="2-Factor Authentication">
           <h2>Two-Facto Authentication</h2>
