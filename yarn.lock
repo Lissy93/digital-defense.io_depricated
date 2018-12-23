@@ -7940,9 +7940,9 @@ vue-carousel@^0.16.0-rc1:
     vue "^2.5.17"
     vue-play "^3.2.1"
 
-vue-checklist@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/vue-checklist/-/vue-checklist-0.1.2.tgz#b2d14793c144b373f90555043f6f650d07545e77"
+vue-checklist@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/vue-checklist/-/vue-checklist-0.1.4.tgz#319d3be94a581a9bbb0df22d134f03bf7369b121"
   dependencies:
     vue "^2.5.17"
     vue-class-component "^6.0.0"

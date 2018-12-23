@@ -20,7 +20,7 @@
           />
           <Tile
               class="tile"
-              name="2fa"
+              name="2 Factor Authentication"
               icon="/img/icon_2fa.jpg"
               v-scroll-to="'#two-f-a'"
               color="#26bdb4"
@@ -233,6 +233,15 @@ export default class Intermediate extends Vue {}
     }
   }
 
+    @media only screen and (max-width: 768px) {
+
+      .section-heading {
+        display: flex;
+        flex-direction: column;
+      }
+
+    }
+
   .tile-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -297,6 +306,7 @@ export default class Intermediate extends Vue {}
 
     .checkbox_label, .header-item{
         font-family: 'Dosis', sans-serif;
+        text-align: left;
     }
     .item-details{
         font-family: 'Raleway', sans-serif;
