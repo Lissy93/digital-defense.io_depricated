@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
+import Intermediate from './views/Intermediate.vue';
 
 Vue.use(Router);
 
@@ -19,7 +20,7 @@ export default new Router({
     {
       path: '/getting-started/intermediate',
       name: 'intermediate',
-      component: () => import(/* webpackChunkName: "intermediate" */ './views/Intermediate.vue'),
+      component: Intermediate,
     },
     {
       path: '/article/:file',
