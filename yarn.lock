@@ -5696,6 +5696,10 @@ npm-run-path@^2.0.0:
     gauge "~2.7.3"
     set-blocking "~2.0.0"
 
+nprogress@0.2.0:
+  version "0.2.0"
+  resolved "http://registry.npmjs.org/nprogress/-/nprogress-0.2.0.tgz#cb8f34c53213d895723fcbab907e9422adbcafb1"
+
 nth-check@^1.0.2, nth-check@~1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/nth-check/-/nth-check-1.0.2.tgz#b2bd295c37e3dd58a3bf0700376663ba4d9cf05c"
@@ -7981,6 +7985,10 @@ vue-loader@^15.4.2:
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
 
+vue-loading-overlay@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/vue-loading-overlay/-/vue-loading-overlay-3.1.1.tgz#02f11958a42262135584591cfc959143b4e834b1"
+
 vue-markdown@^2.2.4:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/vue-markdown/-/vue-markdown-2.2.4.tgz#db0f774178f3bc91ee18c626d86a3a0d2de22746"
@@ -8004,6 +8012,12 @@ vue-material-checkbox@^1.2.1:
   resolved "https://registry.yarnpkg.com/vue-material-checkbox/-/vue-material-checkbox-1.2.1.tgz#5ecd7defe00cec1d326c356635ea83d224bd27a1"
   dependencies:
     vue "^2.5.17"
+
+vue-nprogress@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/vue-nprogress/-/vue-nprogress-0.1.5.tgz#574b412f1034012daaf46299d5505d5812f406e6"
+  dependencies:
+    nprogress "0.2.0"
 
 vue-play@^3.2.1:
   version "3.2.1"

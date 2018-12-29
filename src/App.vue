@@ -2,6 +2,12 @@
 
   <div id="app">
 
+    <!-- The Loader -->
+    <loading :active.sync="isLoading" 
+      :can-cancel="true" 
+      :on-cancel="onCancel"
+      :is-full-page="true"></loading>
+
     <div class="wrapper">
 
       <!-- Header containing navigation bar (don't show on home) -->
@@ -9,7 +15,9 @@
 
     <!-- Main Content -->
     <main>
-      <router-view/>
+      <transition name="slide-left">
+        <router-view/>
+      </transition>
     </main>
 
     <!-- Magic Trick for Stickey Footer -->
@@ -28,13 +36,27 @@
 
   import { Component, Vue } from 'vue-property-decorator';
 
+  import Loading from 'vue-loading-overlay';
+  import 'vue-loading-overlay/dist/vue-loading.css';
+
   import Header from './components/Header.vue';
   import Footer from './components/Footer.vue';
 
+  // tslint:disable:no-var-requires
+  const IsLoadingStore = require('./stores/IsLoadingStore.js');
+  // tslint:enable:no-var-requires
+
+
   @Component({
+    data() {
+        return {
+            isLoading: IsLoadingStore.default.getters.isLoading,
+        };
+    },
   components: {
     Header,
     Footer,
+    Loading,
   },
 })
 export default class Home extends Vue {}
