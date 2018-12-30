@@ -1,8 +1,8 @@
 [
     {"name": "Home", "path": "/", "children": []},
-    {"name": "Beginner", "path": "/beginner", "children": []},
-    {"name": "Intermediate", "path": "/intermediate", "children": []},
-    {"name": "Advanced", "path": "/advanced", "children": []},
+    {"name": "Beginner", "path": "/getting-started/beginner", "children": []},
+    {"name": "Intermediate", "path": "/getting-started/intermediate", "children": []},
+    {"name": "Advanced", "path": "/getting-started/advanced", "children": []},
     {"name": "Specifics", "path": "/specifics", "children": [
         {"name": "Passwords", "path": "/specifics/passwords", "children": []},
         {"name": "Updates", "path": "/specifics/updates", "children": []},
