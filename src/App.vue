@@ -5,7 +5,6 @@
     <!-- The Loader -->
     <loading :active.sync="isLoading" 
       :can-cancel="true" 
-      :on-cancel="onCancel"
       :is-full-page="true"></loading>
 
     <div class="wrapper">

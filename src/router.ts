@@ -3,6 +3,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
 import Intermediate from './views/Intermediate.vue';
+import Advanced from './views/Advanced.vue';
 
 import Loading from 'vue-loading-overlay';
 import 'vue-loading-overlay/dist/vue-loading.css';
@@ -32,6 +33,11 @@ const router = new Router({
       path: '/getting-started/intermediate',
       name: 'intermediate',
       component: Intermediate,
+    },
+    {
+      path: '/getting-started/advanced',
+      name: 'advanced',
+      component: Advanced,
     },
     {
       path: '/article/:file',
