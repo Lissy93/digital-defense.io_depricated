@@ -22,8 +22,6 @@ export default class MdViewer extends Vue {
 <style lang="scss">
   .md-content{
 
-    padding: 1em;
-
     h1, h2, h3, h4, h5 {
       text-align: left;
     }

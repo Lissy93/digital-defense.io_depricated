@@ -11,7 +11,11 @@
         <tbody>
             <tr v-for="tableRow in tableRows" v-bind:key="tableRow.title">
                 <td>{{ tableRow.title }}</td>
-                <td>{{ tableRow.priority }}</td>
+                <td class="priority">
+                    <span :class="`priority-${tableRow.priority}`">
+                        {{ tableRow.priority }}
+                    </span>
+                </td>
                 <td v-html="tableRow.description"></td>
                 <td>
                     <Checkbox :id="tableRow.title">Done</Checkbox>
@@ -54,6 +58,23 @@ table{
     }
     /deep/ a {
         color: #89a9c9;
+    }
+    .priority {
+        span {
+            border-radius: 10px;
+            padding: 0.5em;
+            text-transform: capitalize;
+            cursor: default;
+        }
+        .priority-recommended {
+            background: #caebca;
+        }
+        .priority-optional {
+            background: #f8d79a;
+        }
+        .priority-advanced {
+            background: #efc0c0;
+        }
     }
 }
 

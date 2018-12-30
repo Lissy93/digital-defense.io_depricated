@@ -72,7 +72,7 @@
 
         <hr>
  
-        <MdViewer>{{ require('./../docs/intermediate-intro.md') }}</MdViewer>
+        <MdViewer class="md">{{ require('./../docs/intermediate-intro.md') }}</MdViewer>
       </Card>
   
       <!-- Sec 1 - Passowrds -->
@@ -81,9 +81,9 @@
           <img src="/img/icon_password.jpg" alt="Passwords">
           <h2>Passwords</h2>
         </div>
-        <MdViewer>{{ require('./../docs/intermediate-passwords-start.md') }}</MdViewer>
+        <MdViewer class="md">{{ require('./../docs/intermediate-passwords-start.md') }}</MdViewer>
         <Checklist class="checklist" :theList="passwordList" title="Strong Password Checklist"/>
-        <MdViewer>{{ require('./../docs/intermediate-passwords-end.md') }}</MdViewer>
+        <MdViewer class="md">{{ require('./../docs/intermediate-passwords-end.md') }}</MdViewer>
       </Card>
 
       <!-- Sec 2 - Two-Factor Authentication -->
@@ -92,9 +92,9 @@
           <img src="/img/icon_2fa.jpg" alt="2-Factor Authentication">
           <h2>Two-Facto Authentication</h2>
         </div>
-        <MdViewer>{{ require('./../docs/intermediate-2fa-start.md') }}</MdViewer>
+        <MdViewer class="md">{{ require('./../docs/intermediate-2fa-start.md') }}</MdViewer>
         <Checklist class="checklist" :theList="twoFaList" title="2-FA Checklist"/>
-        <MdViewer>{{ require('./../docs/intermediate-2fa-end.md') }}</MdViewer>
+        <MdViewer class="md">{{ require('./../docs/intermediate-2fa-end.md') }}</MdViewer>
       </Card>
 
       <!-- Sec 3 - Firmware Updates -->
@@ -103,9 +103,9 @@
           <img src="/img/icon_antivirus.jpg" alt="Firmware and Updates">
           <h2>Firmware and Software Updates</h2>
         </div>
-        <MdViewer>{{ require('./../docs/intermediate-firmware-start.md') }}</MdViewer>
+        <MdViewer class="md">{{ require('./../docs/intermediate-firmware-start.md') }}</MdViewer>
         <Checklist class="checklist" :theList="updatesList" title="Software Updates Checklist"/>
-        <MdViewer>{{ require('./../docs/intermediate-firmware-end.md') }}</MdViewer>
+        <MdViewer class="md">{{ require('./../docs/intermediate-firmware-end.md') }}</MdViewer>
       </Card>
 
       <!-- Sec 4 - Encryption and Backup -->
@@ -114,9 +114,9 @@
           <img src="/img/icon_encryption.jpg" alt="Encryption and Backup">
           <h2>Encryption and Backup</h2>
         </div>
-        <MdViewer>{{ require('./../docs/intermediate-encryption-start.md') }}</MdViewer>
+        <MdViewer class="md">{{ require('./../docs/intermediate-encryption-start.md') }}</MdViewer>
         <Checklist class="checklist" :theList="encryptionList" title="Encryption and Backup Checklist"/>
-        <MdViewer>{{ require('./../docs/intermediate-encryption-end.md') }}</MdViewer>
+        <MdViewer class="md">{{ require('./../docs/intermediate-encryption-end.md') }}</MdViewer>
       </Card>
 
       <!-- Sec 5 - Safe Browsing -->
@@ -125,9 +125,9 @@
           <img src="/img/icon_secure.jpg" alt="Safe Browsing">
           <h2>Safe Browsing</h2>
         </div>
-        <MdViewer>{{ require('./../docs/intermediate-browsing-start.md') }}</MdViewer>
+        <MdViewer class="md">{{ require('./../docs/intermediate-browsing-start.md') }}</MdViewer>
         <Checklist class="checklist" :theList="browsingList" title="Safe Browsing Checklist"/>
-        <MdViewer>{{ require('./../docs/intermediate-browsing-end.md') }}</MdViewer>
+        <MdViewer class="md">{{ require('./../docs/intermediate-browsing-end.md') }}</MdViewer>
       </Card>
 
       <!-- Sec 6 - Social Media -->
@@ -136,9 +136,9 @@
           <img src="/img/icon_social.jpg" alt="Social Media">
           <h2>Social Media</h2>
         </div>
-        <MdViewer>{{ require('./../docs/intermediate-social-start.md') }}</MdViewer>
+        <MdViewer class="md">{{ require('./../docs/intermediate-social-start.md') }}</MdViewer>
         <Checklist class="checklist" :theList="socialList" title="Social Media Checklist"/>
-        <MdViewer>{{ require('./../docs/intermediate-social-end.md') }}</MdViewer>
+        <MdViewer class="md">{{ require('./../docs/intermediate-social-end.md') }}</MdViewer>
       </Card>
 
       <!-- Sec 7 - Smart Phones -->
@@ -147,9 +147,9 @@
           <img src="/img/icon_phone.jpg" alt="Smart Phones">
           <h2>Smart Phones</h2>
         </div>
-        <MdViewer>{{ require('./../docs/intermediate-phone-start.md') }}</MdViewer>
+        <MdViewer class="md">{{ require('./../docs/intermediate-phone-start.md') }}</MdViewer>
         <Checklist class="checklist" :theList="phoneList" title="Smart Phone Checklist"/>
-        <MdViewer>{{ require('./../docs/intermediate-phone-end.md') }}</MdViewer>
+        <MdViewer class="md">{{ require('./../docs/intermediate-phone-end.md') }}</MdViewer>
       </Card>
 
       <!-- Sec 8 - Be weary -->
@@ -158,9 +158,9 @@
           <img src="/img/icon_click.jpg" alt="Think before you Click">
           <h2>Be Weary</h2>
         </div>
-        <MdViewer>{{ require('./../docs/intermediate-weary-start.md') }}</MdViewer>
+        <MdViewer class="md">{{ require('./../docs/intermediate-weary-start.md') }}</MdViewer>
         <Checklist class="checklist" :theList="wearyList" title="Be Weary Checklist"/>
-        <MdViewer>{{ require('./../docs/intermediate-weary-end.md') }}</MdViewer>
+        <MdViewer class="md">{{ require('./../docs/intermediate-weary-end.md') }}</MdViewer>
       </Card>
 
   </div>
@@ -213,6 +213,10 @@ export default class Intermediate extends Vue {}
 
 
 <style lang="scss">
+
+  .md {
+    margin: 1em;
+  }
 
   .section-heading {
     display: flex;
