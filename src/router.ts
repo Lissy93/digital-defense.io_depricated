@@ -56,7 +56,7 @@ router.beforeEach((to, from, next) => {
 });
 router.afterEach((to, from) => {
   IsLoadingStore.default.commit('finishLoading');
-  loading.hide();
+  setTimeout(() => { loading.hide(); }, 500);
 });
 
 export default router;
