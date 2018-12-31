@@ -10,14 +10,16 @@
         </thead>
         <tbody>
             <tr v-for="tableRow in tableRows" v-bind:key="tableRow.title">
-                <td>{{ tableRow.title }}</td>
-                <td class="priority">
-                    <span :class="`priority-${tableRow.priority}`">
+                <td class="subheading-col">
+                    {{ tableRow.title }}
+                </td>
+                <td class="priority-col" :class="`priority-${tableRow.priority}`">
+                    <span>
                         {{ tableRow.priority }}
                     </span>
                 </td>
                 <td v-html="tableRow.description"></td>
-                <td>
+                <td class="checkbox-col">
                     <Checkbox :id="tableRow.title">Done</Checkbox>
                 </td>
             </tr>
@@ -59,21 +61,54 @@ table{
     /deep/ a {
         color: #89a9c9;
     }
-    .priority {
+    .priority-col {
         span {
             border-radius: 10px;
             padding: 0.5em;
             text-transform: capitalize;
             cursor: default;
         }
-        .priority-recommended {
+        &.priority-recommended span {
             background: #caebca;
         }
-        .priority-optional {
+        &.priority-optional span {
             background: #f8d79a;
         }
-        .priority-advanced {
+        &.priority-advanced span {
             background: #efc0c0;
+        }
+    }
+}
+
+@media (max-width: 769px) {
+    table {
+        thead {
+            display: none;
+        }
+        tr {
+            display: flex;
+            flex-direction: column;
+            .subheading-col {
+                font-weight: bold;
+                text-align: center;
+                margin-top: 1.5em;
+            }
+            .priority-col {
+                text-align: center;
+                    font-style: italic;
+                    &.priority-recommended {
+                        background: #caebca;
+                    }
+                    &.priority-optional {
+                        background: #f8d79a;
+                    }
+                    &.priority-advanced {
+                        background: #efc0c0;
+                    }
+            }
+            .checkbox-col {
+                display: none;
+            }
         }
     }
 }
