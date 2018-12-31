@@ -1,0 +1,1 @@
+Both SMS texting and traditional phone calls are not secure. Avoid it whenever there is a reasonable alternative, and don’t use these means to communicate anything secure. Be wary of who you share your phone number with

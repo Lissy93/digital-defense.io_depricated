@@ -1,0 +1,6 @@
+
+ Nearly 50 years since the first email was sent, they’re still very much a big part of our day-to-day life, and will probably continue to be for the near future. So considering how much trust we put in them, it’s surprising how fundamentally insecure this infrastructure is. Email-related fraud [is on the up](https://www.csoonline.com/article/3247670/email/email-security-in-2018.html), and without taking basic measures you could be at risk. (For basic enterprise pointers, see [this article](https://digitalguardian.com/blog/what-email-security-data-protection-101)).
+ 
+ If a hacker gets access to your emails, it provides a gateway for your other accounts to be compromised, therefore email security is paramount for your digital safety. 
+ 
+ These links are also useful for additional simple measures that you can take to specifically protect a [Yahoo](https://heimdalsecurity.com/blog/complete-guide-e-mail-security/#yahoo), [GMail](https://heimdalsecurity.com/blog/complete-guide-e-mail-security/#gmail), [Outlook](https://heimdalsecurity.com/blog/complete-guide-e-mail-security/#outlook) and [AOL](https://heimdalsecurity.com/blog/complete-guide-e-mail-security/#aol) account. 

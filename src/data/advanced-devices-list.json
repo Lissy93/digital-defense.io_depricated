@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Turn of connectivity features that aren't being used",
+        "priority": "recommended",
+        "description": "When your not using WiFi, Bluetooth, NFC or anything else- turn those features off. These are commonly used to easily hack individuals"
+    },
+    {
+        "title": "Uninstall apps that you don’t need",
+        "priority": "recommended",
+        "description": "Don’t have apps that your not using on your phone, as they can be collecting data in the background. Don’t install apps from non-legitimate sources, or apps with few reviews"
+    },
+    {
+        "title": "Don’t grant apps permissions that they don’t need",
+        "priority": "recommended",
+        "description": "If an app doesn’t need access to your camera- don’t grant it access. Same with any features of your phone, be wary about what each app has access to"
+    },
+    {
+        "title": "Consider running a custom ROM if you have an Android device",
+        "priority": "advanced",
+        "description": "Your default OS tracks information about your usage, and app data, constantly. Consider a security-focused custom ROM, such as <a href=\"https://lineageos.org\">Lineage</a> or <a href=\"https://copperhead.co/android/\">CopperheadOS</a>"
+    }
+]

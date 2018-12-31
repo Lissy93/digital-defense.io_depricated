@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Check your privacy settings",
+        "priority": "recommended",
+        "description": "Most social networks allow you to control your privacy settings. Ensure that your profile can only be viewed by people who you are in your friends list, and you know personally"
+    },
+    {
+        "title": "Only put info on social media that you wouldn’t mind being public",
+        "priority": "recommended",
+        "description": "Even with tightened security settings, don’t put anything online that you wouldn’t want to be seen by anyone other than your friends. Don’t reply solely on the social networks security"
+    },
+    {
+        "title": "Don’t give social networking apps permissions they don’t need",
+        "priority": "recommended",
+        "description": "By default many of the popular social networking apps, will ask for permission to access your contacts, your call log, your location, your messaging history etc.. If they don’t need this access- don’t grant it"
+    },
+    {
+        "title": "Revoke access for apps your no longer using",
+        "priority": "recommended",
+        "description": "Instructions: <a href=\"https://www.facebook.com/settings?tab=applications\">Facebook</a>, <a href=\"https://twitter.com/settings/applications\">Twitter</a>, <a href=\"https://www.linkedin.com/psettings/third-party-applications\">LinkedIn</a>, <a href=\"https://www.instagram.com/accounts/manage_access/\">Instagram</a>"
+    },
+    {
+        "title": "Remove meta data before uploading media",
+        "priority": "optional",
+        "description": "Most smartphones and some cameras automatically attach a comprehensive set of additional data to each photograph., This usually includes things like time, date, location, camera model, user etc. Remove this data before uploading. See <a href=\"https://www.makeuseof.com/tag/3-ways-to-remove-exif-metadata-from-photos-and-why-you-might-want-to/\">this guide</a> for more info"
+    },
+    {
+        "title": "Don’t have any social media accounts",
+        "priority": "advanced",
+        "description": "It may seem a bit extreme, but if your serious about data privacy and security, stay away from entering information on any social media platform"
+    }
+]

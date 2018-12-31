@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Have more than one email address",
+        "priority": "recommended",
+        "description": "Keeping your important and safety-critical messages separate from trivial subscriptions such as newsletters, is a very good idea. Be sure to use different passwords. This will also make recovering a compromised account after an email breach easier"
+    },
+    {
+        "title": "Keep security in mind when logging into emails",
+        "priority": "recommended",
+        "description": "Your email account is one of the most important to protect with a secure password. Only sync your emails with your phone, if it is secured (encrypted with password). Don’t allow your browser to save your email password. Prevent man-in-the-middle attacks by only logging in on a secured browser"
+    },
+    {
+        "title": "Always be weary of phishing and scams",
+        "priority": "recommended",
+        "description": "If you get an email from someone you don’t recognize, don’t reply, don’t click on any links, and absolutely don’t download an attachment. Keep an eye out for senders pretending to be someone else, such as your bank, email provider or utility company. Check the domain, read it, ensure it’s addressed directly to you, and still don’t give them any personal details. Check out <a href=\"https://heimdalsecurity.com/blog/abcs-detecting-preventing-phishing/\">this guide, on how to spot phishing emails</a>"
+    },
+    {
+        "title": "Don’t share sensitive over email",
+        "priority": "optional",
+        "description": "Emails are very very easily intercepted. Also you can’t know how secure your recipients environment is. Don’t share anything personal, such as bank details, passwords, confidential information over email. Ideally, don’t use email as any primary method of communication"
+    },
+    {
+        "title": "Don’t connect third-party apps to your email account",
+        "priority": "optional",
+        "description": "If you give a third-party app (like Unroll.me) full access to your inbox, this makes you vulnerable to cyber attacks. The app can be compromised and, as a consequence, cyber criminals would gain unhindered access to all your emails and their contents"
+    },
+    {
+        "title": "Consider switching to a more secure email provider",
+        "priority": "optional",
+        "description": "Email providers such as <a href=\"https://protonmail.com\">ProtonMail</a>, <a href=\"https://countermail.com\">CounterMail</a>, <a href=\"https://www.hushmail.com\">HushMail</a> (for business users) or <a href=\"https://mailfence.com\">MailFence</a> allow for end-to-end encryption, full privacy as well as more security-focused features"
+    }
+]

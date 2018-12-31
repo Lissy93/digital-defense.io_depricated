@@ -1,0 +1,7 @@
+[
+    {
+        "title": "Use an authenticator",
+        "priority": "recommended",
+        "description": "Use <a href=\"https://support.google.com/accounts/answer/1066447\">Google Authenticator</a> where sites offer 2-FA. Alternative authenticators include: <a href=\"https://authy.com\">Authy</a>,  <a href=\"https://freeotp.github.io\">FreeOTP</a>, <a href=\"https://lastpass.com/auth/\">LastPassAuthenticator</a> and <a href=\"https://www.authenticatorplus.com\">AuthenticatorPlus</a>. SMS codes are ubiquitous, but easy to break so although better than nothing, not ideal. Another option is a hardware-based 2FA, such as <a href=\"https://www.yubico.com/security-keys-authentication/\">Yubico</a>, although with limited compatibility and of  course a physical cost. Check out <a href=\"https://twofactorauth.org/\">this list of apps/ sites which provide the option of 2FA</a>"
+    }
+]
