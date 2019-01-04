@@ -56,12 +56,10 @@ const router = new Router({
 let loading: any;
 
 router.beforeEach((to, from, next) => {
-  IsLoadingStore.default.commit('startLoading');
   loading = (Vue as any).$loading.show();
   next();
 });
 router.afterEach((to, from) => {
-  IsLoadingStore.default.commit('finishLoading');
   setTimeout(() => { loading.hide(); }, 500);
 });
 
