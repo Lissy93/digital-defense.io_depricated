@@ -2,12 +2,18 @@
     {"name": "Home", "path": "/", "children": []},
     {"name": "Beginner", "path": "/getting-started/beginner", "children": []},
     {"name": "Intermediate", "path": "/getting-started/intermediate", "children": []},
-    {"name": "Advanced", "path": "/getting-started/advanced", "children": []},
+    {"name": "Full Checklist", "path": "/full-checklist", "children": []},
     {"name": "Specifics", "path": "/specifics", "children": [
-        {"name": "Passwords", "path": "/specifics/passwords", "children": []},
-        {"name": "Updates", "path": "/specifics/updates", "children": []},
-        {"name": "Browsing", "path": "/specifics/browsing", "children": []},
-        {"name": "2 FA", "path": "/specifics/2fa", "children": []}
+        {"name": "Passwords", "path": "/full-checklist#passwords", "children": []},
+        {"name": "2 FA", "path": "/full-checklist#2fa", "children": []},
+        {"name": "Browser & Search", "path": "/full-checklist#browser", "children": []},
+        {"name": "VPN", "path": "/full-checklist#vpn", "children": []},
+        {"name": "Emails", "path": "/full-checklist#emails", "children": []},
+        {"name": "Social Media", "path": "/full-checklist#social", "children": []},
+        {"name": "Devices", "path": "/full-checklist#devices", "children": []},
+        {"name": "SMS and Calls", "path": "/full-checklist#sms", "children": []},
+        {"name": "Router", "path": "/full-checklist#router", "children": []},
+        {"name": "Operating System", "path": "/full-checklist#os", "children": []}
     ]},
     {"name": "More", "path": "/tools", "children": [
         {"name": "Hack Map", "path": "/tools/map", "children": []},
