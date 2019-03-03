@@ -22,10 +22,10 @@
                 },
                 {
                     "id": "2",
-                    "name": "Advanced",
+                    "name": "Full Checklist",
                     "color": "#ff636f",
                     "description": "Complete personal cyber security checklist",
-                    "path": "/getting-started/advanced",
+                    "path": "/full-checklist",
                     "icon": "/img/ico_advanced.png"
                 }
             ]

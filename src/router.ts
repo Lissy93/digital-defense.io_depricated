@@ -3,21 +3,17 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
 import Intermediate from './views/Intermediate.vue';
-import Advanced from './views/Advanced.vue';
+import FullList from './views/FullList.vue';
 
 import Loading from 'vue-loading-overlay';
 import 'vue-loading-overlay/dist/vue-loading.css';
 
 Vue.use(Loading);
 
-// tslint:disable:no-var-requires
-const IsLoadingStore = require('./stores/IsLoadingStore.js');
-// tslint:enable:no-var-requires
-
-
 Vue.use(Router);
 
 const router = new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -35,9 +31,9 @@ const router = new Router({
       component: Intermediate,
     },
     {
-      path: '/getting-started/advanced',
-      name: 'advanced',
-      component: Advanced,
+      path: '/full-checklist',
+      name: 'full-list',
+      component: FullList,
     },
     {
       path: '/article/:file',

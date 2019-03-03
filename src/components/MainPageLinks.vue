@@ -1,8 +1,6 @@
 <template>
   <div class="main-page-links">
     
-    <router-link to="/getting-started/intermediate">Test Link</router-link>
-
     <TileSection
       v-for="(section, sectionIndex) in this.sections"
       :key="sectionIndex" 

@@ -7,8 +7,11 @@
       <!-- Contents -->
       <Card class="view-card" id="contents">
         
-        <h3>Contents</h3>
+        <MdViewer class="md">{{ require('./../docs/intermediate-intro.md') }}</MdViewer>
 
+        <hr>
+        <h3>Contents</h3>
+        
         <section class="tile-wrapper"> 
 
           <Tile
@@ -69,10 +72,6 @@
           />
 
         </section>
-
-        <hr>
- 
-        <MdViewer class="md">{{ require('./../docs/intermediate-intro.md') }}</MdViewer>
       </Card>
   
       <!-- Sec 1 - Passowrds -->
