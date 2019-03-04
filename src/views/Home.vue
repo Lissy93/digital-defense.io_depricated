@@ -2,7 +2,7 @@
   <div class="home">
     <Hero />
     <MainPageLinks />
-    <PageIntro />
+    <!-- <PageIntro /> -->
   </div>
 </template>
 
@@ -21,3 +21,4 @@ import MainPageLinks from '@/components/MainPageLinks.vue';
 })
 export default class Home extends Vue {}
 </script>
+

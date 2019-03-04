@@ -64,6 +64,7 @@ html, body, #app {
 .wrapper {
   min-height: 100%;
   margin-bottom: -3em ;
+  background: #2c3e50;
 }
 .footer, .push {
   min-height: 3em;

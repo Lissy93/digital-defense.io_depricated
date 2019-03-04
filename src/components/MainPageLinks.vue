@@ -41,10 +41,13 @@ export default class MainPageLinks extends Vue {}
     .main-page-links{
         position: relative;
         z-index: 5;
-        background: #2c3e50;
+        background: #2c3e509c;
         border: 1em solid transparent;
     }
     .tile-section .tile {
       cursor: pointer;
+    }
+    .tile-section, .tile-section-header {
+      background: #2c3e509c !important;
     }
 </style>
