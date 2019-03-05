@@ -119,7 +119,7 @@ export default class Hero extends Vue {}
   .particles-js-canvas-el{
     position: absolute;
     padding: 0;
-    height: 100%;
+    height: 95% !important;
     z-index: 1;
     top: 0;
     left:0;

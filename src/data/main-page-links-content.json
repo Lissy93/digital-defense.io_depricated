@@ -6,17 +6,17 @@
             "tiles": [
                 {
                     "id": "0",
-                    "name": "Beginner",
+                    "name": "Introduction",
                     "color": "#ffbd00",
-                    "description": "Get started with understanding the basics of staying safe online",
+                    "description": "What is personal cyber security, and why it's important",
                     "path": "/getting-started/beginner",
                     "icon": "/img/ico_beginner.png"
                 },
                 {
                     "id": "1",
-                    "name": "Intermediate",
+                    "name": "Getting Started",
                     "color": "#00c4d4",
-                    "description": "Personal cyber security principles we all should follow",
+                    "description": "Basic personal cyber security principles we all should follow",
                     "path": "/getting-started/intermediate",
                     "icon": "/img/ico_intermediate.png"
                 },
@@ -24,7 +24,7 @@
                     "id": "2",
                     "name": "Full Checklist",
                     "color": "#ff636f",
-                    "description": "Complete personal cyber security checklist",
+                    "description": "Complete and comprehensive personal cyber security checklist",
                     "path": "/full-checklist",
                     "icon": "/img/ico_advanced.png"
                 }

@@ -2,7 +2,7 @@
 
   <div id="app">
 
-    <div class="wrapper">
+    <div class="wrapper" v-bind:class="{ 'dark-bg': $route.name.includes('home') }">
 
       <!-- Header containing navigation bar (don't show on home) -->
       <Header v-if="['home'].indexOf($route.name) < 0" />
@@ -64,11 +64,13 @@ html, body, #app {
 .wrapper {
   min-height: 100%;
   margin-bottom: -3em ;
-  background: #2c3e50;
 }
 .footer, .push {
   min-height: 3em;
   font-size: 0.8em;
+}
+.dark-bg {
+  background: #2c3e50;
 }
 </style>
 
