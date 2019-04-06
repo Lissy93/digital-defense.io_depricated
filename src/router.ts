@@ -4,6 +4,7 @@ import Router from 'vue-router';
 import Home from './views/Home.vue';
 import Intermediate from './views/Intermediate.vue';
 import FullList from './views/FullList.vue';
+import HaveIBeenHacked from './views/HaveIBeenHacked.vue';
 
 import Loading from 'vue-loading-overlay';
 import 'vue-loading-overlay/dist/vue-loading.css';
@@ -34,6 +35,11 @@ const router = new Router({
       path: '/full-checklist',
       name: 'full-list',
       component: FullList,
+    },
+    {
+      path: '/have-i-been-hacked',
+      name: 'have-i-been-hacked',
+      component: HaveIBeenHacked,
     },
     {
       path: '/article/:file',

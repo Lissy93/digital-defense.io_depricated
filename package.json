@@ -11,6 +11,7 @@
   "dependencies": {
     "@babel/core": "^7.1.2",
     "@cypress/webpack-preprocessor": "^3.0.1",
+    "axios": "^0.18.0",
     "html-loader": "^0.5.5",
     "markdown-loader": "^4.0.0",
     "particles.js": "^2.0.0",
