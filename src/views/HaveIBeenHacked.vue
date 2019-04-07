@@ -2,18 +2,29 @@
   <div class="have-i-been-hacked">
       <h2>Check if your account has been compromised in a data breach</h2>
       <form @submit.prevent="handleSubmit">
-        <input type="email" placeholder="Enter your email address" class="big-text-field" required>
+        <input
+          v-model="email"
+          type="email"
+          placeholder="Enter your email address" 
+          class="big-text-field"
+          required
+        >
         <button class="big-button">Check</button>
       </form>
+
       <section>
         <loader v-if="loading" loaderText="Checking..." />
       </section>
-      <section class="results">
 
+      <section v-if="results" class="results">
+        <span>Results will show here</span>
       </section>
+
       <section class="error" v-if="error">
-        There was an error checking database.
+        <span class="line-1">There was an error checking database</span><br>
+        <span class="line-2">This has been logged, and will be looked into</span>
       </section>
+
       <small class="credits">
         Data from <a href="https://feeds.feedburner.com/HaveIBeenPwnedLatestBreaches">';--have i been pwned?</a>
         with credits to <a href="https://www.troyhunt.com/">Troy Hunt</a>
@@ -25,35 +36,55 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import Loader from '../components/Loader.vue';
-import axios from 'axios'
+import axios from 'axios';
 
 
 @Component({
   components: {
     Loader,
   },
-  data: ()=>{ return {
-    error: true,
-    results: null,
-    loading: false,
-  }},
+  data: () => {
+    return {
+      email: '',
+      error: false,
+      results: null,
+      loading: false,
+    };
+  },
   methods: {
     handleSubmit(e) {
       e.preventDefault();
+
+    
       this.$data.loading = true;
-      console.log('starting....');
+      const email = this.$data.email;
+      const url = `https://haveibeenpwned.com/api/v2/breachedaccount/${email}`;
+
+      const requestConfig = {
+        headers: {
+          // 'Access-Control-Allow-Origin': '*',
+          // 'Access-Control-Allow-Origin': 'https://localhost',
+          // 'Access-Control-Allow-Credentials': 'true',
+          // 'User-Agent': 'Alicia-Sykes-App',
+          // 'cache-control': 'no-cache',
+          // 'api-version': 2,
+        },
+      };
+
       axios
-        .get('https://api.cdoindesk.com/v1/bpi/currentprice.json')
+        .get(url, requestConfig)
         .then((response) => {
-          console.log(response)
+          console.log(response);
+          this.$data.results = response;
           this.$data.loading = false;
+          console.log(response);
         }, (error) => {
-          console.log('big error happened')
+          console.log('big error happened');
           this.$data.loading = false;
           this.$data.error = true;
-        })
+        });
 
-    }
+    },
   },
 })
 export default class HaveIBeenHacked extends Vue {}
@@ -84,7 +115,6 @@ export default class HaveIBeenHacked extends Vue {}
       color: #ee6e73;
     } 
     .error {
-      font-size: 2em;
       color: #2c3e50;
       margin: 1em 0;
       border: 2px solid #2c3e50;
@@ -93,6 +123,13 @@ export default class HaveIBeenHacked extends Vue {}
       padding: 1em;
       border-radius: 10px;
       background: rgba(255,255,255,0.2);
+      text-align: center;
+      .line-1 {
+        font-size: 2em;
+      }
+      .line-2 {
+        font-size: 1.5em;
+      }
     }
 
     @media (min-width: 769px) {
