@@ -17,7 +17,7 @@
     ]},
     {"name": "More", "path": "/tools", "children": [
         {"name": "Hack Map", "path": "/tools/map", "children": []},
-        {"name": "Have you been Hacked?", "path": "/tools/hacked", "children": []}
+        {"name": "Have you been Hacked?", "path": "/have-i-been-hacked", "children": []}
     ]},
     {"name": "About", "path": "/about", "children": []}
 ]
