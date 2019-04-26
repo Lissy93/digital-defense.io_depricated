@@ -22,6 +22,7 @@
     "particles.js": "^2.0.0",
     "raw-loader": "^0.5.1",
     "register-service-worker": "^1.0.0",
+    "request": "^2.88.0",
     "typeface-dosis": "^0.0.54",
     "typeface-raleway": "0.0.54",
     "url-loader": "^1.1.2",
