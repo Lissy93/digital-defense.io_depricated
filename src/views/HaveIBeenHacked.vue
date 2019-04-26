@@ -71,7 +71,6 @@ import axios from 'axios';
   methods: {
     handleSubmit(e) {
       e.preventDefault();
-    
       this.$data.loading = true;
       const email = this.$data.email;
       const url = `/api/have-i-been-hacked/${email}`;
@@ -79,7 +78,7 @@ import axios from 'axios';
       axios
         .get(url)
         .then((response) => {
-          console.log(response.data);
+          // console.log(response.data);
           this.$data.results = response.data;
           this.$data.loading = false;
         }, (error) => {
