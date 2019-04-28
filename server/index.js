@@ -8,7 +8,7 @@ const app = express();
 
 const port = process.env.PORT || 8080;
 
-// Serve up built vue app, at the mail root
+// Serve up built vue app, at the main root
 const staticFileMiddleware = express.static(path.join('dist'));
 app.use(staticFileMiddleware);
 app.use(history({

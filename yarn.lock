@@ -1237,10 +1237,6 @@
   version "2.2.44"
   resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-2.2.44.tgz#1d4a798e53f35212fd5ad4d04050620171cd5b5e"
 
-"@types/node@^10.11.2":
-  version "10.12.0"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.0.tgz#ea6dcbddbc5b584c83f06c60e82736d8fbb0c235"
-
 "@types/sinon-chai@2.7.29":
   version "2.7.29"
   resolved "https://registry.yarnpkg.com/@types/sinon-chai/-/sinon-chai-2.7.29.tgz#4db01497e2dd1908b2bd30d1782f456353f5f723"
@@ -8265,16 +8261,6 @@ vue-hot-reload-api@^2.3.0:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.1.tgz#b2d3d95402a811602380783ea4f566eb875569a2"
 
-vue-link-grid@^0.1.7:
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/vue-link-grid/-/vue-link-grid-0.1.7.tgz#4bb4cd1ef48d4848e8ecb50f2e510a62b01db6cc"
-  dependencies:
-    "@types/node" "^10.11.2"
-    register-service-worker "^1.0.0"
-    vue "^2.5.17"
-    vue-class-component "^6.0.0"
-    vue-property-decorator "^7.1.1"
-
 vue-loader@^15.4.2:
   version "15.4.2"
   resolved "https://registry.yarnpkg.com/vue-loader/-/vue-loader-15.4.2.tgz#812bb26e447dd3b84c485eb634190d914ce125e2"
@@ -8332,7 +8318,7 @@ vue-play@^3.2.1:
     vuex "^2.2.1"
     vuex-router-sync "^4.1.2"
 
-vue-property-decorator@^7.0.0, vue-property-decorator@^7.1.1:
+vue-property-decorator@^7.0.0:
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/vue-property-decorator/-/vue-property-decorator-7.2.0.tgz#8e6b0f4dcc630c357135f76366ba7bd91f1db015"
   dependencies:

@@ -23,13 +23,14 @@
         <div v-else>
           You've been hacked
           <div class="hack-list">
-            <Tile
-              v-for="hack in results" v-bind:key="hack.title"
-              class="tile"
-              :name="hack.title"
-              :description="hack.description"
-              :icon="hack.logo"
-          />
+            <div
+              v-for="hack in results"
+              v-bind:key="hack.title"
+              class="tile">
+                <img :src="hack.logo" :alt="`${hack.title} Logo`" class="tile-icon">
+                <h3 class="tile-title">{{hack.title}}</h3>
+                <span class="tile-description" v-html="hack.description"></span>
+              </div>
           </div>
       
         </div>
@@ -50,7 +51,6 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import { Tile } from 'vue-link-grid';
 import Loader from '../components/Loader.vue';
 import axios from 'axios';
 
@@ -58,7 +58,6 @@ import axios from 'axios';
 @Component({
   components: {
     Loader,
-    Tile,
   },
   data: () => {
     return {
@@ -97,7 +96,7 @@ export default class HaveIBeenHacked extends Vue {}
         background: #ee6e73;
         margin: 0;
         padding: 2em 1em;
-        height: 500px;
+        height: 100%;
     }
     h2 {
         margin: 0;
@@ -148,14 +147,27 @@ export default class HaveIBeenHacked extends Vue {}
     }
 
     .hack-list {
-      /deep/ .tile {
-        background: #2c3e50;
-        background: #2c3e50;
+      .tile {
+        display: flex;
+        background: #ffffffe6;
+        color: #2c3e50;
         padding: 1em;
         border-radius: 10px;
-        color: #ee6e73;
+        margin: 10px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        .tile-title {
+          margin: 10px;
+        }
         .tile-icon {
-          max-width: 100px;
+          height: 100px;
+          margin: 10px;
+          max-width: 180px;
+        }
+        .tile-description {
+          margin: 10px;
+          a {
+
+          }
         }
       }
     }
