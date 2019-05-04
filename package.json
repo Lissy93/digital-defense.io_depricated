@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node main",
-    "dev": "nodemon main",
-    "serve": "vue-cli-service serve",
+    "dev": "concurrently \"nodemon main\" -n Backend \"vue-cli-service build --watch --mode development --hmr\"",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:e2e": "vue-cli-service test:e2e"
@@ -14,6 +13,7 @@
     "@babel/core": "^7.1.2",
     "@cypress/webpack-preprocessor": "^3.0.1",
     "axios": "^0.18.0",
+    "concurrently": "^4.1.0",
     "connect-history-api-fallback": "^1.6.0",
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
