@@ -21,7 +21,19 @@
           Good News, no hacks found
         </div>
         <div v-else>
-          You've been hacked
+          
+          <div class="youve-been-hacked">
+            <h4>Warning: Accounts associated with your email have been leaked in {{results.length}} hacks</h4>
+            <div class="more-info">
+              <h5>What does this mean?</h5>
+              <span>
+                Certain account information has been leaked. This happens when companies fail to securly 
+                store user information, and then get hacked. Often, no harm comes to the affected users.
+                But ocassionaly your sensetive data, is either published online, or sold to fraudsters on the deep net.
+              </span>
+            </div>
+          </div>
+
           <div class="hack-list">
             <div
               v-for="hack in results"
@@ -32,7 +44,7 @@
                 <span class="tile-description" v-html="hack.description"></span>
               </div>
           </div>
-      
+          <Checklist class="checklist" :theList="whatToDoIfYourHacked" title="What to do, if your email has been leaked"/>
         </div>
       </section>
 
@@ -51,13 +63,16 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import { Checklist } from 'vue-checklist';
 import Loader from '../components/Loader.vue';
 import axios from 'axios';
+import * as whatToDoIfYourHacked from './../data/what-to-do-if-your-hacked.json';
 
 
 @Component({
   components: {
     Loader,
+    Checklist,
   },
   data: () => {
     return {
@@ -65,6 +80,7 @@ import axios from 'axios';
       error: false,
       results: null,
       loading: false,
+      whatToDoIfYourHacked: whatToDoIfYourHacked.default,
     };
   },
   methods: {
@@ -146,15 +162,35 @@ export default class HaveIBeenHacked extends Vue {}
       }
     }
 
+    .youve-been-hacked {
+      h4 {
+        color: #2c3e50;
+        text-align: center;
+      }
+      .more-info {
+        text-align: left;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 1em;
+        h5 {
+          margin: 0;
+        }
+      }
+    }
+
     .hack-list {
       .tile {
         display: flex;
-        background: #ffffffe6;
+        max-width: 800px;
+        background: rgba(225,225,225,0.6);
         color: #2c3e50;
         padding: 1em;
         border-radius: 10px;
-        margin: 10px;
+        margin: 1em auto;
         box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        @media (max-width: 769px) {
+           flex-direction: column;
+        }
         .tile-title {
           margin: 10px;
         }
@@ -166,7 +202,7 @@ export default class HaveIBeenHacked extends Vue {}
         .tile-description {
           margin: 10px;
           a {
-
+            color: #2c3e50;
           }
         }
       }

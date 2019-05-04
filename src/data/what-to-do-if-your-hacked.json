@@ -1,0 +1,7 @@
+[
+    { 
+        "name": "Change the password of the affected service immediately", 
+        "description": "Your account is no longer safe. If you do not update your login information, anyone with access to the leaked credentials may be able to gain access to your account",
+        "checked": false
+    }
+]
