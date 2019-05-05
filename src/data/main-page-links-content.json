@@ -27,6 +27,14 @@
                     "description": "Complete and comprehensive personal cyber security checklist",
                     "path": "/full-checklist",
                     "icon": "/img/ico_advanced.png"
+                },
+                {
+                    "id": "3",
+                    "name": "Check if you've been hacked",
+                    "color": "#2b5a74",
+                    "description": "Simple tool to search for your email address in recent data breaches",
+                    "path": "/have-i-been-hacked",
+                    "icon": "/img/ico-check-hacked.png"
                 }
             ]
         }

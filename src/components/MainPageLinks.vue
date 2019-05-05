@@ -42,11 +42,19 @@ export default class MainPageLinks extends Vue {}
         position: relative;
         z-index: 5;
         border: 1em solid transparent;
+
+        .tile {
+          cursor: pointer;
+          width: 400px;
+          flex-basis: unset !important;
+          flex-grow: unset !important;
+        }
+        .tile-wraper {
+          flex-wrap: wrap !important;
+        }
+        .tile-section, .tile-section-header {
+          background: none !important;
+        }
     }
-    .tile-section .tile {
-      cursor: pointer;
-    }
-    .tile-section, .tile-section-header {
-      background: none !important;
-    }
+    
 </style>
