@@ -28,8 +28,8 @@
               <h5>What does this mean?</h5>
               <span>
                 Certain account information has been leaked. This happens when companies fail to securly 
-                store user information, and then get hacked. Often, no harm comes to the affected users.
-                But ocassionaly your sensetive data, is either published online, or sold to fraudsters on the deep net.
+                store user information, and then suffer a data breach. Often, no harm comes to the affected users.
+                But ocassionaly sensetive information gets published or sold, so it is important to take necissary precautions.
               </span>
             </div>
           </div>
@@ -39,9 +39,21 @@
               v-for="hack in results"
               v-bind:key="hack.title"
               class="tile">
-                <img :src="hack.logo" :alt="`${hack.title} Logo`" class="tile-icon">
-                <h3 class="tile-title">{{hack.title}}</h3>
-                <span class="tile-description" v-html="hack.description"></span>
+                <div class="tile-header">
+                  <h3 class="tile-title">{{hack.title}}</h3>
+                  <span><b>Leak Date:</b> {{hack.breachDate}}</span>
+                  <span><b>Number Leacked Records:</b> {{hack.count}}</span>
+                </div>
+                <div class="tile-content">
+                  <img :src="hack.logo" :alt="`${hack.title} Logo`" class="tile-icon">
+                  <span class="tile-description" v-html="hack.description"></span>
+                </div>
+                <div class="tile-footer">
+                  <b>Leaked Data</b>
+                  <ul>
+                    <li v-for="dataLoss in hack.leakedData" v-bind:key="dataLoss">{{dataLoss}}, </li>
+                  </ul>
+                </div>
               </div>
           </div>
           <Checklist class="checklist" :theList="whatToDoIfYourHacked" title="What to do, if your email has been leaked"/>
@@ -93,7 +105,6 @@ import * as whatToDoIfYourHacked from './../data/what-to-do-if-your-hacked.json'
       axios
         .get(url)
         .then((response) => {
-          // console.log(response.data);
           this.$data.results = response.data;
           this.$data.loading = false;
         }, (error) => {
@@ -111,7 +122,7 @@ export default class HaveIBeenHacked extends Vue {}
     .have-i-been-hacked {
         background: #ee6e73;
         margin: 0;
-        padding: 2em 1em;
+        padding: 2em 0;
         height: 100%;
     }
     h2 {
@@ -162,9 +173,15 @@ export default class HaveIBeenHacked extends Vue {}
       }
     }
 
+    .results {
+      background: #2c3e50;
+      padding: 1em 2em 2em 2em;
+      margin-bottom: 1em;
+    }
+
     .youve-been-hacked {
       h4 {
-        color: #2c3e50;
+        color: #ee6e73;
         text-align: center;
       }
       .more-info {
@@ -172,15 +189,22 @@ export default class HaveIBeenHacked extends Vue {}
         max-width: 600px;
         margin: 0 auto;
         padding: 1em;
+        color: #ee6e73; 
         h5 {
           margin: 0;
         }
       }
     }
 
+    /deep/ .checkbox-container {
+      max-height: 100px !important;
+      min-width: 260px !important;
+    }
+
     .hack-list {
       .tile {
         display: flex;
+        flex-direction: column;
         max-width: 800px;
         background: rgba(225,225,225,0.6);
         color: #2c3e50;
@@ -188,16 +212,39 @@ export default class HaveIBeenHacked extends Vue {}
         border-radius: 10px;
         margin: 1em auto;
         box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-        @media (max-width: 769px) {
-           flex-direction: column;
+        .tile-content {
+          display: flex;
+        }
+        .tile-header {
+          display: flex;
+          align-items: center;
+          span {
+            margin: 0 16px;
+          }
+        }
+        .tile-footer {
+          display: flex;
+          align-items: center;
+          ul {
+            text-align: left;
+            margin: 0;
+            padding: 8px;
+            li {
+              list-style: none;
+              display: inline;
+            }
+          }
         }
         .tile-title {
-          margin: 10px;
+          font-size: 1.5em;
+          color: #2c3e50;
+          font-weight: bold;
+          margin: 0;
         }
         .tile-icon {
           height: 100px;
           margin: 10px;
-          max-width: 180px;
+          max-width: 140px;
         }
         .tile-description {
           margin: 10px;
