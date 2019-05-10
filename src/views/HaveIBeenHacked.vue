@@ -12,26 +12,31 @@
         <button class="big-button">Check</button>
       </form>
 
-      <section>
+      <div class="what-to-do-button" v-if="!showAdvise"  @click="showAdvise = true">
+        <span>
+          What to do if your account is breached?
+        </span>
+      </div>
+
+      <section class="loader">
         <loader v-if="loading" loaderText="Checking..." />
       </section>
 
       <section v-if="results" class="results">
-        <div v-if="results.length === 0">
-          Good News, no hacks found
+        <div v-if="results.length === 0" class="all-good">
+          <h4>
+            Great news, your email address hasn't shown up in any recently recorded hacks
+          </h4>
+          <img src="../../public/img/success.png" alt="Tick Image">
+          <small>
+            The breaches being searched isn't a difinitive list, and it is still important to take precautions.
+          </small>
         </div>
         <div v-else>
           
           <div class="youve-been-hacked">
             <h4>Warning: Accounts associated with your email have been leaked in {{results.length}} hacks</h4>
-            <div class="more-info">
-              <h5>What does this mean?</h5>
-              <span>
-                Certain account information has been leaked. This happens when companies fail to securly 
-                store user information, and then suffer a data breach. Often, no harm comes to the affected users.
-                But ocassionaly sensetive information gets published or sold, so it is important to take necissary precautions.
-              </span>
-            </div>
+            <img src="../../public/img/error.png" alt="Cross Image">
           </div>
 
           <div class="hack-list">
@@ -56,8 +61,20 @@
                 </div>
               </div>
           </div>
-          <Checklist class="checklist" :theList="whatToDoIfYourHacked" title="What to do, if your email has been leaked"/>
+
+          <div class="more-info">
+              <h5>What does this mean?</h5>
+              <span>
+                Certain account information has been leaked. This happens when companies fail to securly 
+                store user information, and then suffer a data breach. Often, no harm comes to the affected users.
+                But ocassionaly sensetive information gets published or sold, so it is important to take necissary precautions.
+              </span>
+            </div>
         </div>
+      </section>
+
+      <section class="what-to-do-container" v-if="showAdvise">
+        <Checklist class="checklist" :theList="whatToDoIfYourHacked" title="What to do, if your email has been leaked"/>
       </section>
 
       <section class="error" v-if="error">
@@ -92,6 +109,7 @@ import * as whatToDoIfYourHacked from './../data/what-to-do-if-your-hacked.json'
       error: false,
       results: null,
       loading: false,
+      showAdvise: false,
       whatToDoIfYourHacked: whatToDoIfYourHacked.default,
     };
   },
@@ -107,6 +125,7 @@ import * as whatToDoIfYourHacked from './../data/what-to-do-if-your-hacked.json'
         .then((response) => {
           this.$data.results = response.data;
           this.$data.loading = false;
+          this.$data.showAdvise = response.data.length > 0;
         }, (error) => {
           this.$data.loading = false;
           this.$data.error = true;
@@ -119,142 +138,7 @@ export default class HaveIBeenHacked extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-    .have-i-been-hacked {
-        background: #ee6e73;
-        margin: 0;
-        padding: 2em 0;
-        height: 100%;
-    }
-    h2 {
-        margin: 0;
-        color: #2c3e50;
-    }
-    .big-text-field {
-      padding: 1em 2em;
-      border: none;
-      margin: 2em auto;
-      font-size: 1.5em;
-    }
-    .big-button {
-      padding: 1em 2em;
-      background: #2c3e50;
-      border: none;
-      font-size: 1.5em;
-      color: #ee6e73;
-    } 
-    .error {
-      color: #2c3e50;
-      margin: 1em 0;
-      border: 2px solid #2c3e50;
-      width: fit-content;
-      margin: 1em auto;
-      padding: 1em;
-      border-radius: 10px;
-      background: rgba(255,255,255,0.2);
-      text-align: center;
-      .line-1 {
-        font-size: 2em;
-      }
-      .line-2 {
-        font-size: 1.5em;
-      }
-    }
-
-    @media (min-width: 769px) {
-      .big-text-field {
-        border-radius: 10px 0 0 10px;
-      }
-      .big-button {
-        border-radius: 0 10px 10px 0;
-      }
-
-      small.credits, small.credits a {
-          color: #2c3e50;
-      }
-    }
-
-    .results {
-      background: #2c3e50;
-      padding: 1em 2em 2em 2em;
-      margin-bottom: 1em;
-    }
-
-    .youve-been-hacked {
-      h4 {
-        color: #ee6e73;
-        text-align: center;
-      }
-      .more-info {
-        text-align: left;
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 1em;
-        color: #ee6e73; 
-        h5 {
-          margin: 0;
-        }
-      }
-    }
-
-    /deep/ .checkbox-container {
-      max-height: 100px !important;
-      min-width: 260px !important;
-    }
-
-    .hack-list {
-      .tile {
-        display: flex;
-        flex-direction: column;
-        max-width: 800px;
-        background: rgba(225,225,225,0.6);
-        color: #2c3e50;
-        padding: 1em;
-        border-radius: 10px;
-        margin: 1em auto;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-        .tile-content {
-          display: flex;
-        }
-        .tile-header {
-          display: flex;
-          align-items: center;
-          span {
-            margin: 0 16px;
-          }
-        }
-        .tile-footer {
-          display: flex;
-          align-items: center;
-          ul {
-            text-align: left;
-            margin: 0;
-            padding: 8px;
-            li {
-              list-style: none;
-              display: inline;
-            }
-          }
-        }
-        .tile-title {
-          font-size: 1.5em;
-          color: #2c3e50;
-          font-weight: bold;
-          margin: 0;
-        }
-        .tile-icon {
-          height: 100px;
-          margin: 10px;
-          max-width: 140px;
-        }
-        .tile-description {
-          margin: 10px;
-          a {
-            color: #2c3e50;
-          }
-        }
-      }
-    }
-
+  @import './../styles/hacked-styles.scss'
 </style>
 
 
