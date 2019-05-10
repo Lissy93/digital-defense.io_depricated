@@ -1,0 +1,178 @@
+.have-i-been-hacked {
+    background: #ee6e73;
+    margin: 0;
+    padding: 2em 0 5em 0;
+    height: 100%;
+}
+h2 {
+    margin: 0;
+    color: #2c3e50;
+}
+.big-text-field {
+  padding: 1em 2em;
+  border: none;
+  margin: 2em auto 1em auto;
+  font-size: 1.5em;
+}
+.big-button {
+  padding: 1em 2em;
+  background: #2c3e50;
+  border: none;
+  font-size: 1.5em;
+  color: #ee6e73;
+} 
+.error {
+  color: #2c3e50;
+  margin: 1em 0;
+  border: 2px solid #2c3e50;
+  width: fit-content;
+  margin: 1em auto;
+  padding: 1em;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.2);
+  text-align: center;
+  .line-1 {
+    font-size: 2em;
+  }
+  .line-2 {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 769px) {
+  .big-text-field {
+    border-radius: 10px 0 0 10px;
+  }
+  .big-button {
+    border-radius: 0 10px 10px 0;
+  }
+
+  small.credits, small.credits a {
+      color: #2c3e50;
+  }
+}
+
+.results {
+  background: #2c3e50;
+  padding: 1em 2em 2em 2em;
+  margin: 1em 0;
+}
+
+section.loader {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100px;
+  border-radius: 10px;
+}
+
+.all-good {
+  display: flex;
+  flex-direction: column;
+  img {
+    align-self: center;
+    margin: 1em;
+  }
+  h4, small {
+    color: #25ae88;
+    text-align: center;
+  }
+}
+
+.youve-been-hacked {
+  h4 {
+    color: #d75a4a;
+    text-align: center;
+  }
+}
+
+.more-info {
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1em;
+  color: #d75a4a; 
+  h5 {
+    margin: 0;
+  }
+}
+
+/deep/ .checkbox-container {
+  max-height: 100px !important;
+  min-width: 260px !important;
+}
+
+.hack-list {
+  .tile {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    background: rgba(225,225,225,0.6);
+    color: #2c3e50;
+    padding: 1em;
+    border-radius: 10px;
+    margin: 1em auto;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    .tile-content {
+      display: flex;
+      align-items: center;
+    }
+    .tile-header {
+      display: flex;
+      align-items: center;
+      span {
+        margin: 0 16px;
+      }
+    }
+    .tile-footer {
+      display: flex;
+      align-items: center;
+      ul {
+        text-align: left;
+        margin: 0;
+        padding: 8px;
+        li {
+          list-style: none;
+          display: inline;
+        }
+      }
+    }
+    @media (max-width: 769px) {
+      .tile-header, .tile-content, .tile-footer {
+        flex-direction: column;
+      }
+    }
+    .tile-title {
+      font-size: 1.5em;
+      color: #2c3e50;
+      font-weight: bold;
+      margin: 0;
+    }
+    .tile-icon {
+      height: 100px;
+      margin: 10px;
+      max-width: 140px;
+    }
+    .tile-description {
+      margin: 10px;
+      a {
+        color: #2c3e50;
+      }
+    }
+  }
+}
+
+.what-to-do-container {
+  padding: 1em 2em;
+}
+.what-to-do-button {
+  margin: 2em 0;
+  span {
+    color: #ee6e73;
+    background: #2c3e50;
+    padding: 0.8em;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.8em;
+  }
+}
