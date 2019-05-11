@@ -51,10 +51,13 @@ export default class Home extends Vue {}
 <style src="./styles/global-styles.css" />
 
 <style lang="scss">
+
+@import 'styles/colors';
+
 html, body, #app {
   margin: 0;
   height: 100%;
-  background: #fafafa;
+  background: $pale-grey;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -70,7 +73,7 @@ html, body, #app {
   font-size: 0.8em;
 }
 .dark-bg {
-  background: #2c3e50;
+  background: $blue;
 }
 </style>
 

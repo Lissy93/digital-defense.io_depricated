@@ -53,6 +53,8 @@ export default class Checkbox extends Vue {}
 </script>
 
 <style scoped lang="scss">
+
+    @import '../styles/colors';
     
     /* Customize the label (the container) */
     .container {
@@ -84,17 +86,17 @@ export default class Checkbox extends Vue {}
         left: 0;
         height: 25px;
         width: 25px;
-        background-color: #eee;
+        background-color: $pale-grey;
     }
 
     /* On mouse-over, add a grey background color */
     .container:hover input ~ .checkmark {
-        background-color: #ccc;
+        background-color: $dark-grey;
     }
 
     /* When the checkbox is checked, add a blue background */
     .container input:checked ~ .checkmark {
-        background-color: #ee6e73;
+        background-color: $pink;
     }
 
     /* Create the checkmark/indicator (hidden when not checked) */

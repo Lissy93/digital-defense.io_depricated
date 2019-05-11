@@ -45,13 +45,16 @@ export default class Hero extends Vue {}
 </script>
 
 <style scoped lang="scss">
+
+  @import '../styles/colors';
+
   .hero{
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
     padding: 2em;
-    background: #ee6e73;
-    color: #2c3e50;
+    background: $pink;
+    color: $blue;
     box-shadow: 0 -1px 0 rgba(225,225,225,.12), 0 0 2px rgba(0,0,0,.12), 0 2px 4px rgba(0,0,0,.24);
     text-align: center;
     display: flex;
@@ -80,7 +83,7 @@ export default class Hero extends Vue {}
           opacity: 0.9;
           h3, .get-started-button {
             text-align: center;
-            background: #2c3e50;
+            background: $blue;
             padding: 0.5em;
             box-shadow: 1px 1px 1px rgba(255,255,255, 0.4);
             border-radius: 5px;

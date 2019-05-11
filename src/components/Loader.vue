@@ -17,8 +17,8 @@ export default class Loader extends Vue {}
 </script>
 
 <style scoped lang="scss">
-    $color-background: #ee6e73;
-    $color-loader: #2c3e50;
+
+    @import '../styles/colors';
 
     .loader {
     width: 250px;
@@ -32,7 +32,7 @@ export default class Loader extends Vue {}
     font-family: helvetica, arial, sans-serif;
     text-transform: uppercase;
     font-weight: 900;
-    color: $color-loader;
+    color: $blue;
     letter-spacing: 0.2em;
     
     &::before, &::after {
@@ -40,7 +40,7 @@ export default class Loader extends Vue {}
         display: block;
         width: 15px;
         height: 15px;
-        background: $color-loader;
+        background: $blue;
         position: absolute;
         animation: load .7s infinite alternate ease-in-out;
     }
