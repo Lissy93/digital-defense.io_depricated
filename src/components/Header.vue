@@ -13,7 +13,7 @@
         </h1>
 
         <!-- Main Navigation -->
-        <nav>
+        <nav> 
           <ul class="main-nav" v-bind:class="{ menuOpen: isMenuOpen }">
             <li v-for="navBarItem in navBarItems" v-bind:key="navBarItem.name" @mouseover="visibleDropdown = navBarItem.name">
               <div>

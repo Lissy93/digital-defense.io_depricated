@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div class="footer-item">
-        <a href="/">Cyber Security Today</a>
+        <a href="/">Cyber Defence</a>
     </div>
     <div class="footer-item">
           &copy; <a href="https://aliciasykes.com">Alicia Sykes</a> 2019. 

@@ -48,6 +48,9 @@ export default class MainPageLinks extends Vue {}
           width: 400px;
           flex-basis: unset !important;
           flex-grow: unset !important;
+          .tile-texts .tile-description {
+            text-align: left !important;
+          }
         }
         .tile-wraper {
           flex-wrap: wrap !important;
