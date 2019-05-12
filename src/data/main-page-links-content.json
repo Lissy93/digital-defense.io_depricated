@@ -2,16 +2,8 @@
     "sections": [
         {
             "sectionTitle": "Getting Started",
-            "sectionSubTitle": "Introduction to personal cyber security, for beginers, intermediate and advanced users",
+            "sectionSubTitle": "Resources to help people of all technical abilities learn about, and improve personal cyber security",
             "tiles": [
-                {
-                    "id": "0",
-                    "name": "Introduction",
-                    "color": "#ffbd00",
-                    "description": "What is personal cyber security, and why it's important",
-                    "path": "/getting-started/beginner",
-                    "icon": "/img/ico_beginner.png"
-                },
                 {
                     "id": "1",
                     "name": "Getting Started",
