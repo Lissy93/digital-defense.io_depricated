@@ -3,16 +3,23 @@
 |** TEXT STYLING **|
 \******************/
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600i&display=swap');
+
+html, body {
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
 p, span {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1em; 
     text-align: left;
-  }
+}
   
 h1, h2, h3, h4{
-font-family: 'Dosis', sans-serif;
-font-weight: normal;
-margin: 0.5em 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    margin: 0.5em 0;
 }
   
 h1 { 
@@ -20,7 +27,7 @@ h1 {
     text-align: center;
 }
 h2 {
-    font-size: 3em;
+    font-size: 2.5em;
     text-align: center;
 }
 h3 {

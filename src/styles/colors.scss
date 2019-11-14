@@ -1,9 +1,22 @@
 
 /* Core Colors */
 $pink: #ee6e73;
-$blue: #2c3e50;
+$blue: #031636;
 $cyan: #00c3d3;
 $yellow: #ffbd00;
+
+/* Gradients */
+$gradient: linear-gradient(
+    203deg,
+    rgba(13,224,243,1) 0%,
+    rgba(60,112,250,1) 60%,
+    rgba(116,6,255,1) 100%
+);
+
+$box-shadow-large:
+    0 -1px 0 rgba(225,225,225,.12),
+    0 0 2px rgba(0,0,0,.12),
+    0 2px 4px rgba(0,0,0,.24);
 
 /* Colors for specifics */
 $success: #25ae88;
