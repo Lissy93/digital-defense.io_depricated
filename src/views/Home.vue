@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Hero />
+    <DangerHero />
     <MainPageLinks />
     <!-- <PageIntro /> -->
   </div>
@@ -8,13 +8,13 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import Hero from '@/components/Hero.vue';
+import DangerHero from '@/components/DangerHero.vue';
 import PageIntro from '@/components/PageIntro.vue';
 import MainPageLinks from '@/components/MainPageLinks.vue';
 
 @Component({
   components: {
-    Hero,
+    DangerHero,
     PageIntro,
     MainPageLinks,
   },

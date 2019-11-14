@@ -1,7 +1,7 @@
 [
     { 
         "name": "Encrypt your PC", 
-        "description": "Encrypt your devices. Windows has [BitLocker](https://docs.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-overview), and OS X comes with [FileVault](https://support.apple.com/en-gb/HT204837) installed. Alternatively [VeraCrypt](https://www.veracrypt.fr/) is a free, fast and secure cross-platform encryption utility",
+        "description": "Encrypt your devices. Windows has <a href=\"https://docs.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-overview\">BitLocker</a>, and OS X comes with <a href=\"(https://support.apple.com/en-gb/HT204837\">FileVault</a> installed. Alternatively <a href=\"https://www.veracrypt.fr/\">VeraCrypt</a> is a free, fast and secure cross-platform encryption utility",
         "checked": false
     },
     { 

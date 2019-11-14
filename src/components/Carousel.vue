@@ -4,7 +4,7 @@
       :perPage="1"
       :autoplay="true"
       :autoplayHoverPause="true"
-      paginationActiveColor="#2c3e50"
+      paginationActiveColor="#031636"
       :autoplayTimeout="8000"
       :loop="true"
     >
@@ -57,6 +57,9 @@ export default class HomeCarousel extends Vue {
     a{
       color: inherit;
     }
+  }
+  /deep/.VueCarousel-dot-container {
+    opacity: 0.8;
   }
 
 </style>
