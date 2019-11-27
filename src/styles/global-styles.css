@@ -10,7 +10,7 @@ html, body {
 -moz-osx-font-smoothing: grayscale;
 }
 
-p, span {
+p, span, a, ul li, button, div {
     font-family: 'Montserrat', sans-serif;
     font-size: 1em; 
     text-align: left;
