@@ -48,6 +48,9 @@ export default class HomeCarousel extends Vue {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 
+  * { // Note, this is being applied to all children of this component. * is not great practice.
+    text-align: center;
+  }
   span{
     font-size: 1.2rem;
   }

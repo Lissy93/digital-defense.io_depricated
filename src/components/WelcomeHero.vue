@@ -24,9 +24,9 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import HomeCarousel from '@/components/Carousel.vue';
 import AnimatedButton from '@/components/AnimatedButton.vue';
-import 'particles.js'
+// import 'particles.js'
 
-const particleData = require('./../data/particles-js-config.json');
+// const particleData = require('./../data/particles-js-config.json');
 
 @Component({
   components: {
@@ -40,7 +40,7 @@ const particleData = require('./../data/particles-js-config.json');
   },
   mounted: ()=> {
     // Initialize the particles.js on the hero.
-    (<any>window).particlesJS('particles-js', particleData);
+    // (<any>window).particlesJS('particles-js', particleData);
   },
 })
 export default class WelcomeHero extends Vue {}
@@ -71,6 +71,8 @@ export default class WelcomeHero extends Vue {}
     background: $gradient;
     color: $blue;
     text-align: left;
+
+    box-shadow: 0 8px 13px -2px #00000075;
 
     h1 {
       text-align: left;

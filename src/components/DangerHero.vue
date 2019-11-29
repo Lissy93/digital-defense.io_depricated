@@ -3,8 +3,8 @@
     <div class="hero-child">
       <HomeCarousel />
     </div>
-    <div class="hero-child main-logo-in-hero">
-      <img src="../../public/img/hero-scaled.png" alt=""> 
+    <div class="hero-child secondary-info">
+      <p>Something</p>
     </div>
   </div>
 </template>
@@ -30,27 +30,19 @@ export default class DangerHero extends Vue {}
     width: 100%;
     display: flex;
     text-align: center;
-    background: $gradient;
-    color: $blue;
+    color: $cyan;
 
     .hero-child {
         width: 100%;
         @media (min-width: 769px) {
-          &:nth-child(1) { width: 70% }
-          &:nth-child(2) { width: 30% }
+          width: 45%;
         }
 
-      &.main-logo-in-hero{
+      &.secondary-info{
           display: flex;
           justify-content: center;
           align-items: center;
       }
-
-    img{
-      max-width: 250px;
-      width: 90%;
-      margin: 0 auto;
-    }
 
     h2, h3{
       text-shadow: 
