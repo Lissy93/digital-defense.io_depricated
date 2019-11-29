@@ -29,22 +29,23 @@ export default class Footer extends Vue {}
 footer {
     width: 100%;
     margin: 0;
-    background: $dark-grey;
+    background: #bbb8d424;
     display: flex;
     flex-wrap: wrap;
     font-family: 'Raleway', sans-serif;
-    padding-top: 0.15em;
+    padding-top: 0.55em;
     .footer-item{
-
+        line-height: 0.2em;
         flex-grow: 1;
         padding: 1em;
         min-width: 100%;
+        text-align: center;
         @media (min-width: 769px) {
             min-width: 10em;
         }
-        color: $blue;
+        color: $dark-grey;
         a{
-            color: $blue;
+            color: $dark-grey;
             text-decoration: none;
             &:hover{
                 text-decoration: underline;
