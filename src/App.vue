@@ -48,10 +48,9 @@ export default class Home extends Vue {}
 <style src="typeface-dosis/index.css" />
 <style src="typeface-raleway/index.css" />>
 
-<style src="./styles/global-styles.css" />
 
 <style lang="scss">
-
+@import 'styles/global-styles';
 @import 'styles/colors';
 
 html, body, #app {
@@ -63,10 +62,10 @@ html, body, #app {
 
 .wrapper {
   min-height: 100%;
-  margin-bottom: -3em ;
+  margin-bottom: -2.2em ;
 }
 .footer, .push {
-  min-height: 3em;
+  min-height: 2em;
   font-size: 0.8em;
 }
 .dark-bg {
