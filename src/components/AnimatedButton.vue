@@ -14,7 +14,7 @@ export default class AnimatedButton extends Vue {}
 <style scoped lang="scss">
 
 .button {
-    border: 2px solid #031636b0;
+    border: 2px solid $primary;
     border-radius: 12px;
     color: #031636b0;
     font-size: 1.8rem;

@@ -27,15 +27,18 @@ export default class DangerHero extends Vue {}
   @import '../styles/colors';
 
   .danger-hero{
+    background: #09295e;
+    padding: 1em;
+
     width: 100%;
     display: flex;
     text-align: center;
-    color: $cyan;
+    color: $secondary;
 
     .hero-child {
         width: 100%;
         @media (min-width: 769px) {
-          width: 45%;
+          width: 50%;
         }
 
       &.secondary-info{

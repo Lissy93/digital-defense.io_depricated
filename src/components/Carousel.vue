@@ -4,7 +4,7 @@
       :perPage="1"
       :autoplay="true"
       :autoplayHoverPause="true"
-      paginationActiveColor="#031636"
+      paginationActiveColor="#22aef6"
       :autoplayTimeout="8000"
       :loop="true"
     >
