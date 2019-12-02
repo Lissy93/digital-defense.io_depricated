@@ -9,7 +9,7 @@
       :loop="true"
     >
         <slide v-for="carouselItem in carouselContent" v-bind:key="carouselItem.heading">
-          <h2>{{ carouselItem.heading }}</h2>
+          <h3>{{ carouselItem.heading }}</h3>
           <span>{{ carouselItem.subtitle }}</span>
           <br>
           <small>
@@ -45,24 +45,14 @@ export default class HomeCarousel extends Vue {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-
-  * { // Note, this is being applied to all children of this component. * is not great practice.
-    text-align: center;
-  }
-  span{
-    font-size: 1.2rem;
-  }
+  * { text-align: center; }
+  h3 { font-size: 2.5rem; }
+  span{ font-size: 1.2rem; }
   small {
     font-size: 0.8rem;
     opacity: 0.8;
-    a{
-      color: inherit;
-    }
+    a{ color: inherit; }
   }
-  /deep/.VueCarousel-dot-container {
-    opacity: 0.8;
-  }
-
+  /deep/.VueCarousel-dot-container { opacity: 0.8; }
 </style>

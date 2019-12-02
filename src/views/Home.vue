@@ -2,7 +2,7 @@
   <div class="home">
     <WelcomeHero />
     <DangerHero />
-    <!-- <MainPageLinks /> -->
+    <MainPageLinks />
     <!-- <PageIntro /> -->
   </div>
 </template>

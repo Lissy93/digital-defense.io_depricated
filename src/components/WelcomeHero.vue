@@ -33,15 +33,15 @@ import AnimatedButton from '@/components/AnimatedButton.vue';
     AnimatedButton,
     HomeCarousel,
   },
-  methods: {
-    initParticlesJS() {
-      console.log('Just Initing');
-    },
-  },
-  mounted: ()=> {
+  // methods: {
+  //   initParticlesJS() {
+  //     console.log('Just Initing');
+  //   },
+  // },
+  // mounted: ()=> {
     // Initialize the particles.js on the hero.
     // (<any>window).particlesJS('particles-js', particleData);
-  },
+  // },
 })
 export default class WelcomeHero extends Vue {}
 </script>

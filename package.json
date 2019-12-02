@@ -7,7 +7,8 @@
     "dev": "concurrently \"nodemon main\" -n Backend \"vue-cli-service build --watch --mode development --hmr\"",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test:e2e": "vue-cli-service test:e2e"
+    "test:e2e": "vue-cli-service test:e2e",
+    "frontend": "vue-cli-service serve"
   },
   "dependencies": {
     "@babel/core": "^7.1.2",
@@ -43,7 +44,7 @@
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0",
-    "@vue/cli-plugin-e2e-cypress": "^3.0.0",
+    "@vue/cli-plugin-e2e-cypress": "^3.12.1",
     "@vue/cli-plugin-pwa": "^3.0.0",
     "@vue/cli-plugin-typescript": "^3.0.0",
     "@vue/cli-service": "^3.0.0",

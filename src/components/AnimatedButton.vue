@@ -13,10 +13,21 @@ export default class AnimatedButton extends Vue {}
 
 <style scoped lang="scss">
 
-.button {
+@import '../styles/colors';
+
+
+$col1: #031636b0; // This is primary with a bit of opacity
+$col2: #6229fe;
+.button { // All colors defined here
+    color: $col1;
+    background: $col1;
     border: 2px solid $primary;
+    &:before { background: $col2; }
+    &:hover, &:focus, &:active { color: $col2; }
+}
+
+.button {
     border-radius: 12px;
-    color: #031636b0;
     font-size: 1.8rem;
     margin: 0.5rem;
     padding: 0.5rem 1rem;
@@ -25,7 +36,6 @@ export default class AnimatedButton extends Vue {}
     vertical-align: middle;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     position: relative;
-    background: #031636b0;
 }
 
 .animated {
@@ -38,7 +48,6 @@ export default class AnimatedButton extends Vue {}
     transform-origin: 0% 0%;
 }
 .animated:before {
-    background: #6229fe;
     border-radius: 10px;
     content: "";
     position: absolute;
@@ -58,9 +67,7 @@ export default class AnimatedButton extends Vue {}
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
 }
-.animated:hover, .animated:focus, .animated:active {
-    color: #6229fe;
-}
+
 .animated:hover:before, .animated:focus:before, .animated:active:before {
     -webkit-transform: scaleY(0);
     transform: scaleY(0);
