@@ -1,40 +1,15 @@
 <template>
   <div class="main-page-links">
     <h2>Site Content</h2>
-    <div class="link-section">
-      <h3>Categories</h3>
-      <ul class="link-list">
-        <li>
-          <AnimatedButton>Passwords</AnimatedButton>
-        </li>
-        <li>
-          <AnimatedButton>2 FA</AnimatedButton>
-        </li>
-        <li>
-          <AnimatedButton>Browser & Search</AnimatedButton>
-        </li>
-        <li>
-          <AnimatedButton>VPN</AnimatedButton>
-        </li>
-        <li>
-          <AnimatedButton>Emails</AnimatedButton>
-        </li>
-        <li>
-          <AnimatedButton>Social Media</AnimatedButton>
-        </li>
-        <li>
-          <AnimatedButton>Devices</AnimatedButton>
-        </li>
-        <li>
-          <AnimatedButton>SMS and Calls</AnimatedButton>
-        </li>
-        <li>
-          <AnimatedButton>Router</AnimatedButton>
-        </li>
-        <li>
-          <AnimatedButton>Operating System</AnimatedButton>
-        </li>   
-      </ul>
+    <div class="link-section-wrapper">
+      <section v-for="section in sections" :key="section.id" class="link-section">
+        <h3>{{section.title}}</h3>
+        <ul class="link-list">
+          <li v-for="link in section.links" :key="link.id">
+            <span>{{ link.name }}</span>
+          </li>
+        </ul>
+      </section>
     </div>
   </div>
 </template>
@@ -63,48 +38,45 @@ export default class MainPageLinks extends Vue {}
 </script>
 
 <style lang="scss">
-    .main-page-links{
-        color: #3979fa;
-        padding: 1rem;
+  .main-page-links{
+      color: #3979fa;
+      padding: 1rem;
 
+      h2 {
+        opacity: 0.5;
+        margin: 0;
+        font-size: 2.75rem;
+      }
+
+      section.link-section {
+        display: inline-block;
+        vertical-align: top;
+        max-width: 24rem;
+        margin: 1rem;
         h3 {
-          padding-left: 2.5rem;
+          text-decoration: underline;
+          margin: 0 0 1rem 0;
         }
-        ul.link-list {
-          list-style: none;
-          li { // Color overides for cool animated button
-            $col1: #3979fa;
-            $col2: #031636;
-            .button {
-                // Colors
-                color: $col1;
-                background: $col1;
-                border: 2px solid $col1;
-                &:before { background: $col2; }
-                &:hover, &:focus, &:active { color: $col2; }
-                
-                // Display Styles
-                width: 20rem;
-            }
-
-          }
-        }
-
-        .tile {
-          cursor: pointer;
-          width: 400px;
-          flex-basis: unset !important;
-          flex-grow: unset !important;
-          .tile-texts .tile-description {
-            text-align: left !important;
-          }
-        }
-        .tile-wraper {
-          flex-wrap: wrap !important;
-        }
-        .tile-section, .tile-section-header {
-          background: none !important;
-        }
+      }
     }
-    
+  ul.link-list {
+    list-style: none;
+    padding: 0;
+    li {
+      span {
+        font-size: 1.3rem;
+        border-radius: 12px;
+        line-height: 2.2rem;
+        padding: 0.4rem;
+        cursor: pointer;
+        &:hover {
+          background: #09295e;
+        }
+        &:focus {
+          border: 2px solid #3979fa;
+          background: #09295e;
+        }
+      }
+    }
+  }
 </style>

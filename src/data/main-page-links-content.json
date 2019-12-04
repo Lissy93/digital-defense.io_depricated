@@ -1,32 +1,130 @@
 {
     "sections": [
         {
-            "sectionTitle": "Getting Started",
-            "sectionSubTitle": "Resources to help people of all technical abilities learn about, and improve personal cyber security",
-            "tiles": [
+            "title": "Checklists by Level",
+            "id": "s0",
+            "links": [
                 {
-                    "id": "1",
-                    "name": "Getting Started",
+                    "id": "i0",
+                    "name": "Beginner",
                     "color": "#00c4d4",
                     "description": "Basic personal cyber security principles we all should follow",
-                    "path": "/getting-started/intermediate",
+                    "path": "/beginner-checklist",
                     "icon": "/img/ico_intermediate.png"
                 },
                 {
-                    "id": "2",
-                    "name": "Full Checklist",
+                    "id": "i1",
+                    "name": "Intermediate",
                     "color": "#ff636f",
                     "description": "Complete and comprehensive personal cyber security checklist",
-                    "path": "/full-checklist",
+                    "path": "/intermediate-checklist",
                     "icon": "/img/ico_advanced.png"
                 },
                 {
-                    "id": "3",
-                    "name": "Check if you've been hacked",
+                    "id": "i2",
+                    "name": "Advanced",
                     "color": "#2b5a74",
                     "description": "Simple tool to search for your email address in recent data breaches",
-                    "path": "/have-i-been-hacked",
-                    "icon": "/img/ico-check-hacked.png"
+                    "path": "/ultimate-checklist",
+                    "icon": "/img/ico_advanced.png"
+                }
+            ]
+        },
+        {
+            "title": "Checklist Categories",
+            "id": "s2",
+            "links": [
+                {
+                    "id": "i0",
+                    "name": "Passwords",
+                    "color": "#00c4d4",
+                    "path": "/ultimate-checklist/passwords",
+                    "icon": "/img/ico_intermediate.png"
+                },
+                {
+                    "id": "i1",
+                    "name": "2-Factor Authentication",
+                    "color": "#00c4d4",
+                    "path": "/ultimate-checklist/2fa",
+                    "icon": "/img/ico_intermediate.png"
+                },
+                {
+                    "id": "i2",
+                    "name": "Browsers and Search",
+                    "color": "#00c4d4",
+                    "path": "/ultimate-checklist/browsing",
+                    "icon": "/img/ico_intermediate.png"
+                },
+                {
+                    "id": "i3",
+                    "name": "VPN",
+                    "color": "#00c4d4",
+                    "path": "/ultimate-checklist/vpn",
+                    "icon": "/img/ico_intermediate.png"
+                },
+                {
+                    "id": "i4",
+                    "name": "Emails",
+                    "color": "#00c4d4",
+                    "path": "/ultimate-checklist/email",
+                    "icon": "/img/ico_intermediate.png"
+                },
+                {
+                    "id": "i5",
+                    "name": "Social Media",
+                    "color": "#00c4d4",
+                    "path": "/ultimate-checklist/social",
+                    "icon": "/img/ico_intermediate.png"
+                },
+                {
+                    "id": "i6",
+                    "name": "Devices",
+                    "color": "#00c4d4",
+                    "path": "/ultimate-checklist/devices",
+                    "icon": "/img/ico_intermediate.png"
+                },
+                {
+                    "id": "i7",
+                    "name": "SMS and Calls",
+                    "color": "#00c4d4",
+                    "path": "/ultimate-checklist/sms",
+                    "icon": "/img/ico_intermediate.png"
+                },
+                {
+                    "id": "i8",
+                    "name": "Routers",
+                    "color": "#00c4d4",
+                    "path": "/ultimate-checklist/routers",
+                    "icon": "/img/ico_intermediate.png"
+                },
+                {
+                    "id": "i9",
+                    "name": "Operation Systems",
+                    "color": "#00c4d4",
+                    "path": "/ultimate-checklist/os",
+                    "icon": "/img/ico_intermediate.png"
+                }
+            ]
+        },
+        {
+            "title": "More Resources",
+            "id": "s1",
+            "links": [
+                {
+                    "id": "i0",
+                    "name": "Presentation and Handout",
+                    "color": "#00c4d4",
+                    "description": "Free materials for presenting personal cyber security concepts to audiences of all levels",
+                    "path": "/seminar-materials",
+                    "icon": "/img/ico_intermediate.png"
+                },
+                {
+                    "id": "i2",
+                    "name": "Further Links",
+                    "color": "#2b5a74",
+                    "description": "Verified additional resources, tools and organizations online",
+                    "path": "/further-links",
+                    "icon": "/img/ico_advanced.png"
                 }
             ]
         }
