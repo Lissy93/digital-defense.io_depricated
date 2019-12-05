@@ -22,19 +22,26 @@ const router = new Router({
       component: Home,
     },
     {
+      path: '/ultimate-checklist',
+      name: 'ultimate-list',
+      component: FullList,
+    },
+    { path: '/the-ultimate-personal-cyber-security-checklist', redirect: { name: 'ultimate-list' }},
+    { path: '/list', redirect: { name: 'ultimate-list' }},
+    {
       path: '/about',
       name: 'about',
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
     },
     {
-      path: '/getting-started/intermediate',
-      name: 'intermediate',
+      path: '/beginners-checklist',
+      name: 'beginners',
       component: Intermediate,
     },
     {
-      path: '/full-checklist',
-      name: 'full-list',
-      component: FullList,
+      path: '/intermediate-checklist',
+      name: 'intermediate',
+      component: Intermediate,
     },
     {
       path: '/have-i-been-hacked',

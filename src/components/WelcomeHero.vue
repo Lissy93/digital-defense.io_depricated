@@ -12,9 +12,9 @@
       <img src="../../public/img/hero-scaled.png" alt=""> 
     </div>
     <nav>
-      <AnimatedButton>Why?</AnimatedButton>
-      <AnimatedButton>Beginers Checklist</AnimatedButton>
-      <AnimatedButton>Full Checklist</AnimatedButton>
+      <router-link to="/ultimate-checklist">
+        <AnimatedButton>The Ultimate Checklist</AnimatedButton>
+      </router-link>
     </nav>
   </div>
 </template>
