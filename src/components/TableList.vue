@@ -61,6 +61,9 @@ table{
     /deep/ a {
         color: #89a9c9;
     }
+    .subheading-col {
+        min-width: 8rem;
+    }
     .priority-col {
         span {
             border-radius: 10px;

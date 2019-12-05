@@ -7,7 +7,7 @@
       <!-- Main Logo and Title -->
       <h1 class="logo">
           <router-link to="/">
-            <img src="../../public/img/hero-scaled.png" alt="" v-click-outside="closeAllDropdowns">
+            <!-- <img src="../../public/img/hero-scaled.png" alt="" v-click-outside="closeAllDropdowns"> -->
             Digital Defence
           </router-link>
         </h1>

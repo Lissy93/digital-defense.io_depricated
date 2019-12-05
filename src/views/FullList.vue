@@ -4,7 +4,6 @@
         <h1>The Ultimate Personal Cyber Security Checklist</h1>
         <img src="../../public/img/hero-scaled.png" alt="Digital Defense Logo"> 
     </WelcomeHero>
-    <h1>Complete Personal Cyber Security List</h1>
 
     <!-- 1. Passwords -->
     <Card class="view-card" id="passwords">
