@@ -1,5 +1,9 @@
 <template>
   <div class="advanced-page">
+    <WelcomeHero>
+        <h1>The Ultimate Personal Cyber Security Checklist</h1>
+        <img src="../../public/img/hero-scaled.png" alt="Digital Defense Logo"> 
+    </WelcomeHero>
     <h1>Complete Personal Cyber Security List</h1>
 
     <!-- 1. Passwords -->
@@ -80,6 +84,7 @@
 import { Component, Vue } from 'vue-property-decorator';
 import Card from '@/components/Card.vue';
 import TableList from '@/components/TableList.vue';
+import WelcomeHero from '@/components/WelcomeHero.vue';
 import MdViewer from '@/components/MdViewer.vue';
 
 import * as listPasswords from './../data/advanced-password-list.json';
@@ -97,6 +102,7 @@ import * as listOs from './../data/advanced-os-list.json';
     components: {
         Card,
         TableList,
+        WelcomeHero,
         MdViewer,
     },
     data: () => {
@@ -129,7 +135,18 @@ export default class Advanced extends Vue {}
 
 <style lang="scss" scoped>
 .advanced-page {
-    padding: 0 2em;
+    .welcome-hero {
+        img {
+            width: 25%;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+        h1 {
+            width: 75%;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+    }
     h2 {
         text-align: left;
         margin: 0;

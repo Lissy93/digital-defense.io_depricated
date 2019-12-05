@@ -1,5 +1,5 @@
 <template>
-  <div class="welcome-hero">
+  <div v-if="!this.$slots.default" class="welcome-hero" >
     <!-- <div class="particles-js-canvas-el" id="particles-js"></div> -->
     <div class="hero-child hc1">
       <h1>Digital Defense</h1>
@@ -16,6 +16,9 @@
         <AnimatedButton>The Ultimate Checklist</AnimatedButton>
       </router-link>
     </nav>
+  </div>
+  <div v-else class="welcome-hero" >
+    <slot></slot>
   </div>
 </template>
 
