@@ -96,7 +96,7 @@ export default class Checkbox extends Vue {}
 
     /* When the checkbox is checked, add a blue background */
     .container input:checked ~ .checkmark {
-        background-color: $pink;
+        background-color: $primary;
     }
 
     /* Create the checkmark/indicator (hidden when not checked) */

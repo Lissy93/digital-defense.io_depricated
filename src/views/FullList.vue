@@ -133,8 +133,13 @@ export default class Advanced extends Vue {}
 </script>
 
 <style lang="scss" scoped>
+@import '../styles/colors';
+
 .advanced-page {
+    background: $primary;
     .welcome-hero {
+        box-shadow: 0 8px 13px -2px #000000f5;
+        padding: 0 0 4rem 0;
         img {
             width: 25%;
             padding: 1rem;
@@ -153,7 +158,9 @@ export default class Advanced extends Vue {}
     .view-card{
         margin: 2em auto;
         padding: 1em;
-        max-width: 800px;
+        width: 90%;
+        max-width: 1000px;
+        box-shadow: 0 8px 13px -2px #000000f5;
     }
 }
 </style>
