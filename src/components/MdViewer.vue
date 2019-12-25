@@ -20,6 +20,7 @@ export default class MdViewer extends Vue {
 </script>
 
 <style lang="scss">
+  @import '../styles/colors';
   .md-content{
 
     h1, h2, h3, h4, h5 {
@@ -39,6 +40,9 @@ export default class MdViewer extends Vue {
     h4, h5{
       font-size: 1rem;
       font-weight: bold;
+    }
+    a {
+      color: $secondary;
     }
   }
 </style>

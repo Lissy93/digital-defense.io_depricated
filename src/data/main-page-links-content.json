@@ -27,6 +27,22 @@
                     "description": "Simple tool to search for your email address in recent data breaches",
                     "path": "/ultimate-checklist",
                     "icon": "/img/ico_advanced.png"
+                },
+                {
+                    "id": "i3",
+                    "name": "Kids",
+                    "color": "#2b5a74",
+                    "description": "",
+                    "path": "/ultimate-checklist",
+                    "icon": "/img/ico_advanced.png"
+                },
+                {
+                    "id": "i4",
+                    "name": "Small Businesses",
+                    "color": "#2b5a74",
+                    "description": "",
+                    "path": "/ultimate-checklist",
+                    "icon": "/img/ico_advanced.png"
                 }
             ]
         },
@@ -108,11 +124,19 @@
         },
         {
             "title": "More Resources",
-            "id": "s1",
+            "id": "s3",
             "links": [
                 {
                     "id": "i0",
-                    "name": "Presentation and Handout",
+                    "name": "The importance of Digital Security",
+                    "color": "#00c4d4",
+                    "description": "",
+                    "path": "/tools/check-email",
+                    "icon": "/img/ico_intermediate.png"
+                },
+                {
+                    "id": "i1",
+                    "name": "Presentation and Seminar Materials",
                     "color": "#00c4d4",
                     "description": "Free materials for presenting personal cyber security concepts to audiences of all levels",
                     "path": "/seminar-materials",
@@ -124,6 +148,120 @@
                     "color": "#2b5a74",
                     "description": "Verified additional resources, tools and organizations online",
                     "path": "/further-links",
+                    "icon": "/img/ico_advanced.png"
+                },
+                {
+                    "id": "i4",
+                    "name": "Quizzes",
+                    "color": "#00c4d4",
+                    "description": "",
+                    "path": "/tools/check-email",
+                    "icon": "/img/ico_intermediate.png"
+                }
+            ]
+        },
+        {
+            "title": "Tools",
+            "id": "s4",
+            "links": [
+                {
+                    "id": "i0",
+                    "name": "Check your Email",
+                    "color": "#00c4d4",
+                    "description": "",
+                    "path": "/tools/check-email",
+                    "icon": "/img/ico_intermediate.png"
+                },
+                {
+                    "id": "i2",
+                    "name": "Check your Password",
+                    "color": "#2b5a74",
+                    "description": "",
+                    "path": "/tools/check-password",
+                    "icon": "/img/ico_advanced.png"
+                },
+                {
+                    "id": "i3",
+                    "name": "Password Generator",
+                    "color": "#2b5a74",
+                    "description": "",
+                    "path": "/tools/check-password",
+                    "icon": "/img/ico_advanced.png"
+                }
+            ]
+        },
+        {
+            "title": "Recommended Products",
+            "id": "s5",
+            "links": [
+                {
+                    "id": "i0",
+                    "name": "Virtual Private Networks",
+                    "color": "#00c4d4",
+                    "description": "",
+                    "path": "/tools/check-email",
+                    "icon": "/img/ico_intermediate.png"
+                },
+                {
+                    "id": "i2",
+                    "name": "Password Managers",
+                    "color": "#2b5a74",
+                    "description": "",
+                    "path": "/tools/check-password",
+                    "icon": "/img/ico_advanced.png"
+                },
+                {
+                    "id": "i3",
+                    "name": "Security-focused software",
+                    "color": "#2b5a74",
+                    "description": "",
+                    "path": "/tools/check-password",
+                    "icon": "/img/ico_advanced.png"
+                },
+                {
+                    "id": "i4",
+                    "name": "Security and Privacy Gadgets",
+                    "color": "#2b5a74",
+                    "description": "",
+                    "path": "/tools/check-password",
+                    "icon": "/img/ico_advanced.png"
+                }
+            ]
+        },
+        {
+            "title": "Articles",
+            "id": "s6",
+            "links": [
+                {
+                    "id": "i0",
+                    "name": "What to do if you've been hacked",
+                    "color": "#00c4d4",
+                    "description": "",
+                    "path": "/tools/check-email",
+                    "icon": "/img/ico_intermediate.png"
+                },
+                {
+                    "id": "i2",
+                    "name": "The problem with social feeds",
+                    "color": "#2b5a74",
+                    "description": "",
+                    "path": "/tools/check-password",
+                    "icon": "/img/ico_advanced.png"
+                },
+                {
+                    "id": "i3",
+                    "name": "Switching from Google",
+                    "color": "#2b5a74",
+                    "description": "",
+                    "path": "/tools/check-password",
+                    "icon": "/img/ico_advanced.png"
+                },
+                {
+                    "id": "i4",
+                    "name": "The State of Surveillance",
+                    "color": "#2b5a74",
+                    "description": "",
+                    "path": "/tools/check-password",
                     "icon": "/img/ico_advanced.png"
                 }
             ]

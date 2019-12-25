@@ -74,8 +74,6 @@
         <MdViewer>{{ require('./../docs/advanced-os.md') }}</MdViewer>
         <TableList :tableRows="osList"/>
     </Card>
-
-
   </div>
 </template>
 
@@ -137,18 +135,23 @@ export default class Advanced extends Vue {}
 
 .advanced-page {
     background: $primary;
+    padding-bottom: 2rem;
     .welcome-hero {
         box-shadow: 0 8px 13px -2px #000000f5;
-        padding: 0 0 4rem 0;
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
         img {
-            width: 25%;
-            padding: 1rem;
-            box-sizing: border-box;
+            width: 20rem;
+            height: 16rem;
+            margin: 0 auto;
+            padding: 0 2rem;
+            @media (max-width: 1024px) {
+                display: none;
+            }
         }
         h1 {
-            width: 75%;
-            padding: 1rem;
-            box-sizing: border-box;
+            flex: 1;
         }
     }
     h2 {
@@ -158,9 +161,9 @@ export default class Advanced extends Vue {}
     .view-card{
         margin: 2em auto;
         padding: 1em;
-        width: 90%;
-        max-width: 1000px;
-        box-shadow: 0 8px 13px -2px #000000f5;
+        width: 85%;
+       max-width: 1350px;
+        box-shadow: 2px 8px 7px 10px #0000008a;
     }
 }
 </style>

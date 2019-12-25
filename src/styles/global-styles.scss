@@ -4,6 +4,7 @@
 \******************/
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600i&display=swap');
+@import './colors';
 
 html, body {
 -webkit-font-smoothing: antialiased;
@@ -37,6 +38,10 @@ h3 {
 h4 {
     font-size: 1.8em;
     text-align: left;
+}
+
+a {
+    color: $secondary;
 }
 
   

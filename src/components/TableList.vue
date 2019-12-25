@@ -44,76 +44,77 @@ export default class TableList extends Vue {}
 </script>
 
 <style scoped lang="scss">
+  @import '../styles/colors';
 
-table{
-    text-align: left;
-    font-family:  'Raleway', sans-serif;
-    font-size: 1em;
-    thead th{
-        font-family: 'Dosis', sans-serif;
-        font-size: 1.5em;
-        font-weight: 400;
-    }
-    td{
-        padding: 0.5em;
-        border: 1px solid #e5e5e5;
-    }
-    /deep/ a {
-        color: #89a9c9;
-    }
-    .subheading-col {
-        min-width: 8rem;
-    }
-    .priority-col {
-        span {
-            border-radius: 10px;
+    table{
+        text-align: left;
+        font-family:  'Raleway', sans-serif;
+        font-size: 1em;
+        color: $primary;
+        thead th{
+            font-family: 'Dosis', sans-serif;
+            font-size: 1.5em;
+            font-weight: 400;
+        }
+        td{
             padding: 0.5em;
-            text-transform: capitalize;
-            cursor: default;
+            border: 1px solid #e5e5e5;
         }
-        &.priority-recommended span {
-            background: #caebca;
+        /deep/ a {
+            color: $secondary;
         }
-        &.priority-optional span {
-            background: #f8d79a;
+        .subheading-col {
+            min-width: 8rem;
         }
-        &.priority-advanced span {
-            background: #efc0c0;
+        .priority-col {
+            span {
+                border-radius: 10px;
+                padding: 0.5em;
+                text-transform: capitalize;
+                cursor: default;
+            }
+            &.priority-recommended span {
+                background: #caebca;
+            }
+            &.priority-optional span {
+                background: #f8d79a;
+            }
+            &.priority-advanced span {
+                background: #efc0c0;
+            }
         }
     }
-}
 
-@media (max-width: 769px) {
-    table {
-        thead {
-            display: none;
-        }
-        tr {
-            display: flex;
-            flex-direction: column;
-            .subheading-col {
-                font-weight: bold;
-                text-align: center;
-                margin-top: 1.5em;
-            }
-            .priority-col {
-                text-align: center;
-                    font-style: italic;
-                    &.priority-recommended {
-                        background: #caebca;
-                    }
-                    &.priority-optional {
-                        background: #f8d79a;
-                    }
-                    &.priority-advanced {
-                        background: #efc0c0;
-                    }
-            }
-            .checkbox-col {
+    @media (max-width: 769px) {
+        table {
+            thead {
                 display: none;
             }
+            tr {
+                display: flex;
+                flex-direction: column;
+                .subheading-col {
+                    font-weight: bold;
+                    text-align: center;
+                    margin-top: 1.5em;
+                }
+                .priority-col {
+                    text-align: center;
+                        font-style: italic;
+                        &.priority-recommended {
+                            background: #caebca;
+                        }
+                        &.priority-optional {
+                            background: #f8d79a;
+                        }
+                        &.priority-advanced {
+                            background: #efc0c0;
+                        }
+                }
+                .checkbox-col {
+                    display: none;
+                }
+            }
         }
     }
-}
-
 </style>

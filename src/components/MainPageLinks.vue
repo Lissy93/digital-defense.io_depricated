@@ -51,7 +51,7 @@ export default class MainPageLinks extends Vue {}
       section.link-section {
         display: inline-block;
         vertical-align: top;
-        max-width: 24rem;
+        width: 25rem;
         margin: 1rem;
         h3 {
           text-decoration: underline;
