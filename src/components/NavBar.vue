@@ -15,13 +15,13 @@
         <!-- Main Navigation -->
         <nav> 
           <ul class="main-nav" v-bind:class="{ menuOpen: isMenuOpen }">
-            <li v-for="navBarItem in navBarItems" v-bind:key="navBarItem.name" @mouseover="visibleDropdown = navBarItem.name">
+            <li v-for="section in navData" v-bind:key="section.id" @mouseover="visibleDropdown = section.id">
               <div>
-                <router-link :to="navBarItem.path">{{navBarItem.name}}</router-link>
+                <router-link :to="section.title">{{section.title}}</router-link>
               </div>
-              <ul class="sub-nav" v-bind:class="{ open: visibleDropdown == navBarItem.name }"  @mouseleave="closeAllDropdowns">
-                <li v-for="navBarItemChild in navBarItem.children" v-bind:key="navBarItemChild.name">
-                  <router-link :to="navBarItemChild.path">{{navBarItemChild.name}}</router-link>
+              <ul class="sub-nav" v-bind:class="{ open: visibleDropdown == section.id }"  @mouseleave="closeAllDropdowns">
+                <li v-for="link in section.links" v-bind:key="link.name">
+                  <router-link :to="link.path">{{link.name}}</router-link>
                 </li>
               </ul>
             </li>
@@ -36,6 +36,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 
 import NavBarItems from './../models/NavBarItems';
 import Burger from './Burger.vue';
+import * as NavData from './../data/main-page-links-content.json';
 
 // tslint:disable:no-var-requires // Will I go to hell for this?
 const ClickOutside = require('./../directives/ClickOutside.js');
@@ -46,16 +47,17 @@ const navData = require('./../data/nav-bar-content.json');
     data: () => {
         return {
         navBarItems: (new NavBarItems()).makeTheFuckingNavbar(navData),
+        navData: NavData.default.sections,
         visibleDropdown: '',
         isMenuOpen: false, // start closed
         };
     },
     methods: {
         closeAllDropdowns() {
-        this.$data.visibleDropdown = '';
+          this.$data.visibleDropdown = '';
         },
         onBurgerChange(openOrClose) {
-        this.$data.isMenuOpen = openOrClose;
+          this.$data.isMenuOpen = openOrClose;
         },
     },
     directives: {

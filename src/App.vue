@@ -5,7 +5,7 @@
     <div class="wrapper" v-bind:class="{ 'dark-bg': $route.name.includes('home') }">
 
       <!-- Header containing navigation bar (don't show on home) -->
-      <Header v-if="['home'].indexOf($route.name) < 0" />
+      <NavBar v-if="['home'].indexOf($route.name) < 0" />
 
     <!-- Main Content -->
     <main>
@@ -32,12 +32,12 @@
 
 
 
-  import Header from './components/Header.vue';
+  import NavBar from './components/NavBar.vue';
   import Footer from './components/Footer.vue';
 
   @Component({
     components: {
-      Header,
+      NavBar,
       Footer,
     },
 })
