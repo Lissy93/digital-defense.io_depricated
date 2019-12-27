@@ -15,7 +15,12 @@
         <!-- Main Navigation -->
         <nav> 
           <ul class="main-nav" v-bind:class="{ menuOpen: isMenuOpen }">
-            <li v-for="section in navData" v-bind:key="section.id" @mouseover="visibleDropdown = section.id">
+            <li
+              v-for="section in navData"
+              v-bind:key="section.id"
+              v-bind:class="{ hide: !section.showInNav }"
+              @mouseover="visibleDropdown = section.id"
+              >
               <div>
                 <router-link :to="section.title">{{section.title}}</router-link>
               </div>
@@ -71,6 +76,7 @@ export default class Header extends Vue {}
 </script>
 
 <style lang="sass">
-  @import './../styles/navbar-styles.scss'
+  @import './../styles/navbar-styles.scss';
+  .hide{ display: none; }
 </style>
 

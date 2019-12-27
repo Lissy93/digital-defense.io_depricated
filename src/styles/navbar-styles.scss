@@ -1,6 +1,6 @@
 @import '../styles/colors';
 
-header{
+header {
     background: $primary;
     padding: 0.5em 1em;
     box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0,0,0,.12), 0 2px 4px rgba(0,0,0,.24);
@@ -8,29 +8,19 @@ header{
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    @media (min-width: 769px) {
-      display: block;
-    }
-  
-    .bigmac{
+    .bigmac {
       width: 10%;
-      @media (min-width: 769px) {
-        display: none;
-      }
     }
-
+    
     h1 {
       width: 90%;
-      @media (min-width: 769px) {
-        width: auto;
-      }
       margin: 0;
-      a{
+      a {
         margin: 0;
         display: flex;
         align-items: center;
         justify-content: center;
-        img{
+        img {
           width: 1.5em; 
           @media screen and (max-width: 479px) {
             display: none; // Sorry tiny phones - u don't get no pretty picture
@@ -39,32 +29,21 @@ header{
       }
     }
 
-    nav{
+    nav {
       margin: 0 auto;
-      @media (min-width: 769px) {
-        margin: 0;
-      }
     }
   
     ul {
       list-style: none;
       padding: 0;
 
-      &.main-nav{
+      &.main-nav {
         display: none; // Because the menu should only be immediately visible on desktop
         flex-direction: column;
-
-        &.menuOpen{
+        &.menuOpen {
           display: flex;
-        }
-        
-        @media (min-width: 769px) {
-          display: flex;
-          flex-direction: row;
         }
       }
-
-
     }
 
     ul li a {
@@ -75,16 +54,17 @@ header{
       color: $secondary;
       text-decoration: none;
       font-family: 'Dosis', sans-serif;
-      font-size: 1.2em;
+      font-size: 1em;
       display: block;
       margin: 0;
-      border: 1px solid $blue;
+      border: 1px solid $primary;
   
       &.router-link-exact-active {
         border: 1px solid $secondary;
+
       }
       
-      &.router-link-active:hover, &:hover {
+      &.router-link-active:hover, &:hover, &.router-link-exact-active {
         background: $secondary;
         border: 1px solid $secondary;
         color: $blue;
@@ -115,35 +95,55 @@ header{
       }
 
     }
-
-    @media (min-width: 769px) {
-      position: absolute;
-    }
-  }
-  
-  
-  @media (min-width: 769px) {
-    ul.main-nav {
-      display: flex;
-    }
-    header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    ul li a {
-      margin: 0 0.5em;
-    }
-  }
-  
-  @media (min-width: 1025px) {
-    header {
-        flex-direction: row;
-        justify-content: space-between;
-    }
   }
   
   h1 a{
       color: $secondary;
       text-decoration: none;
+      font-size: 2rem;
+  }
+
+  @media (min-width: 1025px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        .main-nav li {
+          min-width: 8rem;
+          div a { text-align: center;}
+        }
+        nav { margin: 0; }
+    }
+  }
+  
+  @media (min-width: 769px) {
+    header { 
+      ul.main-nav {
+        display: flex;
+        display: flex;
+        flex-direction: row;
+        li div a { border: 1px solid $secondary; }
+      }
+      header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      ul li a {
+        margin: 0 0.5em;
+      }
+      .bigmac {
+        display: none;
+      }
+      h1 {
+        width: auto;
+      }
+      .sub-nav {
+        position: absolute;
+      }
+      header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }      
+    }
   }
