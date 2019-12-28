@@ -1,6 +1,6 @@
 // vue.config.js
 module.exports = {
-    publicPath: '/digital-defense.io/',
+    // publicPath: '/digital-defense.io/',
     configureWebpack: {
         module: {
             rules: [
