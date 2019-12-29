@@ -4,7 +4,10 @@
       <HomeCarousel />
     </div>
     <div class="hero-child secondary-info">
-      <p>Something</p>
+      <p>
+        The easy-to-follow guides on this site, will help you keep 
+        your data protected from fraud, hacks and survelance
+      </p>
     </div>
   </div>
 </template>
@@ -31,12 +34,18 @@ export default class DangerHero extends Vue {}
     padding: 1em;
 
     width: 100%;
-    display: flex;
     text-align: center;
     color: $secondary;
 
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 769px) {
+      flex-direction: row;
+    }
+
     .hero-child {
-        width: 100%;
+        margin-bottom: 1rem;
+        width: 90%;
         @media (min-width: 769px) {
           width: 50%;
         }
@@ -45,6 +54,13 @@ export default class DangerHero extends Vue {}
           display: flex;
           justify-content: center;
           align-items: center;
+          margin: auto;
+          max-width: 20rem;
+          padding: 1rem;
+          margin: auto;
+          background: $primary;
+          font-size: 1.2rem;
+          box-shadow: 1px 3px 0px 0px #00000036;
       }
 
     h2, h3{
@@ -54,6 +70,14 @@ export default class DangerHero extends Vue {}
         0 2px 4px rgba(0, 0, 0, 0.24);
     }
   }
+
+  // @media (max-width: 1024px) {
+  //   background: yellow;
+  // }
+
+  // @media (min-width: 769px) {
+  //   background: red;
+  // }
 }
 
 </style>

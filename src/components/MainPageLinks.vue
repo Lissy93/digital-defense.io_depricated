@@ -51,23 +51,25 @@ export default class MainPageLinks extends Vue {}
       section.link-section {
         display: inline-block;
         vertical-align: top;
-        width: 25rem;
-        margin: 1rem;
+        width: 15rem;
+        margin: 0.5rem;
         h3 {
           text-decoration: underline;
-          margin: 0 0 1rem 0;
+          margin: 0 0 0.2rem 0;
+          font-size: 1.2rem;
         }
       }
     }
   ul.link-list {
     list-style: none;
     padding: 0;
+    margin: 0.5rem 0;
     li {
       span {
-        font-size: 1.3rem;
-        border-radius: 12px;
-        line-height: 2.2rem;
-        padding: 0.4rem;
+        font-size: 1rem;
+        border-radius: 8px;
+        line-height: 1.6rem;
+        padding: 0.2rem;
         cursor: pointer;
         &:hover {
           background: #09295e;

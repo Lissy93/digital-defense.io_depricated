@@ -54,5 +54,11 @@ export default class HomeCarousel extends Vue {
     opacity: 0.8;
     a{ color: inherit; }
   }
-  /deep/.VueCarousel-dot-container { opacity: 0.8; }
+  /deep/.VueCarousel-dot-container {
+    opacity: 0.8;
+    button {
+      margin-top: 0 !important;
+      padding: 0 10px;
+    }
+  }
 </style>
