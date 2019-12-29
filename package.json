@@ -4,11 +4,11 @@
   "private": true,
   "scripts": {
     "start": "node main",
-    "dev": "concurrently \"nodemon main\" -n Backend \"vue-cli-service build --watch --mode development --hmr\"",
+    "dev": "concurrently \"nodemon main\" -n Backend \"vue-cli-service serve\"",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:e2e": "vue-cli-service test:e2e",
-    "frontend": "vue-cli-service serve"
+    "deploy": "sh deploy"
   },
   "dependencies": {
     "@babel/core": "^7.7.7",
