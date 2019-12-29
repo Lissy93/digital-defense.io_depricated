@@ -48,83 +48,6 @@
             ]
         },
         {
-            "title": "Checklist Categories",
-            "id": "s2",
-            "showInNav": false,
-            "links": [
-                {
-                    "id": "i0",
-                    "name": "Passwords",
-                    "color": "#00c4d4",
-                    "path": "/ultimate-checklist/passwords",
-                    "icon": "/img/ico_intermediate.png"
-                },
-                {
-                    "id": "i1",
-                    "name": "2-Factor Authentication",
-                    "color": "#00c4d4",
-                    "path": "/ultimate-checklist/2fa",
-                    "icon": "/img/ico_intermediate.png"
-                },
-                {
-                    "id": "i2",
-                    "name": "Browsers and Search",
-                    "color": "#00c4d4",
-                    "path": "/ultimate-checklist/browsing",
-                    "icon": "/img/ico_intermediate.png"
-                },
-                {
-                    "id": "i3",
-                    "name": "VPN",
-                    "color": "#00c4d4",
-                    "path": "/ultimate-checklist/vpn",
-                    "icon": "/img/ico_intermediate.png"
-                },
-                {
-                    "id": "i4",
-                    "name": "Emails",
-                    "color": "#00c4d4",
-                    "path": "/ultimate-checklist/email",
-                    "icon": "/img/ico_intermediate.png"
-                },
-                {
-                    "id": "i5",
-                    "name": "Social Media",
-                    "color": "#00c4d4",
-                    "path": "/ultimate-checklist/social",
-                    "icon": "/img/ico_intermediate.png"
-                },
-                {
-                    "id": "i6",
-                    "name": "Devices",
-                    "color": "#00c4d4",
-                    "path": "/ultimate-checklist/devices",
-                    "icon": "/img/ico_intermediate.png"
-                },
-                {
-                    "id": "i7",
-                    "name": "SMS and Calls",
-                    "color": "#00c4d4",
-                    "path": "/ultimate-checklist/sms",
-                    "icon": "/img/ico_intermediate.png"
-                },
-                {
-                    "id": "i8",
-                    "name": "Routers",
-                    "color": "#00c4d4",
-                    "path": "/ultimate-checklist/routers",
-                    "icon": "/img/ico_intermediate.png"
-                },
-                {
-                    "id": "i9",
-                    "name": "Operation Systems",
-                    "color": "#00c4d4",
-                    "path": "/ultimate-checklist/os",
-                    "icon": "/img/ico_intermediate.png"
-                }
-            ]
-        },
-        {
             "title": "Tools",
             "id": "s4",
             "showInNav": true,
@@ -178,7 +101,7 @@
                 },
                 {
                     "id": "i3",
-                    "name": "Security-focused software",
+                    "name": "Privacy/ Security Software",
                     "color": "#2b5a74",
                     "description": "",
                     "path": "/tools/check-password",
@@ -186,6 +109,14 @@
                 },
                 {
                     "id": "i4",
+                    "name": "Apps that don't track you",
+                    "color": "#2b5a74",
+                    "description": "",
+                    "path": "/tools/check-password",
+                    "icon": "/img/ico_advanced.png"
+                },
+                {
+                    "id": "i5",
                     "name": "Security and Privacy Gadgets",
                     "color": "#2b5a74",
                     "description": "",
@@ -264,7 +195,7 @@
                 },
                 {
                     "id": "i3",
-                    "name": "Switching from Google",
+                    "name": "Apps and services that respect your privacy",
                     "color": "#2b5a74",
                     "description": "",
                     "path": "/tools/check-password",
@@ -277,6 +208,91 @@
                     "description": "",
                     "path": "/tools/check-password",
                     "icon": "/img/ico_advanced.png"
+                },
+                {
+                    "id": "i5",
+                    "name": "Nothing to hide, why digital privacy matters",
+                    "color": "#2b5a74",
+                    "description": "",
+                    "path": "/tools/check-password",
+                    "icon": "/img/ico_advanced.png"
+                }
+            ]
+        },
+        {
+            "title": "Top 10 Checklists",
+            "id": "s2",
+            "showInNav": false,
+            "links": [
+                {
+                    "id": "i0",
+                    "name": "Passwords",
+                    "color": "#00c4d4",
+                    "path": "/ultimate-checklist/passwords",
+                    "icon": "/img/ico_intermediate.png"
+                },
+                {
+                    "id": "i1",
+                    "name": "2-Factor Authentication",
+                    "color": "#00c4d4",
+                    "path": "/ultimate-checklist/2fa",
+                    "icon": "/img/ico_intermediate.png"
+                },
+                {
+                    "id": "i2",
+                    "name": "Browsers and Search",
+                    "color": "#00c4d4",
+                    "path": "/ultimate-checklist/browsing",
+                    "icon": "/img/ico_intermediate.png"
+                },
+                {
+                    "id": "i3",
+                    "name": "VPN",
+                    "color": "#00c4d4",
+                    "path": "/ultimate-checklist/vpn",
+                    "icon": "/img/ico_intermediate.png"
+                },
+                {
+                    "id": "i4",
+                    "name": "Emails",
+                    "color": "#00c4d4",
+                    "path": "/ultimate-checklist/email",
+                    "icon": "/img/ico_intermediate.png"
+                },
+                {
+                    "id": "i5",
+                    "name": "Social Media",
+                    "color": "#00c4d4",
+                    "path": "/ultimate-checklist/social",
+                    "icon": "/img/ico_intermediate.png"
+                },
+                {
+                    "id": "i6",
+                    "name": "Devices",
+                    "color": "#00c4d4",
+                    "path": "/ultimate-checklist/devices",
+                    "icon": "/img/ico_intermediate.png"
+                },
+                {
+                    "id": "i7",
+                    "name": "SMS and Calls",
+                    "color": "#00c4d4",
+                    "path": "/ultimate-checklist/sms",
+                    "icon": "/img/ico_intermediate.png"
+                },
+                {
+                    "id": "i8",
+                    "name": "Routers",
+                    "color": "#00c4d4",
+                    "path": "/ultimate-checklist/routers",
+                    "icon": "/img/ico_intermediate.png"
+                },
+                {
+                    "id": "i9",
+                    "name": "Operation Systems",
+                    "color": "#00c4d4",
+                    "path": "/ultimate-checklist/os",
+                    "icon": "/img/ico_intermediate.png"
                 }
             ]
         }
