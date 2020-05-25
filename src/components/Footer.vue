@@ -1,18 +1,24 @@
 <template>
-  <footer>
-    <div class="footer-item">
-        <a href="/">Cyber Defence</a>
-    </div>
-    <div class="footer-item">
-          &copy; <a href="https://aliciasykes.com">Alicia Sykes</a> 2019. 
-          Licensed under <a href="https://gist.github.com/Lissy93/143d2ee01ccc5c052a17">MIT</a>.
-    </div>
-    <div class="footer-item">
-        <a href="https://aliciasykes.com/legal">
-            Legal
-        </a>
-      </div>
-  </footer>
+    <footer>
+        <div class="footer-item">
+            <a href="/">digital-defense.io</a>
+        </div>
+        <div class="footer-item">
+            <a href="/about">About</a>
+        </div>
+        <div class="footer-item">
+            <a href="https://github.com/Lissy93/digital-defense.io">Source Code</a>
+        </div>
+        <div class="footer-item">
+            <a href="https://aliciasykes.com/legal">
+            Privacy Policy
+            </a>
+        </div>
+        <div class="footer-item">
+            &copy; <a href="https://aliciasykes.com">Alicia Sykes</a> 2019. 
+            Licensed under <a href="https://gist.github.com/Lissy93/143d2ee01ccc5c052a17">MIT</a>.
+        </div>
+    </footer>
 </template>
 
 <script lang="ts">
