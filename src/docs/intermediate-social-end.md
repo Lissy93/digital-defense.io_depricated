@@ -1,1 +1,0 @@
-*Change your password immediately if there is any activity that you don’t recognise and report anything suspicious. A good approach, is to think of everything you post or upload as potentially public, even once you’ve tightened your privacy settings.*

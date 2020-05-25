@@ -1,1 +1,0 @@
-2-Factor authentication, is a method of logging into your secure accounts on different computers/ devices, where you provide both something you know (a password), and something you have (a 6-digit number generated on your smartphone).

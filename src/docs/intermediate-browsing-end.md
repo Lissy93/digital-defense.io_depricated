@@ -1,1 +1,0 @@
-*Always remember, that everything you do online is being tracked and monitored, so don’t overshare, don’t trust websites that may not be reputable, and keep an eye on your cookies.*

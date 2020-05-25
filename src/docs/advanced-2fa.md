@@ -1,1 +1,0 @@
-This is a secure method of logging in, where you supply not just your password, but also an additional code usually from a device that only you’d have access to.

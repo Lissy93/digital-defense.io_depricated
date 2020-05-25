@@ -1,1 +1,0 @@
-*A password manager such as LastPass (or DashLine, OnePass, KeePass) will make applying these points significantly easier. It will securely store, and auto fill each of your passwords, so that you don’t have to remember them all.*

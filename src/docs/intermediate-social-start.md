@@ -1,1 +1,0 @@
-Social media hacks are some of the most common, so it is important to stay vigilant. Social media hacks often put not only yourself at risk, but also the organisations you work for, so it’s a good idea to not disclose any work details on your profile.

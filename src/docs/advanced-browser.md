@@ -1,3 +1,0 @@
-Most modern web browsers allow for addons and extensions, these can access anything that you do online, avoid installing anything that may not be legitimate and check permissions first. Be aware that ever website that you interact with, including search engines will likely be keeping records of all your activity. Last year Kaspersky reported [over a million data exploits caused by malicious sites](https://securelist.com/it-threat-evolution-q1-2017-statistics/78475/).
-
-For more browser security pointers, check out: [Here’s How To Get Solid Browser Security](https://heimdalsecurity.com/blog/ultimate-guide-secure-online-browsing/) 

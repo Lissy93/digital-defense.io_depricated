@@ -1,1 +1,0 @@
-Scams target everyone are getting increasingly more sophisticated and they can target anyone. Often they succeed because they appear to be legitimate, but the effects can be detrimental. They may be after money, personal details or attempting to get access to something related to the organisation you work for. It’s important to know how to protect yourself from falling victim.

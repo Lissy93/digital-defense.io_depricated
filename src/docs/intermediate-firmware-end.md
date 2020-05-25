@@ -1,1 +1,0 @@
-*As well as vital security patches, updates often also include bug fixes, efficiency and speed upgrades as well as new features.*
