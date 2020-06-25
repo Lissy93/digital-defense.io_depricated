@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "checklist_sections",
   "info": {
-    "name": "checklist-section"
+    "name": "checklistSection"
   },
   "options": {
     "increments": true,
@@ -16,8 +16,8 @@
       "type": "richtext"
     },
     "items": {
-      "via": "checklist_section",
-      "collection": "checklist-item"
+      "collection": "checklist-item",
+      "via": "checklist_section"
     },
     "category": {
       "type": "component",

@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "checklist_items",
   "info": {
-    "name": "checklist-item"
+    "name": "checklistItem"
   },
   "options": {
     "increments": true,
@@ -24,8 +24,8 @@
       ]
     },
     "checklist_section": {
-      "model": "checklist-section",
-      "via": "items"
+      "via": "items",
+      "model": "checklist-section"
     }
   }
 }

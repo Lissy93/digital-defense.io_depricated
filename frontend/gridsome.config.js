@@ -7,9 +7,10 @@ module.exports = {
     {
       use: '@gridsome/source-strapi',
       options: {
+        typeName: 'dd_',
         apiURL: 'http://localhost:1337',
         queryLimit: 1000,
-        contentTypes: [],
+        contentTypes: ['Checklist-Item', 'Checklist-Section'],
         // loginData: {
         //   identifier: '',
         //   password: ''
