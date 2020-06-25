@@ -23,14 +23,9 @@
         "advanced"
       ]
     },
-    "categories": {
-      "type": "component",
-      "repeatable": true,
-      "component": "additional-data.categories"
-    },
     "checklist_section": {
-      "via": "items",
-      "model": "checklist-section"
+      "model": "checklist-section",
+      "via": "items"
     }
   }
 }

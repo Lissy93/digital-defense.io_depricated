@@ -16,8 +16,13 @@
       "type": "richtext"
     },
     "items": {
-      "collection": "checklist-item",
-      "via": "checklist_section"
+      "via": "checklist_section",
+      "collection": "checklist-item"
+    },
+    "category": {
+      "type": "component",
+      "repeatable": true,
+      "component": "additional-data.categories"
     }
   }
 }
