@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "checklist_items",
+  "info": {
+    "name": "checklist-item"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "details": {
+      "type": "richtext"
+    },
+    "level": {
+      "type": "enumeration",
+      "enum": [
+        "basic",
+        "intermediate",
+        "advanced"
+      ]
+    },
+    "categories": {
+      "type": "component",
+      "repeatable": true,
+      "component": "additional-data.categories"
+    },
+    "checklist_section": {
+      "via": "items",
+      "model": "checklist-section"
+    }
+  }
+}

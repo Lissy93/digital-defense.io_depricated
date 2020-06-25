@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_additional_data_links",
+  "info": {
+    "name": "Links",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "display_name": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "category": {
+      "type": "component",
+      "repeatable": true,
+      "component": "additional-data.categories"
+    }
+  }
+}

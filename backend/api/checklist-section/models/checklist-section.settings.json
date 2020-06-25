@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "checklist_sections",
+  "info": {
+    "name": "checklist-section"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "intro": {
+      "type": "richtext"
+    },
+    "items": {
+      "collection": "checklist-item",
+      "via": "checklist_section"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_additional_data_categories",
+  "info": {
+    "name": "Categories",
+    "icon": "tags"
+  },
+  "options": {},
+  "attributes": {
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "authentication",
+        "web_browsing",
+        "email",
+        "messaging",
+        "social_media",
+        "networks",
+        "smart_phones",
+        "personal_computers",
+        "smart_home",
+        "personal_finance",
+        "human_aspect",
+        "physical_security"
+      ]
+    }
+  }
+}
