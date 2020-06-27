@@ -1,5 +1,23 @@
 // Gridsome project configuration
-// See Docs: https://gridsome.org/docs/config
+
+const path = require('path');
+
+/**
+ * Loads global SASS stylesheet assets
+ * @param {*} rule 
+ */
+function addStyleResource (rule) {
+  rule.use('style-resource')
+    .loader('style-resources-loader')
+    .options({
+      patterns: [
+        path.resolve(__dirname, './src/assets/styles/_color-pallet.scss'),
+        path.resolve(__dirname, './src/assets/styles/_globals.scss'),
+        path.resolve(__dirname, './src/assets/styles/_reset.scss'),
+      ],
+    })
+}
+
 
 module.exports = {
   siteName: 'Gridsome',
@@ -17,5 +35,12 @@ module.exports = {
         // }
       }
     }
-  ]
+  ],
+  // Loads variables for all vue-files
+  chainWebpack (config) {
+    const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
+    types.forEach(type => {
+      addStyleResource(config.module.rule('scss').oneOf(type))
+    })
+	}
 }
