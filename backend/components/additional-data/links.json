@@ -15,6 +15,10 @@
     "description": {
       "type": "string"
     },
+    "external": {
+      "type": "boolean",
+      "default": true
+    },
     "category": {
       "type": "component",
       "repeatable": true,

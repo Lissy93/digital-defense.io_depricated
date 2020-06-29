@@ -6,7 +6,7 @@
   },
   "options": {},
   "attributes": {
-    "category": {
+    "type": {
       "type": "enumeration",
       "enum": [
         "authentication",

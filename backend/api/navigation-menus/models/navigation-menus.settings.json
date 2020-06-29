@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "navigation_menus",
+  "info": {
+    "name": "NavigationMenus"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "additional-data.links"
+    },
+    "children": {
+      "type": "component",
+      "repeatable": true,
+      "component": "additional-data.links"
+    },
+    "menu_location": {
+      "type": "enumeration",
+      "enum": [
+        "home"
+      ],
+      "default": "home"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}
