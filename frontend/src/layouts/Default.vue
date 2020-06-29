@@ -1,6 +1,7 @@
 <template>
   <div class="layout">
     <header class="header">
+      <NavBar />
       <strong>
         <g-link to="/">{{ $static.metadata.siteName }}</g-link>
       </strong>
@@ -13,6 +14,19 @@
   </div>
 </template>
 
+<script>
+import NavBar from '../components/structural/NavBar.vue'
+
+export default {
+  components: {
+    NavBar
+  }
+}
+</script>
+
+
+</script>
+
 <static-query>
 query {
   metadata {
@@ -21,13 +35,14 @@ query {
 }
 </static-query>
 
-<style>
+<style lang="scss">
 
 body {
   font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   margin:0;
   padding:0;
   line-height: 1.5;
+  color: $accent1;
 }
 
 .layout {

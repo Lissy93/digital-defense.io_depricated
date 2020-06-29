@@ -20,19 +20,17 @@ function addStyleResource (rule) {
 
 
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: 'Digital Defense 🔐',
+  siteUrl: 'https://digital-defense.io',
+  siteDescription: 'Tools, Guides and Resources for Preserving Privacy and Strengthening Security Online.',
   plugins: [
     {
       use: '@gridsome/source-strapi',
       options: {
-        typeName: 'dd_',
+        // typeName: 'dd_',
         apiURL: 'http://localhost:1337',
         queryLimit: 1000,
-        contentTypes: ['Checklist-Item', 'Checklist-Section'],
-        // loginData: {
-        //   identifier: '',
-        //   password: ''
-        // }
+        contentTypes: ['Checklist-Item', 'Checklist-Section', 'Navigation-Menus'],
       }
     }
   ],
