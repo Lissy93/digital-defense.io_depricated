@@ -1,22 +1,50 @@
 <template>
-<nav> 
-  <ul class="main-nav" v-bind:class="{ menuOpen: isMenuOpen }">
-    <li
-      v-for="section in navData"
-      v-bind:key="section.id"
+
+  <!-- Site Navigation Link Cointainer -->
+  <nav>
+    <ul class="main-nav" v-bind:class="{ menuOpen: isMenuOpen }">
+      <li
+        v-for="navItem in $static.allDdNavigationMenus.edges"
+        v-bind:key="navItem.node.link.id"
       >
-      <div>
-        <router-link :to="section.path">{{section.name}}</router-link>
-      </div>
-    </li>
-  </ul>
-</nav>
+        <!-- Navigation Bar Link Item -->
+        <router-link :to="navItem.node.link.url">
+          {{navItem.node.link.display_name}}
+        </router-link>
+        
+        <!-- Optional Drop-down Menu, Visible on Hover -->
+        <ul v-if="navItem.node.children.length > 0">
+          <li 
+            v-for="subNavItem in navItem.node.children"
+            v-bind:key="subNavItem.id"
+          >
+            {{subNavItem.display_name}}
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+  </nav>
 </template>
 
 <static-query>
-query {
-  metadata {
-    siteName
+{
+  allDdNavigationMenus {
+    edges {
+      node {
+        link {
+          id
+          display_name
+          url
+          description
+        }
+    		children {
+      		id
+          display_name
+          url
+        }
+      }
+    }
   }
 }
 </static-query>
@@ -25,37 +53,24 @@ query {
 
 import ClickOutside from '~/utils/clickOutside.js';
 
-const d = [
-    {"id": "001", "name": "Home", "path": "/", "children": []},
-    {"id": "002", "name": "Beginner", "path": "/getting-started/beginner", "children": []},
-    {"id": "003", "name": "Intermediate", "path": "/getting-started/intermediate", "children": []},
-    {"id": "004", "name": "Full Checklist", "path": "/full-checklist", "children": []},
-    {"id": "005", "name": "More", "path": "/tools", "children": [
-        {"id": "051", "name": "Hack Map", "path": "/tools/map", "children": []},
-        {"id": "052", "name": "Have you been Hacked?", "path": "/have-i-been-hacked", "children": []}
-    ]},
-    {"id": "006", "name": "About", "path": "/about", "children": []}
-]
-
 export default {
   name: 'NavBar',
   data: () => {
-        return {
-        navData: d,
+      return {
         visibleDropdown: '',
         isMenuOpen: false, // start closed
-        };
+      };
     },
     methods: {
-        closeAllDropdowns() {
-          this.$data.visibleDropdown = '';
-        },
-        onBurgerChange(openOrClose) {
-          this.$data.isMenuOpen = openOrClose;
-        },
+      closeAllDropdowns() {
+        this.$data.visibleDropdown = '';
+      },
+      onBurgerChange(openOrClose) {
+        this.$data.isMenuOpen = openOrClose;
+      },
     },
     directives: {
-        ClickOutside,
+      ClickOutside,
     },
 }
 </script>

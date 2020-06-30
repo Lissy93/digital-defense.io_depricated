@@ -27,7 +27,7 @@ module.exports = {
     {
       use: '@gridsome/source-strapi',
       options: {
-        // typeName: 'dd_',
+        typeName: 'dd_',
         apiURL: 'http://localhost:1337',
         queryLimit: 1000,
         contentTypes: ['Checklist-Item', 'Checklist-Section', 'Navigation-Menus'],
