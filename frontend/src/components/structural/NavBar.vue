@@ -22,11 +22,9 @@
           @mouseover="visibleDropdown = navItem.node.link.id"
         >
           <!-- Navigation Bar Link Item -->
-          <div>
-            <router-link :to="navItem.node.link.url">
-              {{navItem.node.link.display_name}}
-            </router-link>
-          </div>
+          <router-link :to="navItem.node.link.url">
+            {{navItem.node.link.display_name}}
+          </router-link>
           
           <!-- Optional Drop-down Menu, Visible on Hover -->
           <ul
@@ -39,7 +37,9 @@
               v-for="subNavItem in navItem.node.children"
               v-bind:key="subNavItem.id"
             >
-              {{subNavItem.display_name}}
+              <router-link :to="subNavItem.url">
+                {{subNavItem.display_name}}
+              </router-link>
             </li>
           </ul>
         </li>
@@ -123,6 +123,30 @@ header.dd-nav-bar {
       color: $accent1;
     }
 
+    /** Square Button used for Nav Bar Links */
+    ul.main-nav li a, ul.sub-nav li a {
+      display: block;
+      padding: 0.3em 0.6em;
+      margin: 0 0.5rem;
+      min-width: 80px;
+      border: 1px solid $accent1;
+      color: $accent1;
+      line-height: 2;
+      text-decoration: none;
+      font-size: 1em;
+      text-align: center;
+      
+      &.router-link-exact-active {
+        border: 1px solid $accent1;
+      }
+      
+      &.router-link-active:hover, &:hover, &.router-link-exact-active {
+        background: $accent1;
+        border: 1px solid $accent1;
+        color: $primary;
+      }
+    }
+
     /** Main Navigation Links, Within Header Bar */
     nav {
       ul.main-nav {
@@ -131,34 +155,25 @@ header.dd-nav-bar {
         list-style: none;
         padding: 0;
 
-        /** Main Nav Link */
-        li a {
-          display: block;
-          padding: 0.3em 0.6em;
-          margin: 0 0.5rem;
-          min-width: 80px;
-          border: 1px solid $accent1;
-          color: $accent1;
-          line-height: 2;
-          text-decoration: none;
-          font-family: 'Dosis', sans-serif;
-          font-size: 1em;
-          text-align: center;
-          
-          &.router-link-exact-active {
-            border: 1px solid $accent1;
-          }
-          
-          &.router-link-active:hover, &:hover, &.router-link-exact-active {
-            background: $accent1;
-            border: 1px solid $accent1;
-            color: $primary;
-          }
-        }
+
 
         /** Sub-Nav */
         li ul.sub-nav {
-          display: none;
+          position: absolute;
+          background: $primary;
+          padding: 0;
+          list-style: none;
+          transition: height,.2s linear;
+          overflow: hidden;
+          max-height: 0; // Hide Sub-Nav
+          &.open {
+            max-height: 500px; // Show Sub-Nav
+          }
+          a {
+            text-align: left;
+            border: none;
+            margin: 0;
+          }
         }
 
       }
