@@ -28,4 +28,14 @@ query {
 
 <style lang="scss">
 
+@font-face {
+    font-family: ZillaSlab;
+    src: url('../assets/fonts/ZillaSlab-Regular.ttf');
+    font-weight: normal;
+}
+
+
+body, p, span, a, div, li, button, label {
+    font-family: ZillaSlab, serif;
+}
 </style>
