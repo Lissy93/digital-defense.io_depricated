@@ -1,0 +1,29 @@
+
+
+// Defined as max width of standard devices
+$tiny-phone: 320px;
+$phone: 667px; // Phone Portrait
+$tablet: 843px; // Phone Landscape / Tablet Portrait
+$laptop: 1440px;
+$desktop: 1920px;
+
+
+@mixin tiny-phone-min { @media (min-width: #{$tiny-phone}) { @content; } }
+
+@mixin tiny-phone-max { @media (max-width: #{$tiny-phone - 1px}) { @content; } }
+
+@mixin phone-min { @media (min-width: #{$phone}) { @content; } }
+
+@mixin phone-max { @media (max-width: #{$phone - 1px}) { @content; } }
+
+@mixin tablet-min { @media (min-width: #{$tablet}) { @content; } }
+
+@mixin tablet-max { @media (max-width: #{$tablet - 1px}) { @content; } }
+
+@mixin laptop-min { @media (min-width: #{$laptop}) { @content; } }
+
+@mixin laptop-max { @media (max-width: #{$laptop - 1px}) { @content; } }
+
+@mixin desktop-min { @media (min-width: #{$desktop}) { @content; } }
+
+@mixin desktop-max { @media (max-width: #{$desktop - 1px}) { @content; } }
