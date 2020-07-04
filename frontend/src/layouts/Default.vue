@@ -28,14 +28,27 @@ query {
 
 <style lang="scss">
 
+
 @font-face {
     font-family: ZillaSlab;
     src: url('../assets/fonts/ZillaSlab-Regular.ttf');
     font-weight: normal;
 }
 
-
-body, p, span, a, div, li, button, label {
+.article-font {
     font-family: ZillaSlab, serif;
 }
+
+@font-face {
+    font-family: Cairo;
+    src: url('../assets/fonts/Cairo-Regular.ttf');
+    font-weight: normal;
+}
+
+body, p, span, a {
+    font-family: Cairo, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+
+
 </style>
