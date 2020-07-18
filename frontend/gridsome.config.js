@@ -19,7 +19,6 @@ function addStyleResource (rule) {
     })
 }
 
-
 module.exports = {
   siteName: 'Digital Defense 🔐',
   siteUrl: 'https://digital-defense.io',
@@ -33,6 +32,9 @@ module.exports = {
         queryLimit: 1000,
         contentTypes: ['Checklist-Item', 'Checklist-Section', 'Navigation-Menus'],
       }
+    },
+    {
+      use: 'gridsome-plugin-typescript',
     }
   ],
   // Loads variables for all vue-files
