@@ -2,10 +2,10 @@
   <header v-click-outside="closeAllDropdowns" class="dd-nav-bar">
 
     <!-- Burger menu for mobile-->
-    <!-- <Burger class="bigmac" @onBurgerChange="onBurgerChange" :startIsMenuOpen="isMenuOpen"/> -->
+    <Burger class="bigmac" @onBurgerChange="onBurgerChange" :startIsMenuOpen="isMenuOpen"/>
 
     <!-- Main Logo and Title -->
-    <router-link to="/">
+    <router-link class="nav-title-wrapper" to="/">
       <h1 class="nav-title">
           <!-- <img src="../../public/img/hero-scaled.png" alt="" v-click-outside="closeAllDropdowns"> -->
           Digital Defence
@@ -75,6 +75,7 @@
 <script>
 
 import ClickOutside from '~/utils/clickOutside.js';
+import Burger from '~/components/misc/Burger';
 
 export default {
   name: 'NavBar',
@@ -95,6 +96,9 @@ export default {
     directives: {
       ClickOutside,
     },
+    components: {
+        Burger,
+    },
 }
 </script>
 
@@ -110,17 +114,38 @@ header.dd-nav-bar {
     background: $primary;
     list-style: none;
 
-    a {
+    @include phone-max {
+      flex-direction: column;
+    };
+
+    a { // Remove hyperlink underline
       text-decoration: none;
     }
 
+    /** Burger Menu Icon */
+    .bigmac {
+      position: absolute;
+      left: 1rem;
+      top: 1rem;
+      @include phone-min {
+        display: none; // Only visible on mobile
+      }
+    }
+
+
     /** Title */
-    h1.nav-title {
-      margin: 0;
-      font-size: 2.5rem;
-      font-weight: normal;
-      text-decoration: none;
-      color: $accent1;
+    .nav-title-wrapper {
+      flex-grow: 1;
+      h1.nav-title {
+        margin: 0;
+        font-size: 2.5rem;
+        font-weight: normal;
+        text-decoration: none;
+        color: $accent1;
+        @include tablet-max {
+          text-align: center;
+        };
+      }
     }
 
     /** Square Button used for Nav Bar Links */
@@ -145,17 +170,33 @@ header.dd-nav-bar {
         border: 1px solid $accent1;
         color: $primary;
       }
+
+      @include phone-max {
+        border: none;
+        // display: none;
+      }
     }
 
     /** Main Navigation Links, Within Header Bar */
     nav {
+      margin: 0 auto;
+      @include phone-max {
+        width: 100%;
+      }
       ul.main-nav {
         display: flex;
         flex-direction: row;
         list-style: none;
         padding: 0;
 
+        @include phone-max {
+          flex-direction: column;
+          display: none; // On mobile, hide
+        };
 
+        &.menuOpen { // If menuOpen, then show
+          display: flex;
+        }
 
         /** Sub-Nav */
         li ul.sub-nav {
