@@ -1,11 +1,14 @@
 <template>
   <header v-click-outside="closeAllDropdowns" class="dd-nav-bar">
 
+    
+
     <!-- Burger menu for mobile-->
     <Burger class="bigmac" @onBurgerChange="onBurgerChange" :startIsMenuOpen="isMenuOpen"/>
 
     <!-- Main Logo and Title -->
     <router-link class="nav-title-wrapper" to="/">
+      <img class="nav-logo" src="../../assets/icons/dd-logo.png" />
       <h1 class="nav-title">
           <!-- <img src="../../public/img/hero-scaled.png" alt="" v-click-outside="closeAllDropdowns"> -->
           Digital Defence
@@ -110,7 +113,7 @@ header.dd-nav-bar {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5em 1em;
+    padding: 0.5em;
     background: $primary;
     list-style: none;
 
@@ -135,6 +138,8 @@ header.dd-nav-bar {
 
     /** Title */
     .nav-title-wrapper {
+      display: flex;
+      align-items: center;
       flex-grow: 1;
       h1.nav-title {
         margin: 0;
@@ -142,10 +147,18 @@ header.dd-nav-bar {
         font-weight: normal;
         text-decoration: none;
         color: $accent1;
-        @include tablet-max {
+      }
+      .nav-logo {
+        width: 5rem;
+        margin: 0 0.1rem;
+        @include phone-max {
+          display: none;
+        }
+      }
+      @include tablet-max {
+          justify-content: center;
           text-align: center;
         };
-      }
     }
 
     /** Square Button used for Nav Bar Links */
@@ -215,6 +228,9 @@ header.dd-nav-bar {
             border: none;
             margin: 0;
           }
+          @include phone-max {
+            position: relative;
+          };
         }
 
       }
