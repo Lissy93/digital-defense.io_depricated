@@ -1,21 +1,11 @@
 <template>
     <section class="article-grid">
-        <ArticleGridItem />
-        <div class="article-item">
-            Article
-        </div>
-        <div class="article-item">
-            Article
-        </div>
-        <div class="article-item">
-            Article
-        </div>
-        <div class="article-item">
-            Article
-        </div>
-        <div class="article-item">
-            Article
-        </div>
+        <ArticleGridItem class="article-item" />
+        <ArticleGridItem class="article-item" />
+        <ArticleGridItem class="article-item" />
+        <ArticleGridItem class="article-item" />
+        <ArticleGridItem class="article-item" />
+        <ArticleGridItem class="article-item" />
     </section>
 </template>
 
@@ -37,7 +27,7 @@ export default {
 </script>
 
 <style lang="scss">
-$item-min-width: 12rem;
+$item-min-width: 14rem;
 .article-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax($item-min-width, 1fr));
@@ -50,16 +40,15 @@ $item-min-width: 12rem;
         grid-column: 1 / 1;
     }
 
-    
-
     .article-item {
-        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        
         transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-
-        // &:first-child {
-        //     grid-row: 1 / 1;
-        //     grid-column: 1 / 1;
-        // }
+        margin: 0.5rem;
+        
+        &:first-child {
+            grid-row: 1 / 1;
+            grid-column: 1 / 1;
+        }
     }
 }
 

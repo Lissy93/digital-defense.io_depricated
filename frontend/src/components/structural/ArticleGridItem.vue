@@ -20,8 +20,25 @@ export default {
 </script>
 
 <style lang="scss">
-  // .article-grid-item {
-
-  // }
+  .article-grid-item {
+    background: $white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow:
+      0 1px 3px rgba(0,0,0,0.12),
+      0 1px 2px rgba(0,0,0,0.24);
+    img {
+      width: 100%;
+    }
+    .item-text {
+      padding: 0.2rem;
+      .article-title {
+        font-size: 1.4rem;
+      }
+      .article-description {
+        font-size: 0.8rem;
+      }
+    }
+  }
 
 </style>
