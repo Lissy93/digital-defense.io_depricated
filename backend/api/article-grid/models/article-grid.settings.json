@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "article_grids",
+  "info": {
+    "name": "ArticleGrid"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "order": {
+      "type": "integer"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "img_path": {
+      "type": "string"
+    },
+    "click_location": {
+      "type": "string"
+    }
+  }
+}

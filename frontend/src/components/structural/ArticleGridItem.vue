@@ -1,6 +1,6 @@
 <template>
     <div class="article-grid-item">
-      <img src="../../assets/images/1x/test-img001.png" />
+      <img src="../../assets/images/450w/DemoAsset1medium.png" />
       <div class="item-text">
         <p class="article-title">Article Title</p>
         <p class="article-description">Slightly longer article description</p>
@@ -21,6 +21,7 @@ export default {
 
 <style lang="scss">
   .article-grid-item {
+    min-height: 150px;
     background: $white;
     border-radius: 8px;
     overflow: hidden;
@@ -29,6 +30,8 @@ export default {
       0 1px 2px rgba(0,0,0,0.24);
     img {
       width: 100%;
+      height: 80px;
+      object-fit: cover;
     }
     .item-text {
       padding: 0.2rem;

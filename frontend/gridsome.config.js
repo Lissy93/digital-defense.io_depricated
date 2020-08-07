@@ -30,7 +30,7 @@ module.exports = {
         typeName: 'dd_',
         apiURL: 'http://localhost:1337',
         queryLimit: 1000,
-        contentTypes: ['Checklist-Item', 'Checklist-Section', 'Navigation-Menus', 'Site-Meta-Data'],
+        contentTypes: ['Checklist-Item', 'Checklist-Section', 'Navigation-Menus', 'Site-Meta-Data', 'Article-Grid'],
       }
     },
     {
