@@ -1,9 +1,9 @@
 <template>
     <div class="article-grid-item">
-      <img src="../../assets/images/450w/DemoAsset1medium.png" />
+      <g-image :src="getImage(articleImgPath.url)" width="500"/>
       <div class="item-text">
-        <p class="article-title">Article Title</p>
-        <p class="article-description">Slightly longer article description</p>
+        <p class="article-title">{{articleTitle}}</p>
+        <p class="article-description">{{articleDescription}}</p>
       </div>
     </div>
 </template>
@@ -12,10 +12,25 @@
 
 </static-query>
 
-<script>
+<script lang="ts">
+
+interface Data {
+  title: string;
+  description: string;
+  img_path: string;
+}
 
 export default {
   name: 'ArticleGridItem',
+  props: {
+    articleTitle: String,
+    articleDescription: String,
+    articleImgPath: Object,
+    articleClickUrl: String,
+  },
+   methods: {
+    getImage: (path: String) => 'http://localhost:1337' + path
+  }
 }
 </script>
 

@@ -2,6 +2,10 @@
     <section class="article-grid">
         <ArticleGridItem
             class="article-item"
+            :articleTitle="articleItem.node.title"
+            :articleDescription="articleItem.node.description"
+            :articleImgPath="articleItem.node.image"
+            articleClickUrl=""
             v-for="articleItem in $static.allDdArticleGrid.edges"
             v-bind:key="articleItem.node.order"
         />
@@ -15,7 +19,10 @@
       node {
         order,
         title,
-        description
+        description,
+        image {
+          url(width: 100, height:200)
+        }
       }
     }
   }
