@@ -6,6 +6,7 @@
             :articleDescription="articleItem.node.description"
             :articleImgPath="articleItem.node.image"
             articleClickUrl=""
+            :scrollPosition="scrollPosition"
             v-for="articleItem in $static.allDdArticleGrid.edges"
             v-bind:key="articleItem.node.order"
         />
@@ -33,18 +34,33 @@
 
 import ArticleGridItem from '~/components/structural/ArticleGridItem';
 
-
 export default {
   name: 'ArticleGrid',
   components: {
       ArticleGridItem,
   },
+  data: () => ({
+    scrollPosition: 0,
+  }),
+  methods: { 
+    scroll () {
+      window.onscroll = () => {
+        this.scrollPosition = document.documentElement.scrollTop;
+      }
+    },
+  },
+  mounted() {
+    this.scroll();
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.scroll);
+  }
 }
 </script>
 
 <style lang="scss">
-$item-min-width: 16rem;
-$item-min-height: 8rem;
+$item-min-width: 18rem;
+$item-min-height: 12rem;
 .article-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax($item-min-width, 1fr));

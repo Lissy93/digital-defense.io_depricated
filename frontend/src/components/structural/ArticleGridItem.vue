@@ -1,6 +1,9 @@
 <template>
     <div class="article-grid-item">
-      <g-image :src="getImage(articleImgPath.url)" width="500"/>
+      <g-image
+        :src="getImage(articleImgPath.url)"
+        :style="`object-position: 0 ${calculateThumbnailPosition(scrollPosition)}%`"
+      />
       <div class="item-text">
         <p class="article-title">{{articleTitle}}</p>
         <p class="article-description">{{articleDescription}}</p>
@@ -27,10 +30,18 @@ export default {
     articleDescription: String,
     articleImgPath: Object,
     articleClickUrl: String,
+    scrollPosition: Number,
   },
-   methods: {
-    getImage: (path: String) => 'http://localhost:1337' + path
-  }
+   methods: { // TODO, use a global for the image paths
+    getImage: (path: String) => 'http://localhost:1337' + path,
+    calculateThumbnailPosition: (scrollPosition) => {
+      // Uses scroll position, and page hiehgt to offset the item image,
+      // In order to create a subtle parallax-like effect
+      const pageHeight = document.body.scrollHeight;
+      const percentage = scrollPosition / pageHeight * 100;
+      return percentage;
+    }
+   },
 }
 </script>
 
@@ -45,16 +56,18 @@ export default {
       0 1px 2px rgba(0,0,0,0.24);
     img {
       width: 100%;
-      height: 80px;
+      height: 120px;
       object-fit: cover;
     }
     .item-text {
       padding: 0.2rem;
       .article-title {
         font-size: 1.4rem;
+        margin: 0.2rem;
       }
       .article-description {
         font-size: 0.8rem;
+        margin: 0.2rem;
       }
     }
   }
