@@ -13,8 +13,9 @@ function addStyleResource (rule) {
       patterns: [
         path.resolve(__dirname, './src/assets/styles/_color-pallet.scss'),
         path.resolve(__dirname, './src/assets/styles/_globals.scss'),
-        path.resolve(__dirname, './src/assets/styles/_reset.scss'),
         path.resolve(__dirname, './src/assets/styles/_media-queries.scss'),
+        path.resolve(__dirname, './src/assets/styles/_reset.scss'),
+        path.resolve(__dirname, './src/assets/styles/_typography.scss'),
       ],
     })
 }

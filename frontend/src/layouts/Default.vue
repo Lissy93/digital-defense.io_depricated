@@ -35,9 +35,7 @@ query {
     font-weight: normal;
 }
 
-.article-font {
-    font-family: ZillaSlab, serif;
-}
+
 
 @font-face {
     font-family: Cairo;
@@ -45,9 +43,6 @@ query {
     font-weight: normal;
 }
 
-body, p, span, a {
-    font-family: Cairo, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-}
 
 
 

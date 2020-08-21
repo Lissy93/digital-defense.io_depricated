@@ -1,5 +1,7 @@
 <template>
-    <section class="article-grid">
+    <section class="article-section">
+      <h3>Articles</h3>
+      <div class="article-grid">
         <ArticleGridItem
             class="article-item"
             :articleTitle="articleItem.node.title"
@@ -9,7 +11,8 @@
             :scrollPosition="scrollPosition"
             v-for="articleItem in $static.allDdArticleGrid.edges"
             v-bind:key="articleItem.node.order"
-        />
+          />
+        </div>
     </section>
 </template>
 
@@ -61,6 +64,12 @@ export default {
 <style lang="scss">
 $item-min-width: 18rem;
 $item-min-height: 12rem;
+.article-section {
+  padding: 1rem;
+  h3 {
+    margin: 0.5rem;
+  }
+}
 .article-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax($item-min-width, 1fr));

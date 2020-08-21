@@ -1,0 +1,31 @@
+
+
+// Global Font Sizes
+
+$small: 0.8rem;
+$medium: 1rem;
+$large: 1.4rem;
+$xLarge: 2rem;
+
+
+h3 {
+  font-size: $xLarge;
+}
+
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  font-family: 'ZillaSlab', serif;
+}
+
+.article-font {
+  font-family: ZillaSlab, serif;
+}
+
+h3 {
+  font-family: 'ZillaSlab', serif;
+}
+
+body, p, span, a {
+  font-family: Cairo, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
