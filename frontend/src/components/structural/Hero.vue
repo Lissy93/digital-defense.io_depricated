@@ -1,17 +1,17 @@
 <template>
     <header class="hero">
         <div class="left">
-        <h2>Tools, Guides and Lists to defend your digital life against threats</h2>
-        <div class="software-list hero-button">Awesome Software List</div>
-        <div class="full-list hero-button">Personal Security Checklist</div>
-        <div class="get-started hero-button">Get Started</div>
+            <h2>Tools, Guides and Lists to defend your digital life against threats</h2>
+            <div class="software-list hero-button">Awesome Software List</div>
+            <div class="full-list hero-button">Personal Security Checklist</div>
+            <div class="get-started hero-button">Get Started</div>
         </div>
         <div class="right">
-            <img
+            <!-- <img
                 class="hero-logo"
                 src="../../assets/icons/dd-hero.png" 
                 alt="Logo"
-            />
+            /> -->
         </div>
     </header>
 </template>
@@ -31,8 +31,8 @@ export default {
 .hero {
     background: $accent1;
     margin: 0;
-    height: 15rem;
     display: flex;
+    min-height: 16rem; // May not be needed with more content
     h2 {
         margin: 0;
         padding: 1rem;
@@ -53,11 +53,16 @@ export default {
 
         }
     }
+    .left {
+        flex: 1;
+    }
     .right {
+        text-align: right;
+        background-image: url('../../assets/icons/dd-hero.png');
+        background-size: auto 100%;
         width: 20%;
-        img.hero-logo {
-            height: 100%;
-        }
+        background-repeat: no-repeat;
+        background-position-x: right;
     }
 }
 
