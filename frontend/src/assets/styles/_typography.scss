@@ -7,6 +7,13 @@ $medium: 1rem;
 $large: 1.4rem;
 $xLarge: 2rem;
 
+h1 { // Displays in Navigation Bar
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: normal;
+  text-decoration: none;
+  color: $accent1;
+}
 
 h3 {
   font-size: $xLarge;

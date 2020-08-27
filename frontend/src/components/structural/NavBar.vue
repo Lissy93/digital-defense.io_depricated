@@ -118,11 +118,9 @@ header.dd-nav-bar {
     padding: 0.5em;
     background: $primary;
     list-style: none;
-
     @include phone-max {
       flex-direction: column;
     };
-
     a { // Remove hyperlink underline
       text-decoration: none;
     }
@@ -133,22 +131,19 @@ header.dd-nav-bar {
       left: 1rem;
       top: 1rem;
       @include phone-min {
-        display: none; // Only visible on mobile
+        display: none; // Make visible only on mobile
       }
     }
 
-    /** Title */
+    /** Title + Logo */
     .nav-title-wrapper {
       display: flex;
       align-items: center;
       flex-grow: 1;
-      h1.nav-title {
-        margin: 0;
-        font-size: 2.5rem;
-        font-weight: normal;
-        text-decoration: none;
-        color: $accent1;
-      }
+      @include tablet-max { // Center on medium/ small devices
+        justify-content: center;
+        text-align: center;
+      };
       .nav-logo {
         width: 5rem;
         margin-right: 1rem;
@@ -159,11 +154,6 @@ header.dd-nav-bar {
           opacity: 0.8;
         }
       }
-      @include tablet-max {
-        justify-content: center;
-        text-align: center;
-      };
-      
     }
 
     /** Square Button used for Nav Bar Links */
@@ -178,20 +168,16 @@ header.dd-nav-bar {
       text-decoration: none;
       font-size: 1em;
       text-align: center;
-      
-      &.router-link-exact-active {
-        border: 1px solid $accent1;
+      @include phone-max { // Mobile-only nav buttons
+        border: none;
+        border-bottom: 1px solid $accent1;
       }
-      
-      &.router-link-active:hover, &:hover, &.router-link-exact-active {
+      &.router-link-active:hover,
+      &:hover,
+      &.router-link-exact-active { // Hover + Active nav buttons
         background: $accent1;
         border: 1px solid $accent1;
         color: $primary;
-      }
-
-      @include phone-max {
-        border: none;
-        // display: none;
       }
     }
 
@@ -206,14 +192,12 @@ header.dd-nav-bar {
         flex-direction: row;
         list-style: none;
         padding: 0;
-
         @include phone-max {
           flex-direction: column;
           display: none; // On mobile, hide
         };
-
-        &.menuOpen { // If menuOpen, then show
-          display: flex;
+        &.menuOpen {
+          display: flex; // If menuOpen, then show
         }
 
         /** Sub-Nav */
@@ -226,16 +210,16 @@ header.dd-nav-bar {
           overflow: hidden;
           max-height: 0; // Hide Sub-Nav
           &.open {
-            max-height: 500px; // Show Sub-Nav
-          }
-          a {
-            text-align: left;
-            border: none;
-            margin: 0;
+            max-height: 800px; // Show Sub-Nav
           }
           @include phone-max {
-            position: relative;
+            position: relative; // On mobile sub-nav is full-width + solid
           };
+          li a{
+            text-align: left;
+            border-color: $primary;
+            margin: 0;
+          }
         }
 
       }
