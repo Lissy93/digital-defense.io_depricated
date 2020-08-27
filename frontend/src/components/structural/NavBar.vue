@@ -127,8 +127,10 @@ header.dd-nav-bar {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     padding: 0.5em;
     background: $primary;
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.35);
     list-style: none;
     @include phone-max {
       flex-direction: column;

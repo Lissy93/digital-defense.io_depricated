@@ -32,6 +32,7 @@ export default {
     background: $accent1;
     margin: 0;
     display: flex;
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.25);
     min-height: 16rem; // May not be needed with more content
     h2 {
         margin: 0;

@@ -12,7 +12,7 @@ import ArticleGrid from '~/components/structural/ArticleGrid';
 
 export default {
   metaInfo: {
-    title: 'Hello, world!'
+    title: 'Digital Defense'
   },
   components: {
     Hero,

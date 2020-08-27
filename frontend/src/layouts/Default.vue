@@ -27,23 +27,14 @@ query {
 </static-query>
 
 <style lang="scss">
-
-
 @font-face {
     font-family: ZillaSlab;
     src: url('../assets/fonts/ZillaSlab-Regular.ttf');
     font-weight: normal;
 }
-
-
-
 @font-face {
     font-family: Cairo;
     src: url('../assets/fonts/Cairo-Regular.ttf');
     font-weight: normal;
 }
-
-
-
-
 </style>
