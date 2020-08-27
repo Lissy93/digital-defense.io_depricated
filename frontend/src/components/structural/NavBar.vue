@@ -13,7 +13,7 @@
         alt="Logo"
       />
       <h1 class="nav-title">
-          Digital Defence
+        {{$static.siteMeta.edges[0].node.title}}
       </h1>
     </router-link>
 
@@ -22,7 +22,7 @@
       <ul class="main-nav" v-bind:class="{ menuOpen: isMenuOpen }">
 
         <li
-          v-for="navItem in $static.allDdNavigationMenus.edges"
+          v-for="navItem in $static.navData.edges"
           v-bind:key="navItem.node.link.id"
           @mouseover="visibleDropdown = navItem.node.link.id"
         >
@@ -55,9 +55,19 @@
   </header>
 </template>
 
+
+
+
 <static-query>
-{
-  allDdNavigationMenus {
+query {
+  siteMeta: allDdSiteMetaData {
+    edges {
+      node {
+        title,
+      }
+    }
+  }
+  navData: allDdNavigationMenus {
     edges {
       node {
         link {
@@ -76,6 +86,8 @@
   }
 }
 </static-query>
+
+
 
 <script>
 
