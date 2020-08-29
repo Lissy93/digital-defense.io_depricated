@@ -23,6 +23,9 @@
       "type": "component",
       "repeatable": true,
       "component": "additional-data.categories"
+    },
+    "order": {
+      "type": "integer"
     }
   }
 }
