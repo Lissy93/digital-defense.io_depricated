@@ -175,7 +175,7 @@ header.dd-nav-bar {
       color: $accent1;
       line-height: 2;
       text-decoration: none;
-      font-size: 1em;
+      font-size: $body-font-medium;
       text-align: center;
       @include phone-max { // Mobile-only nav buttons
         border: none;

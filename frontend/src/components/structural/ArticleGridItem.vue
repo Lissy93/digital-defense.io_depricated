@@ -62,11 +62,11 @@ export default {
     .item-text {
       padding: 0.2rem;
       .article-title {
-        font-size: 1.4rem;
+        font-size: $body-font-large;
         margin: 0.2rem;
       }
       .article-description {
-        font-size: 0.8rem;
+        font-size: $body-font-small;
         margin: 0.2rem;
       }
     }

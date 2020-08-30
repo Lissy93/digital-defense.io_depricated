@@ -32,7 +32,7 @@ export default {
         margin: 0;
         padding: 1rem;
         color: $primary;
-        font-size: 1.8rem;
+        font-size: $heading-font-small;
     }
     .hero-button {
         border: 2px solid $primary;
@@ -41,7 +41,7 @@ export default {
         margin: 0.5rem;
         display: inline-flex;
         min-width: 180px;
-        font-size: 1.8rem;
+        font-size: $body-font-large;
         &.get-started {
             background: $primary;
             color: $accent1;

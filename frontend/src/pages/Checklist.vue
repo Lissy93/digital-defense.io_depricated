@@ -7,6 +7,11 @@
       v-bind:key="section.node.id"
     >
       <h2>#{{section.node.order}} - {{section.node.title}}</h2>
+      <div class="section-content">
+        <span class="section-intro">
+          {{section.node.intro}}
+        </span>
+      </div>
     </section>
   </Layout>
 </template>
@@ -26,6 +31,7 @@ query {
       node {
         order
         title
+        intro
       }
     }
   }
@@ -39,7 +45,7 @@ query {
   h1.title {
     color: #151e3f;
     text-align: center;
-    font-size: 3.8rem;
+    font-size: $heading-font-large;
     margin: 2rem;
   }
   section.checklist-section {
@@ -52,10 +58,16 @@ query {
       0 8px 18px rgba(21, 30, 63, 0.17),
       0 5px 8px rgba(21, 30, 63, 0.17);
     h2 {
-      font-size: 2.5rem;
+      font-size: $heading-font-medium;
       color: $primary;
       background: $accent1;
       padding: 1rem;
+    }
+    .section-content {
+      padding: 1rem;
+      span.section-intro {
+        font-size: $body-font-medium;
+      }
     }
   }
 

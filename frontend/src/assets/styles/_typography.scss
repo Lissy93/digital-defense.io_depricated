@@ -2,21 +2,26 @@
 
 // Global Font Sizes
 
-$small: 0.8rem;
-$medium: 1rem;
-$large: 1.4rem;
-$xLarge: 2rem;
+$body-font-small: 0.8rem;
+$body-font-medium: 1.2rem;
+$body-font-large: 1.6rem;
+$body-font-xLarge: 2rem;
+
+$heading-font-xSmall: 1.2rem;
+$heading-font-small: 2rem;
+$heading-font-medium: 2.5rem;
+$heading-font-large: 3.8rem;
 
 h1 { // Displays in Navigation Bar
   margin: 0;
-  font-size: 2.5rem;
+  font-size: $heading-font-medium;
   font-weight: normal;
   text-decoration: none;
   color: $accent1;
 }
 
 h3 {
-  font-size: $xLarge;
+  font-size: $heading-font-large;
 }
 
 
