@@ -1,19 +1,13 @@
 <template>
   <Layout>
     <h1 class="title">The Ultimate Privacy & Security Checklist</h1>
-
-    <section class="checklist-section">
-      <h2>#1 - Authenctacion</h2>
+    <section
+      class="checklist-section"
+      v-for="section in $page.allDdChecklistSection.edges"
+      v-bind:key="section.node.id"
+    >
+      <h2>#{{section.node.order}} - {{section.node.title}}</h2>
     </section>
-    
-    <section class="checklist-section">
-      <h2>#2 - Communication</h2>
-    </section>
-
-    <section class="checklist-section">
-      <h2>#3 - Mobile Devices</h2>
-    </section>
-
   </Layout>
 </template>
 
@@ -24,6 +18,19 @@ export default {
   }
 }
 </script>
+
+<page-query>
+query {
+  allDdChecklistSection(sortBy: "order", order: ASC) {
+    edges {
+      node {
+        order
+        title
+      }
+    }
+  }
+}
+</page-query>
 
 <style lang="scss">
   .layout {
