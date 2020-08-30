@@ -6,13 +6,7 @@
             <div class="full-list hero-button">Personal Security Checklist</div>
             <div class="get-started hero-button">Get Started</div>
         </div>
-        <div class="right">
-            <!-- <img
-                class="hero-logo"
-                src="../../assets/icons/dd-hero.png" 
-                alt="Logo"
-            /> -->
-        </div>
+        <div class="right"></div>
     </header>
 </template>
 

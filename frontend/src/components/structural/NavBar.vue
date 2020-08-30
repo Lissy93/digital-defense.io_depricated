@@ -55,9 +55,6 @@
   </header>
 </template>
 
-
-
-
 <static-query>
 query {
   siteMeta: allDdSiteMetaData {
@@ -86,8 +83,6 @@ query {
   }
 }
 </static-query>
-
-
 
 <script>
 
