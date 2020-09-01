@@ -6,9 +6,41 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = function (api) {
-  api.loadSource(({ addCollection }) => {
-    // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
+  // api.loadSource(({ addCollection }) => {
+  //   // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
+  // })
+
+  api.loadSource(({ addSchemaResolvers, addSchemaTypes, schema }) => {
+    addSchemaTypes([
+      schema.createObjectType({
+        name: 'ChecklistSection',
+        interfaces: ['Node'],
+        fields: {
+          id: 'ID!',
+          order: 'Int',
+          title: 'String',
+          intro: 'String'
+        }
+      })
+    ]),
+    addSchemaResolvers({
+      DdChecklistSection: {
+        intro: {
+          type: 'String',
+          args: {
+            markdown: 'Boolean'
+          },
+          resolve(obj, args) {
+            if (args.markdown) {
+              return obj.intro + 'TODO: Will convert to html here'
+            }
+            return obj.intro
+          }
+        }
+      }
+    })
   })
+
 
   api.createPages(({ createPage }) => {
     // Use the Pages API here: https://gridsome.org/docs/pages-api/

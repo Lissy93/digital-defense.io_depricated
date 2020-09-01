@@ -1,6 +1,7 @@
 <template>
   <Layout>
     <h1 class="title">The Ultimate Privacy & Security Checklist</h1>
+    <h2>{{testing()}}</h2>
     <ChecklistSection
       v-for="section in $page.allDdChecklistSection.edges"
       v-bind:key="section.node.id"
@@ -13,6 +14,8 @@
 
 <script>
 
+import marked from 'marked';
+
 import ChecklistSection from '~/components/checklist/ChecklistSection';
 
 
@@ -22,7 +25,13 @@ export default {
   },
   components: {
     ChecklistSection,
-  }
+  },
+  methods: {
+    testing() {
+      return marked('hello **world!**');
+      // this.$data.visibleDropdown = '';
+    },
+  },
 }
 </script>
 
@@ -33,7 +42,7 @@ query {
       node {
         order
         title
-        intro
+        intro(markdown: true)
       }
     }
   }
