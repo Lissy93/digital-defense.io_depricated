@@ -38,6 +38,11 @@ module.exports = {
       use: 'gridsome-plugin-typescript',
     }
   ],
+  transformers: {
+    remark: {
+      // global remark options
+    }
+  },
   // Loads variables for all vue-files
   chainWebpack (config) {
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
