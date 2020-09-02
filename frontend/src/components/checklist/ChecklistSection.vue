@@ -2,9 +2,7 @@
     <section class="checklist-section">
       <h2>#{{order}} - {{title}}</h2>
       <div class="section-content">
-        <span class="section-intro">
-          {{intro}}
-        </span>
+        <span class="section-intro"  v-html="intro"></span>
         <div class="section-table">
           <div class="table-cell title"></div>
           <div class="table-cell tags"></div>

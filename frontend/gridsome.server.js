@@ -6,6 +6,9 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = function (api) {
+
+  const marked = require('marked');
+
   // api.loadSource(({ addCollection }) => {
   //   // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
   // })
@@ -32,7 +35,8 @@ module.exports = function (api) {
           },
           resolve(obj, args) {
             if (args.markdown) {
-              return obj.intro + 'TODO: Will convert to html here'
+              // return obj.intro
+              return marked(obj.intro || '')
             }
             return obj.intro
           }
