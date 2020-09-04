@@ -9,10 +9,6 @@ module.exports = function (api) {
 
   const marked = require('marked');
 
-  // api.loadSource(({ addCollection }) => {
-  //   // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
-  // })
-
   api.loadSource(({ addSchemaResolvers, addSchemaTypes, schema }) => {
     addSchemaTypes([
       schema.createObjectType({
@@ -35,7 +31,6 @@ module.exports = function (api) {
           },
           resolve(obj, args) {
             if (args.markdown) {
-              // return obj.intro
               return marked(obj.intro || '')
             }
             return obj.intro
@@ -44,7 +39,6 @@ module.exports = function (api) {
       }
     })
   })
-
 
   api.createPages(({ createPage }) => {
     // Use the Pages API here: https://gridsome.org/docs/pages-api/

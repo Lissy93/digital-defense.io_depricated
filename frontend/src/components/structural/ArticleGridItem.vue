@@ -34,7 +34,7 @@ export default {
   },
    methods: { // TODO, use a global for the image paths
     getImage: (path: String) => 'http://localhost:1337' + path,
-    calculateThumbnailPosition: (scrollPosition) => {
+    calculateThumbnailPosition: (scrollPosition: number ) => {
       // Uses scroll position, and page hiehgt to offset the item image,
       // In order to create a subtle parallax-like effect
       const pageHeight = document.body.scrollHeight;
