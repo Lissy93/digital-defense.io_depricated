@@ -1,22 +1,15 @@
 <template>
-    <section class="checklist-section">
-      <h2>#{{order}} - {{title}}</h2>
-      <div class="section-content">
-        <span class="section-intro"  v-html="intro"></span>
-        <div class="section-table">
-          <div class="table-cell title"></div>
-          <div class="table-cell tags"></div>
-          <div class="table-cell description"></div>
-        </div>
-      </div>
-    </section>
+  <section class="checklist-section">
+    <h2>#{{order}} - {{title}}</h2>
+    <div class="section-content">
+      <div class="section-intro" v-html="intro"></div>
+      <ChecklistTable :items="items" />
+    </div>
+  </section>
 </template>
 
-<static-query>
-
-</static-query>
-
 <script>
+import ChecklistTable from '~/components/checklist/ChecklistTable';
 
 export default {
   name: 'ChecklistSection',
@@ -24,7 +17,11 @@ export default {
     order: Number,
     title: String,
     intro: String,
-  }
+    items: Array,
+  },
+  components: {
+    ChecklistTable,
+  },
 }
 </script>
 
@@ -46,18 +43,10 @@ export default {
     }
     .section-content {
       padding: 1rem;
-      span.section-intro {
+      div.section-intro p {
         font-size: $body-font-medium;
-      }
-
-      .section-table {
-        .table-cell {
-          &.title {}
-          &.tags {}
-          &.description {}
-        }
+        margin-bottom: 1rem;
       }
     }
   }
-
 </style>
