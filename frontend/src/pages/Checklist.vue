@@ -48,14 +48,23 @@ query {
 </page-query>
 
 <style lang="scss">
-  .layout {
-    background: $background;
-  }
+
   h1.title {
-    color: #151e3f;
+    color: $white; 
     text-align: center;
     font-size: $heading-font-large;
     margin: 2rem;
+  }
+
+  /* Some adjustments to the outer-page */
+  .layout {
+	  background: $primary;
+  }
+  header.dd-nav-bar {
+	  border-bottom: 2px solid $accent1;
+  }
+  .sub-nav.open {
+    border: 1px solid $accent1;
   }
 
 </style>

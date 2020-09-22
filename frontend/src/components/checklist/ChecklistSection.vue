@@ -3,7 +3,7 @@
     <h2>#{{order}} - {{title}}</h2>
     <div class="section-content">
       <div class="section-intro" v-html="intro"></div>
-      <ChecklistTable :items="items" />
+      <ChecklistTable v-if="items.length > 0" :items="items" />
     </div>
   </section>
 </template>
